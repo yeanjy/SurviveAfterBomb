@@ -1,8 +1,9 @@
 #include <iostream>
 #include "survivor.hpp"
+#include "app.hpp"
 
 int main(){
-  std::cout << "hello world" << std::endl;
-
+  app app;
+  app.run();
   return 0;
 }

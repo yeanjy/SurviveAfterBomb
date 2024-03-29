@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/bomba.dir/src/app.cpp.o"
+  "CMakeFiles/bomba.dir/src/app.cpp.o.d"
   "CMakeFiles/bomba.dir/src/main.cpp.o"
   "CMakeFiles/bomba.dir/src/main.cpp.o.d"
   "CMakeFiles/bomba.dir/src/survivor.cpp.o"

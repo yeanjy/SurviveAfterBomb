@@ -14,6 +14,7 @@ set(
     SOURCE_FILES
     ${SOURCE_DIR}/survivor.cpp
     ${SOURCE_DIR}/main.cpp
+    ${SOURCE_DIR}/app.cpp
 )
 
 # Adding executables
