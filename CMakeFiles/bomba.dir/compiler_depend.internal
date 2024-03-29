@@ -193,6 +193,7 @@ CMakeFiles/bomba.dir/src/app.cpp.o
 
 CMakeFiles/bomba.dir/src/main.cpp.o
  /home/yean/faculdade/SurviveAfterBomb/src/main.cpp
+ /home/yean/faculdade/SurviveAfterBomb/include/app.hpp
  /home/yean/faculdade/SurviveAfterBomb/include/survivor.hpp
  /usr/include/alloca.h
  /usr/include/asm-generic/errno-base.h

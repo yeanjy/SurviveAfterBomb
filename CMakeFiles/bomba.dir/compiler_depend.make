@@ -191,6 +191,7 @@ CMakeFiles/bomba.dir/src/app.cpp.o: src/app.cpp \
   /usr/lib/gcc/x86_64-pc-linux-gnu/13.2.1/include/stddef.h
 
 CMakeFiles/bomba.dir/src/main.cpp.o: src/main.cpp \
+  include/app.hpp \
   include/survivor.hpp \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
