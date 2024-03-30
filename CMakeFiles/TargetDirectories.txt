@@ -1,3 +1,0 @@
-/home/yean/faculdade/SurviveAfterBomb/CMakeFiles/bomba.dir
-/home/yean/faculdade/SurviveAfterBomb/CMakeFiles/edit_cache.dir
-/home/yean/faculdade/SurviveAfterBomb/CMakeFiles/rebuild_cache.dir

@@ -1,1 +1,0 @@
-/usr/sbin/c++  -Wall -Wextra CMakeFiles/bomba.dir/src/survivor.cpp.o CMakeFiles/bomba.dir/src/main.cpp.o CMakeFiles/bomba.dir/src/app.cpp.o -o bin/bomba
