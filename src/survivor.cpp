@@ -6,5 +6,5 @@ survivor::survivor(std::string name, int age, char gender, int hunger = 10, int 
 
 void survivor::printData()
 {
-  std::cout << this->name << " : " << "hunger: "<< this->hunger << " thirst: " << this->thirst << "\n";
+  std::cout << this->name << " : " << "fome: "<< this->hunger << " sede: " << this->thirst << "\n";
 }
