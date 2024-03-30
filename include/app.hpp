@@ -10,6 +10,7 @@ public:
   void goToAnotherDay();
   void addMember();
   void printFamilyData();
+  void updateFamilyData();
   
 private:
   bool isRun = true;

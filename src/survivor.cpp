@@ -8,3 +8,9 @@ void survivor::printData()
 {
   std::cout << this->name << " : " << "fome:"<< this->hunger << " sede:" << this->thirst << "\n";
 }
+
+void survivor::updateData()
+{
+  this->hunger-= 0.3;
+  this->thirst-= 0.5;
+}

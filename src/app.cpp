@@ -31,6 +31,14 @@ void app::printFamilyData()
   }
 }
 
+void app::updateFamilyData()
+{
+  for (auto &member : family)
+  {
+    member.updateData();
+  }
+}
+
 void app::printDay()
 {
   std::cout << "\n";
@@ -54,6 +62,7 @@ void app::run()
   printDay();  
   printFamilyData(); 
 
+  updateFamilyData();
   goToAnotherDay();
 }
 }
