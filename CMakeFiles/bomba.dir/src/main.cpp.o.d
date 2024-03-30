@@ -1,6 +1,9 @@
 CMakeFiles/bomba.dir/src/main.cpp.o: \
  /home/yean/faculdade/SurviveAfterBomb/src/main.cpp \
- /usr/include/stdc-predef.h /usr/include/c++/13.2.1/iostream \
+ /usr/include/stdc-predef.h \
+ /home/yean/faculdade/SurviveAfterBomb/include/app.hpp \
+ /home/yean/faculdade/SurviveAfterBomb/include/survivor.hpp \
+ /usr/include/c++/13.2.1/iostream \
  /usr/include/c++/13.2.1/bits/requires_hosted.h \
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/13.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -135,6 +138,4 @@ CMakeFiles/bomba.dir/src/main.cpp.o: \
  /usr/include/c++/13.2.1/bits/locale_facets.tcc \
  /usr/include/c++/13.2.1/bits/basic_ios.tcc \
  /usr/include/c++/13.2.1/bits/ostream.tcc /usr/include/c++/13.2.1/istream \
- /usr/include/c++/13.2.1/bits/istream.tcc \
- /home/yean/faculdade/SurviveAfterBomb/include/survivor.hpp \
- /home/yean/faculdade/SurviveAfterBomb/include/app.hpp
+ /usr/include/c++/13.2.1/bits/istream.tcc

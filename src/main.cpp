@@ -1,5 +1,3 @@
-#include <iostream>
-#include "survivor.hpp"
 #include "app.hpp"
 
 int main(){
