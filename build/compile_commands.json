@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/home/yeanc/faculdade/SurviveAfterBomb/build",
+  "command": "/usr/bin/c++  -I/home/yeanc/faculdade/SurviveAfterBomb/include -I/home/yeanc/faculdade/SurviveAfterBomb/external/include  -Wall -Wextra -o CMakeFiles/bomba.dir/src/survivor.cpp.o -c /home/yeanc/faculdade/SurviveAfterBomb/src/survivor.cpp",
+  "file": "/home/yeanc/faculdade/SurviveAfterBomb/src/survivor.cpp",
+  "output": "CMakeFiles/bomba.dir/src/survivor.cpp.o"
+},
+{
+  "directory": "/home/yeanc/faculdade/SurviveAfterBomb/build",
+  "command": "/usr/bin/c++  -I/home/yeanc/faculdade/SurviveAfterBomb/include -I/home/yeanc/faculdade/SurviveAfterBomb/external/include  -Wall -Wextra -o CMakeFiles/bomba.dir/src/main.cpp.o -c /home/yeanc/faculdade/SurviveAfterBomb/src/main.cpp",
+  "file": "/home/yeanc/faculdade/SurviveAfterBomb/src/main.cpp",
+  "output": "CMakeFiles/bomba.dir/src/main.cpp.o"
+},
+{
+  "directory": "/home/yeanc/faculdade/SurviveAfterBomb/build",
+  "command": "/usr/bin/c++  -I/home/yeanc/faculdade/SurviveAfterBomb/include -I/home/yeanc/faculdade/SurviveAfterBomb/external/include  -Wall -Wextra -o CMakeFiles/bomba.dir/src/app.cpp.o -c /home/yeanc/faculdade/SurviveAfterBomb/src/app.cpp",
+  "file": "/home/yeanc/faculdade/SurviveAfterBomb/src/app.cpp",
+  "output": "CMakeFiles/bomba.dir/src/app.cpp.o"
+}
+]
