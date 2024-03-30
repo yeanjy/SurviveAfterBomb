@@ -3,7 +3,7 @@
 
 class survivor{
 public:
-  survivor(std::string name, int age, char gender, int hunger, int thirst);
+  survivor(std::string name, int age, char gender, int hunger = 5, int thirst = 5);
   void printData();
 
 private:
@@ -11,8 +11,7 @@ private:
   int age;
   char gender;
 
-  int hunger; //0-10
-  int thirst; //0-10
+  int hunger; //0-5
+  int thirst; //0-5
   
-  // int power; //0-100
 };
