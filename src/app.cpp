@@ -1,14 +1,36 @@
 #include "app.hpp"
+#include "survivor.hpp"
 #include <cstdio>
 #include <iostream>
 #include <string>
 
 std::string openText = "Após a eclosão da Terceira Guerra Mundial e a subsequente guerra nuclear, uma família de Frankenmuth emerge como sobrevivente, confrontada não apenas pela devastação imediata, mas também pelo desafio constante de manter-se viva em um mundo transformado em um deserto radioativo e hostil. Com sua casa resistindo ao impacto direto da bomba, eles agora enfrentam a difícil tarefa de sobreviver em um ambiente de recursos escassos, radiação perigosa e a constante ameaça de outros sobreviventes desesperados.\n";
 
+survivor dad("Ted", 35, 'm');
+survivor mom("Dolores", 31, 'f');
+survivor son("Timmy", 14, 'm');
+survivor daughter("Mary Jane", 17, 'f');
+
 app::app(){};
 
-int app::dayCounter = 1;
-  
+int app::dayCounter = 1; 
+
+void app::addMember()
+{
+  family.push_back(dad); 
+  family.push_back(mom);
+  family.push_back(son);
+  family.push_back(daughter);
+}
+
+void app::printFamilyData()
+{
+  for (auto &member : family)
+  {
+    member.printData();
+  }
+}
+
 void app::printDay()
 {
   std::cout << "\n";
@@ -25,20 +47,12 @@ void app::goToAnotherDay()
 
 void app::run()
 {
-  survivor dad("Ted", 35, 'm');
-  survivor mom("Dolores", 31, 'f');
-  survivor son("Timmy", 14, 'm');
-  survivor daughter("Mary Jane", 17, 'f');
-
   std::cout << openText;
+  addMember();
 
   while (isRun) {
   printDay();  
-
-  dad.printData();
-  mom.printData();
-  son.printData();
-  daughter.printData();
+  printFamilyData(); 
 
   goToAnotherDay();
 }
