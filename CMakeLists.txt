@@ -15,6 +15,8 @@ set(
     ${SOURCE_DIR}/survivor.cpp
     ${SOURCE_DIR}/main.cpp
     ${SOURCE_DIR}/app.cpp
+    ${SOURCE_DIR}/water.cpp
+    ${SOURCE_DIR}/food.cpp
 )
 
 # Adding executables
