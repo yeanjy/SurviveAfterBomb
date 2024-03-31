@@ -1,5 +1,8 @@
 #pragma once
 #include <iostream>
+#include <iomanip>
+#include <random>
+
 
 class survivor{
 public:

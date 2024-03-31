@@ -1,19 +1,15 @@
 #include "survivor.hpp"
-#include <iomanip>
-#include <random>
-
 
 survivor::survivor(std::string name, int age, char gender, double height,
                    double weight, int hunger, int thirst, bool isAlive)
-    : name(name), age(age), gender(gender), height(height), weight(weight),
-      hunger(hunger), thirst(thirst), isAlive(isAlive) {}
+: name(name), age(age), gender(gender), height(height), weight(weight),
+  hunger(hunger), thirst(thirst), isAlive(isAlive) {}
 
 void survivor::printData()
 {
   std::cout << this->name << " : " << "fome:" << std::setprecision(2)<< this->hunger 
    << " sede:" << this->thirst << "\n";
 }
-
 
 double survivor::updateHunger() {
   double metabolicRate;

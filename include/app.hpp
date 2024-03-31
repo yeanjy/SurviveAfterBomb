@@ -1,6 +1,10 @@
 #pragma once
 #include "survivor.hpp"
 #include <vector>
+#include <cstdio>
+#include <iostream>
+#include <string>
+
 
 class app{
 public:
