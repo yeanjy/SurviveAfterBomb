@@ -52,3 +52,13 @@ void survivor::updateData()
   double thirstLoss = updateThirst();
   thirst -= thirstLoss;
 }
+
+void survivor::eat(food &f)
+{
+  hunger++;
+}
+
+void survivor::drink(water &w)
+{
+  thirst++;
+}
