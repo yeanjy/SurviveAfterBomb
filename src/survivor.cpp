@@ -37,12 +37,12 @@ double survivor::updateThirst()
 
   if (gender == 'm')
   { 
-    std::uniform_real_distribution<> dis(0.4, 0.5);
+    std::uniform_real_distribution<> dis(0.5, 0.7);
     return dis(gen);
   }
   else
   { 
-    std::uniform_real_distribution<> dis(0.3, 0.4);
+    std::uniform_real_distribution<> dis(0.4, 0.6);
     return dis(gen);
   }
 
@@ -65,20 +65,20 @@ void survivor::updateData()
   }
 }
 
-void survivor::eat(food &f)
-{
-  if (isAlive)
-   hunger++;
-  else
-   std::cout << "Personagem morto";
-}
-
-void survivor::drink(water &w)
-{
-  if(isAlive)
-    thirst++;
-  else
-   std::cout << "Personagem morto";
-}
+// void survivor::eat(food &f)
+// {
+//   if (isAlive)
+//    hunger++;
+//   else
+//    std::cout << "Personagem morto";
+// }
+//
+// void survivor::drink(water &w)
+// {
+//   if(isAlive)
+//     thirst++;
+//   else
+//    std::cout << "Personagem morto";
+// }
 
 bool survivor::getIsAlive() {return isAlive;}
