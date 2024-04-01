@@ -16,5 +16,17 @@
   "command": "/usr/sbin/c++  -I/home/yean/faculdade/SurviveAfterBomb/include -I/home/yean/faculdade/SurviveAfterBomb/external/include  -Wall -Wextra -o CMakeFiles/bomba.dir/src/app.cpp.o -c /home/yean/faculdade/SurviveAfterBomb/src/app.cpp",
   "file": "/home/yean/faculdade/SurviveAfterBomb/src/app.cpp",
   "output": "CMakeFiles/bomba.dir/src/app.cpp.o"
+},
+{
+  "directory": "/home/yean/faculdade/SurviveAfterBomb/build",
+  "command": "/usr/sbin/c++  -I/home/yean/faculdade/SurviveAfterBomb/include -I/home/yean/faculdade/SurviveAfterBomb/external/include  -Wall -Wextra -o CMakeFiles/bomba.dir/src/water.cpp.o -c /home/yean/faculdade/SurviveAfterBomb/src/water.cpp",
+  "file": "/home/yean/faculdade/SurviveAfterBomb/src/water.cpp",
+  "output": "CMakeFiles/bomba.dir/src/water.cpp.o"
+},
+{
+  "directory": "/home/yean/faculdade/SurviveAfterBomb/build",
+  "command": "/usr/sbin/c++  -I/home/yean/faculdade/SurviveAfterBomb/include -I/home/yean/faculdade/SurviveAfterBomb/external/include  -Wall -Wextra -o CMakeFiles/bomba.dir/src/food.cpp.o -c /home/yean/faculdade/SurviveAfterBomb/src/food.cpp",
+  "file": "/home/yean/faculdade/SurviveAfterBomb/src/food.cpp",
+  "output": "CMakeFiles/bomba.dir/src/food.cpp.o"
 }
 ]

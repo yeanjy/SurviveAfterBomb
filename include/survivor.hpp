@@ -14,8 +14,10 @@ public:
   void updateData();
   void eat(food &f);
   void drink(water &w);
+  void checkIsAlive();
   double updateHunger();
   double updateThirst();
+  bool getIsAlive();
 
 private:
   std::string name;

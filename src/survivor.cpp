@@ -7,8 +7,11 @@ survivor::survivor(std::string name, int age, char gender, double height,
 
 void survivor::printData()
 {
-  std::cout << this->name << " : " << "fome:" << std::setprecision(2)<< this->hunger 
-   << " sede:" << this->thirst << "\n";
+  if (isAlive)
+    std::cout << this->name << " : " << "fome:" << std::setprecision(2)<< this->hunger 
+     << " sede:" << this->thirst << "\n";
+  else
+   std::cout << this->name << ": Morto\n";
 }
 
 double survivor::updateHunger() {
@@ -45,20 +48,37 @@ double survivor::updateThirst()
 
 }
 
+void survivor::checkIsAlive()
+{
+  if (hunger <= 0 || thirst <= 0)
+    isAlive = false;
+}
+
 void survivor::updateData()
 {
+  if (isAlive)
+  {
   double metabolicLoss = updateHunger();
   hunger -= metabolicLoss;
   double thirstLoss = updateThirst();
   thirst -= thirstLoss;
+  }
 }
 
 void survivor::eat(food &f)
 {
-  hunger++;
+  if (isAlive)
+   hunger++;
+  else
+   std::cout << "Personagem morto";
 }
 
 void survivor::drink(water &w)
 {
-  thirst++;
+  if(isAlive)
+    thirst++;
+  else
+   std::cout << "Personagem morto";
 }
+
+bool survivor::getIsAlive() {return isAlive;}

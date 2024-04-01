@@ -15,7 +15,8 @@ public:
   void addMember();
   void printFamilyData();
   void updateFamilyData();
-  
+  void checkMenberIsAlive();
+  void checkEndOfGame();
 private:
   bool isRun = true;
   static int dayCounter;
