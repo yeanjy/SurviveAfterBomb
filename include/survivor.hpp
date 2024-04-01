@@ -1,10 +1,7 @@
 #pragma once
-#include <iostream>
-#include <iomanip>
-#include <random>
 #include "food.hpp"
 #include "water.hpp"
-
+#include <string>
 
 class survivor{
 public:

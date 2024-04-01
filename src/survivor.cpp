@@ -1,4 +1,7 @@
 #include "survivor.hpp"
+#include <iomanip>
+#include <random>
+#include <iostream>
 
 survivor::survivor(std::string name, int age, char gender, double height,
                    double weight, int hunger, int thirst, bool isAlive)

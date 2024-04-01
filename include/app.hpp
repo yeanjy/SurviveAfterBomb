@@ -3,10 +3,6 @@
 #include <item.hpp>
 #include <memory>
 #include <vector>
-#include <cstdio>
-#include <iostream>
-#include <string>
-
 
 class app{
 public:
