@@ -1,5 +1,7 @@
 #pragma once
 #include "survivor.hpp"
+#include <item.hpp>
+#include <memory>
 #include <vector>
 #include <cstdio>
 #include <iostream>
@@ -21,4 +23,5 @@ private:
   bool isRun = true;
   static int dayCounter;
   std::vector<survivor> family;
+  std::vector<std::shared_ptr<item>> inventory;
 };
