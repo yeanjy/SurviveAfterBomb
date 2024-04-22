@@ -1,5 +1,6 @@
 #include "app.hpp"
 #include "food.hpp"
+#include "survivor.hpp"
 #include "water.hpp"
 #include <cstdio>
 #include <iostream>
@@ -29,7 +30,7 @@ void app::addMember()
 
 void app::printFamilyData()
 {
-  for (auto &member : family)
+  for (survivor &member : family)
   {
     member.printData();
   }
@@ -37,7 +38,7 @@ void app::printFamilyData()
 
 void app::updateFamilyData()
 {
-  for (auto &member : family)
+  for (survivor &member : family)
   {
     member.updateData();
   }
@@ -63,7 +64,6 @@ void app::initInventory()
     std::shared_ptr<item> w = std::make_shared<water>();
     inventory.push_back(w);
   }
-
 }
 
 void app::checkEndOfGame()
@@ -80,7 +80,6 @@ void app::checkEndOfGame()
     std::cout << endText; 
     isRun = false;
   }
-
 }
 
 void app::printDay()
@@ -113,7 +112,8 @@ void app::run()
   addMember();
   initInventory();
 
-  while (isRun) {
+  while (isRun)
+  {
   checkMenberIsAlive();
   printDay();  
   printInventory();
@@ -122,5 +122,5 @@ void app::run()
   updateFamilyData();
   goToAnotherDay();
   checkEndOfGame();
-}
+  }
 }
