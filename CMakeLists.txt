@@ -17,6 +17,7 @@ set(
     ${SOURCE_DIR}/app.cpp
     ${SOURCE_DIR}/water.cpp
     ${SOURCE_DIR}/food.cpp
+    ${SOURCE_DIR}/medkit.cpp
 )
 
 # Adding executables
