@@ -70,7 +70,7 @@ void app::initInventory()
 void app::checkEndOfGame()
 {
   size_t counter = 0;
-   for (auto &menber : family)
+  for (auto &menber : family)
   {
     if (!menber.getIsAlive())
       counter++;
@@ -121,6 +121,8 @@ void app::run()
   printFamilyData(); 
 
   updateFamilyData();
+  //adicionar novos eventos e 
+  //consumir os eventos
   goToAnotherDay();
   checkEndOfGame();
   }
