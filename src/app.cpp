@@ -54,12 +54,13 @@ void app::checkMenberIsAlive()
 
 void app::initInventory()
 {
- for (auto i = 0; i < 5; i++)
+  for (auto i = 0; i < 5; i++)
   {
     std::shared_ptr<item> f = std::make_shared<food>();
     inventory.push_back(f);
   }
- for (auto i = 0; i < 5; i++)
+
+  for (auto i = 0; i < 5; i++)
   {
     std::shared_ptr<item> w = std::make_shared<water>();
     inventory.push_back(w);

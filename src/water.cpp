@@ -6,5 +6,5 @@ water::water()
 
 void water::printItem()
 {
-  std::cout << "W ";
+  std::cout << "🍶 ";
 }
