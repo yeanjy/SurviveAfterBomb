@@ -1,6 +1,9 @@
 #include "app.hpp"
+#include "food.hpp"
+#include "water.hpp"
 #include <cstdio>
 #include <iostream>
+#include <memory>
 #include <string>
 
 std::string openText = "Após a eclosão da Terceira Guerra Mundial e a subsequente guerra nuclear, uma família de Frankenmuth emerge como sobrevivente, confrontada não apenas pela devastação imediata, mas também pelo desafio constante de manter-se viva em um mundo transformado em um deserto radioativo e hostil. Com sua casa resistindo ao impacto direto da bomba, eles agora enfrentam a difícil tarefa de sobreviver em um ambiente de recursos escassos, radiação perigosa e a constante ameaça de outros sobreviventes desesperados.\n";
@@ -48,6 +51,21 @@ void app::checkMenberIsAlive()
   }
 }
 
+void app::initInventory()
+{
+ for (auto i = 0; i < 5; i++)
+  {
+    std::shared_ptr<item> f = std::make_shared<food>();
+    inventory.push_back(f);
+  }
+ for (auto i = 0; i < 5; i++)
+  {
+    std::shared_ptr<item> w = std::make_shared<water>();
+    inventory.push_back(w);
+  }
+
+}
+
 void app::checkEndOfGame()
 {
   size_t counter = 0;
@@ -79,14 +97,26 @@ void app::goToAnotherDay()
   getchar();
 }
 
+void app::printInventory()
+{
+  std::cout << "Inventório: ";
+  for (auto &item : inventory)
+  {
+    item->printItem(); 
+  }
+  std::cout << "\n";
+}
+
 void app::run()
 {
   std::cout << openText;
   addMember();
+  initInventory();
 
   while (isRun) {
   checkMenberIsAlive();
   printDay();  
+  printInventory();
   printFamilyData(); 
 
   updateFamilyData();

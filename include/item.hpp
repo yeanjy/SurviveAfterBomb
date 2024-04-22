@@ -2,5 +2,5 @@
 
 class item{
 public:
-  virtual void function() = 0;
+  virtual void printItem() = 0;
 };
