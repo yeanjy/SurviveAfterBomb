@@ -40,12 +40,12 @@ double survivor::updateThirst()
 
   if (gender == 'm')
   { 
-    std::uniform_real_distribution<> dis(0.5, 0.7);
+    std::uniform_real_distribution<> dis(0.8, 1);
     return dis(gen);
   }
   else
   { 
-    std::uniform_real_distribution<> dis(0.4, 0.6);
+    std::uniform_real_distribution<> dis(0.7, 0.9);
     return dis(gen);
   }
 
