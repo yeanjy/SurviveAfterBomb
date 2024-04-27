@@ -6,5 +6,5 @@ food::food()
 
 void food::printItem()
 {
-  std::cout << "🥫 ";
+  std::cout << "🥫";
 }

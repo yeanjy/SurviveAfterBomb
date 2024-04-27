@@ -2,6 +2,7 @@
 #include "survivor.hpp"
 #include <item.hpp>
 #include <memory>
+#include <unordered_map>
 #include <vector>
 
 class app{
@@ -21,5 +22,5 @@ private:
   bool isRun = true;
   static int dayCounter;
   std::vector<survivor> family;
-  std::vector<std::shared_ptr<item>> inventory;
+  std::unordered_map<std::shared_ptr<item>, int> inventory;
 };

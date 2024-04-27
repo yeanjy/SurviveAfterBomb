@@ -54,17 +54,10 @@ void app::checkMenberIsAlive()
 
 void app::initInventory()
 {
-  for (auto i = 0; i < 5; i++)
-  {
     std::shared_ptr<item> f = std::make_shared<food>();
-    inventory.push_back(f);
-  }
-
-  for (auto i = 0; i < 5; i++)
-  {
     std::shared_ptr<item> w = std::make_shared<water>();
-    inventory.push_back(w);
-  }
+    inventory.insert({f, 5});
+    inventory.insert({w, 5});
 }
 
 void app::checkEndOfGame()
@@ -100,9 +93,10 @@ void app::goToAnotherDay()
 void app::printInventory()
 {
   std::cout << "Inventório: ";
-  for (auto &item : inventory)
+  for (auto item : inventory)
   {
-    item->printItem(); 
+    item.first->printItem();
+    std::cout  << "x" << item.second << " "; 
   }
   std::cout << "\n";
 }
