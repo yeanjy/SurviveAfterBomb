@@ -1,5 +1,6 @@
 #pragma once
 #include "survivor.hpp"
+#include <cstddef>
 #include <item.hpp>
 #include <memory>
 #include <unordered_map>

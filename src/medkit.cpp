@@ -6,5 +6,5 @@ medkit::medkit()
 
 void medkit::printItem()
 {
-  std::cout << "🇨";
+  std::cout << "🆘";
 }

@@ -2,6 +2,7 @@
 #include "food.hpp"
 #include "survivor.hpp"
 #include "water.hpp"
+#include <cstddef>
 #include <cstdio>
 #include <iostream>
 #include <memory>
@@ -38,7 +39,7 @@ void app::printFamilyData()
 
 void app::updateFamilyData()
 {
-  for (survivor &member : family)
+  for (auto &member : family)
   {
     member.updateData();
   }
@@ -54,22 +55,22 @@ void app::checkMenberIsAlive()
 
 void app::initInventory()
 {
-    std::shared_ptr<item> f = std::make_shared<food>();
-    std::shared_ptr<item> w = std::make_shared<water>();
-    inventory.insert({f, 5});
-    inventory.insert({w, 5});
+  std::shared_ptr<item> f = std::make_shared<food>();
+  std::shared_ptr<item> w = std::make_shared<water>();
+  inventory.insert({f, 5});
+  inventory.insert({w, 5});
 }
 
 void app::checkEndOfGame()
 {
-  size_t counter = 0;
+  size_t survivorCounter = 0;
   for (auto &menber : family)
   {
     if (!menber.getIsAlive())
-      counter++;
+      survivorCounter++;
   }
 
-  if (counter == family.size()) 
+  if (survivorCounter == family.size()) 
   {
     std::cout << endText; 
     isRun = false;
