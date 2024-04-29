@@ -4,9 +4,9 @@
 #include <iostream>
 
 survivor::survivor(std::string name, int age, char gender, double height,
-                   double weight, int hunger, int thirst, bool isAlive)
+                   double weight, int hunger, int thirst, bool isAlive, bool isHealthy)
 : name(name), age(age), gender(gender), height(height), weight(weight),
-  hunger(hunger), thirst(thirst), isAlive(isAlive) {}
+  hunger(hunger), thirst(thirst), isAlive(isAlive), isHealthy(isHealthy) {}
 
 void survivor::printData()
 {
@@ -15,6 +15,39 @@ void survivor::printData()
      << " sede:" << this->thirst << "\n";
   else
    std::cout << this->name << ": Morto\n";
+}
+
+void survivor::checkIsAlive()
+{
+  if (hunger <= 0 || thirst <= 0)
+    isAlive = false;
+}
+
+void survivor::updateData()
+{
+  if (isAlive)
+  {
+  double metabolicLoss = updateHunger();
+  hunger -= metabolicLoss;
+  double thirstLoss = updateThirst();
+  thirst -= thirstLoss;
+  }
+}
+
+void survivor::eat()
+{
+  if (isAlive)
+   hunger++;
+  else
+   std::cout << "Personagem morto";
+}
+
+void survivor::drink()
+{
+  if(isAlive)
+    thirst++;
+  else
+   std::cout << "Personagem morto";
 }
 
 double survivor::updateHunger() {
@@ -51,37 +84,10 @@ double survivor::updateThirst()
 
 }
 
-void survivor::checkIsAlive()
-{
-  if (hunger <= 0 || thirst <= 0)
-    isAlive = false;
-}
+void survivor::setIsHealhy() {isHealthy = !isHealthy;}
 
-void survivor::updateData()
-{
-  if (isAlive)
-  {
-  double metabolicLoss = updateHunger();
-  hunger -= metabolicLoss;
-  double thirstLoss = updateThirst();
-  thirst -= thirstLoss;
-  }
-}
-
-// void survivor::eat(food &f)
-// {
-//   if (isAlive)
-//    hunger++;
-//   else
-//    std::cout << "Personagem morto";
-// }
-//
-// void survivor::drink(water &w)
-// {
-//   if(isAlive)
-//     thirst++;
-//   else
-//    std::cout << "Personagem morto";
-// }
+void survivor::setIsAlive() {isAlive = !isAlive;}
 
 bool survivor::getIsAlive() {return isAlive;}
+
+bool survivor::getIsHealthy() {return isHealthy;}

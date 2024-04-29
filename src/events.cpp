@@ -1,5 +1,13 @@
 #include "events.hpp"
 
-events::events(std::string eventText, survivor s)
-:eventText(eventText),s(s)
-{}
+void getSick(survivor &s)
+{
+  if (s.getIsHealthy())  
+  {
+    s.setIsHealhy();
+  }
+  else
+  {
+    s.setIsAlive();
+  }
+}

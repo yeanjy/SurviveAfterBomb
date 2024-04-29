@@ -1,12 +1,15 @@
 #include "app.hpp"
 #include "food.hpp"
+#include "medkit.hpp"
 #include "survivor.hpp"
 #include "water.hpp"
+#include <chrono>
 #include <cstddef>
 #include <cstdio>
 #include <iostream>
 #include <memory>
 #include <string>
+#include <thread>
 
 std::string openText = "Após a eclosão da Terceira Guerra Mundial e a subsequente guerra nuclear, uma família de Frankenmuth emerge como sobrevivente, confrontada não apenas pela devastação imediata, mas também pelo desafio constante de manter-se viva em um mundo transformado em um deserto radioativo e hostil. Com sua casa resistindo ao impacto direto da bomba, eles agora enfrentam a difícil tarefa de sobreviver em um ambiente de recursos escassos, radiação perigosa e a constante ameaça de outros sobreviventes desesperados.\n";
 
@@ -57,8 +60,10 @@ void app::initInventory()
 {
   std::shared_ptr<item> f = std::make_shared<food>();
   std::shared_ptr<item> w = std::make_shared<water>();
+  std::shared_ptr<item> m = std::make_shared<medkit>();
   inventory.insert({f, 5});
   inventory.insert({w, 5});
+  inventory.insert({m, 1});
 }
 
 void app::checkEndOfGame()
@@ -87,8 +92,9 @@ void app::printDay()
 
 void app::goToAnotherDay()
 {
-  std::cout << "Pressione enter para ir pro próximo dia\n";
-  getchar();
+  // std::cout << "Pressione enter para ir pro próximo dia\n";
+  // getchar();
+  std::this_thread::sleep_for(std::chrono::seconds(1));
 }
 
 void app::printInventory()
