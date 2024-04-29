@@ -6,20 +6,31 @@
 survivor::survivor(std::string name, int age, char gender, double height,
                    double weight, int hunger, int thirst, bool isAlive, bool isHealthy)
 : name(name), age(age), gender(gender), height(height), weight(weight),
-  hunger(hunger), thirst(thirst), isAlive(isAlive), isHealthy(isHealthy) {}
+  hunger(hunger), thirst(thirst), isAlive(isAlive), isHealthy(isHealthy),
+  daySinceSick(0) {}
 
 void survivor::printData()
 {
   if (isAlive)
+  {
     std::cout << this->name << " : " << "fome:" << std::setprecision(2)<< this->hunger 
-     << " sede:" << this->thirst << "\n";
+     << " sede:" << this->thirst;
+    if (!isHealthy)
+    {
+      std::cout << " 💀";
+    }
+    std::cout << "\n";
+  }
   else
    std::cout << this->name << ": Morto\n";
 }
 
 void survivor::checkIsAlive()
 {
-  if (hunger <= 0 || thirst <= 0)
+  if (!isHealthy)
+    daySinceSick++;
+
+  if (hunger <= 0 || thirst <= 0 || daySinceSick >= 7)
     isAlive = false;
 }
 
@@ -70,23 +81,23 @@ double survivor::updateThirst()
 {
   std::random_device rd;
   std::mt19937 gen(rd());
-
+  double thirstLoss;
   if (gender == 'm')
   { 
     std::uniform_real_distribution<> dis(0.8, 1);
-    return dis(gen);
+    thirstLoss = dis(gen);
   }
   else
   { 
     std::uniform_real_distribution<> dis(0.7, 0.9);
-    return dis(gen);
+    thirstLoss = dis(gen);
   }
-
+  return thirstLoss;
 }
 
-void survivor::setIsHealhy() {isHealthy = !isHealthy;}
+void survivor::setIsSick() {isHealthy = !isHealthy;}
 
-void survivor::setIsAlive() {isAlive = !isAlive;}
+void survivor::setIsDead() {isAlive = !isAlive;}
 
 bool survivor::getIsAlive() {return isAlive;}
 

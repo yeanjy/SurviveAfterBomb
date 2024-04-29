@@ -9,8 +9,8 @@ public:
   void updateData();
   void eat();
   void drink();
-  void setIsHealhy();
-  void setIsAlive();
+  void setIsDead();
+  void setIsSick();
   void checkIsAlive();
   double updateHunger();
   double updateThirst();
@@ -26,4 +26,5 @@ private:
   float thirst; //0-5
   bool isAlive; 
   bool isHealthy;
+  int daySinceSick;
 };

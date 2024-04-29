@@ -2,12 +2,8 @@
 
 void getSick(survivor &s)
 {
-  if (s.getIsHealthy())  
-  {
-    s.setIsHealhy();
-  }
-  else
-  {
-    s.setIsAlive();
-  }
+  if (!s.getIsHealthy())  
+    s.setIsDead();  
+  else 
+    s.setIsSick();
 }
