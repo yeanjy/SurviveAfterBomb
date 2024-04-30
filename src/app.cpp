@@ -1,4 +1,5 @@
 #include "app.hpp"
+#include "repiratoryMask.hpp"
 #include "food.hpp"
 #include "medkit.hpp"
 #include "survivor.hpp"
@@ -61,9 +62,11 @@ void app::initInventory()
   std::shared_ptr<item> f = std::make_shared<food>();
   std::shared_ptr<item> w = std::make_shared<water>();
   std::shared_ptr<item> m = std::make_shared<medkit>();
+  std::shared_ptr<item> mask = std::make_shared<respiratoryMask>();
   inventory.insert({f, 5});
   inventory.insert({w, 5});
   inventory.insert({m, 1});
+  inventory.insert({mask, 1});
 }
 
 void app::checkEndOfGame()
