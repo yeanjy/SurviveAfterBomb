@@ -19,6 +19,7 @@ set(
     ${SOURCE_DIR}/food.cpp
     ${SOURCE_DIR}/medkit.cpp
     ${SOURCE_DIR}/events.cpp
+    ${SOURCE_DIR}/respiratoryMask.cpp
 )
 
 # Adding executables
