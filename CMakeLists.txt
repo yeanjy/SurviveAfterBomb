@@ -12,14 +12,15 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_SOURCE_DIR}/bin)
 set(SOURCE_DIR ${CMAKE_SOURCE_DIR}/src)
 set(
     SOURCE_FILES
-    ${SOURCE_DIR}/survivor.cpp
-    ${SOURCE_DIR}/main.cpp
     ${SOURCE_DIR}/app.cpp
-    ${SOURCE_DIR}/water.cpp
-    ${SOURCE_DIR}/food.cpp
-    ${SOURCE_DIR}/medkit.cpp
     ${SOURCE_DIR}/events.cpp
+    ${SOURCE_DIR}/food.cpp
+    ${SOURCE_DIR}/main.cpp
+    ${SOURCE_DIR}/medkit.cpp
     ${SOURCE_DIR}/respiratoryMask.cpp
+    ${SOURCE_DIR}/survivor.cpp
+    ${SOURCE_DIR}/variables.cpp
+    ${SOURCE_DIR}/water.cpp
 )
 
 # Adding executables
