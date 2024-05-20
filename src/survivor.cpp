@@ -7,7 +7,7 @@
 survivor::survivor(std::string name, int age, char gender, double height,
                    double weight, int hunger, int thirst)
 : name(name), age(age), gender(gender), height(height), weight(weight),
-  hunger(hunger), thirst(thirst), isAlive(true), isHealthy(true),
+  hunger(hunger), thirst(thirst), isAlive(true), isHealthy(false),
   daySinceSick(0) {}
 
 void survivor::printData()
@@ -18,7 +18,7 @@ void survivor::printData()
      << " sede:" << this->thirst;
     if (!isHealthy)
     {
-      std::cout << " 💀";
+      std::cout << " 💀x" << daySinceSick;
     }
     std::cout << "\n";
   }
@@ -28,17 +28,17 @@ void survivor::printData()
 
 void survivor::checkIsAlive()
 {
-  if (!isHealthy)
-    daySinceSick++;
-  else 
-    daySinceSick = 0;
-
-  if (hunger <= 0 || thirst <= 0 || daySinceSick >= 7)
+   if (hunger <= 0 || thirst <= 0 || daySinceSick >= 7)
     isAlive = false;
 }
 
 void survivor::updateData()
 {
+  if (!isHealthy)
+    daySinceSick++;
+  else 
+    daySinceSick = 0;
+
   if (isAlive)
   {
   double metabolicLoss = updateHunger();

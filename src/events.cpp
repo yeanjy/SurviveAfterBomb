@@ -1,11 +1,11 @@
 #include "events.hpp"
 #include "item.hpp"
 #include "medkit.hpp"
+#include "variables.hpp"
 #include <iostream>
 #include <memory>
 #include <random>
 #include <unordered_map>
-#include "variables.hpp"
 
 bool verifyEvent(double porcentage)
 {

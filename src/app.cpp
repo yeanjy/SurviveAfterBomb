@@ -12,6 +12,7 @@
 #include <iostream>
 #include <memory>
 #include <random>
+#include <set>
 #include <thread>
 #include <vector>
 
@@ -34,6 +35,22 @@ void app::consumeEvents()
     int m = d(gen);
     events[e](family[m], inventory, 99);
   }
+  // std::uniform_int_distribution<int> dis(0, events.size()-1) ;
+  // std::uniform_int_distribution<int> d(0, family.size()-1) ;
+  //
+  // std::set<int> event;
+  // std::set<int> member;
+  //
+  // while (event.size() < 3)
+  // {
+  //   int e = dis(gen);
+  //   event.insert(e);
+  // }
+  // while(member.size() < 3)
+  // {
+  //   int m = d(gen);
+  //   member.insert(m);
+  // }
 }
 
 void app::addMember()
@@ -47,25 +64,19 @@ void app::addMember()
 void app::printFamilyData()
 {
   for (survivor &member : family)
-  {
     member.printData();
-  }
 }
 
 void app::updateFamilyData()
 {
   for (auto &member : family)
-  {
     member.updateData();
-  }
 }
 
 void app::checkMenberIsAlive()
 {
   for (auto &member : family)
-  {
     member.checkIsAlive();
-  }
 }
 
 void app::initInventory()
