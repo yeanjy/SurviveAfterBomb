@@ -5,9 +5,7 @@
 #include <memory>
 #include <random>
 #include <unordered_map>
-
-std::random_device rd;
-std::mt19937 gen(rd());
+#include "variables.hpp"
 
 bool verifyEvent(double porcentage)
 {

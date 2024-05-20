@@ -4,14 +4,13 @@
 #include <memory>
 #include <unordered_map>
 #include <vector>
-typedef void (*FunctionPointer)(survivor&);
+typedef void (*FunctionPointer)(survivor&, std::unordered_map<std::shared_ptr<item>,int>&, double porcentage);
 
 class app{
 public:
   app();
   void run();
   void printDay(); 
-  void goToAnotherDay();
   void addMember();
   void printFamilyData();
   void updateFamilyData();
@@ -19,6 +18,7 @@ public:
   void checkEndOfGame();
   void initInventory();
   void initEvents();
+  void consumeEvents();
   void printInventory();
   std::unordered_map<std::shared_ptr<item>, int> inventory;
 private:

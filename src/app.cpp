@@ -11,6 +11,7 @@
 #include <cstdio>
 #include <iostream>
 #include <memory>
+#include <random>
 #include <thread>
 #include <vector>
 
@@ -20,7 +21,19 @@ int app::dayCounter = 1;
 
 void app::initEvents()
 {
-  // events.push_back(&getSick);
+  events.push_back(&getSick);
+}
+
+void app::consumeEvents()
+{
+  for(size_t i = 0; i < 3; i++)
+  {
+    std::uniform_int_distribution<int> dis(0, events.size()-1) ;
+    std::uniform_int_distribution<int> d(0, family.size()-1) ;
+    int e = dis(gen);
+    int m = d(gen);
+    events[e](family[m], inventory, 99);
+  }
 }
 
 void app::addMember()
@@ -49,9 +62,9 @@ void app::updateFamilyData()
 
 void app::checkMenberIsAlive()
 {
-  for (auto &menber : family)
+  for (auto &member : family)
   {
-    menber.checkIsAlive();
+    member.checkIsAlive();
   }
 }
 
@@ -70,9 +83,9 @@ void app::initInventory()
 void app::checkEndOfGame()
 {
   size_t survivorCounter = 0;
-  for (auto &menber : family)
+  for (auto &member : family)
   {
-    if (!menber.getIsAlive())
+    if (!member.getIsAlive())
       survivorCounter++;
   }
 
@@ -91,13 +104,6 @@ void app::printDay()
   dayCounter++;
 }
 
-void app::goToAnotherDay()
-{
-  // std::cout << "Pressione enter para ir pro próximo dia\n";
-  // getchar();
-  std::this_thread::sleep_for(std::chrono::seconds(1));
-}
-
 void app::printInventory()
 {
   std::cout << "Inventório: ";
@@ -114,16 +120,18 @@ void app::run()
   std::cout << openText;
   addMember();
   initInventory();
+  initEvents();
 
   while (isRun)
   {
   checkMenberIsAlive();
   printDay();  
   printInventory();
+  consumeEvents();
   printFamilyData(); 
 
   updateFamilyData();
-  goToAnotherDay();
+  std::this_thread::sleep_for(std::chrono::seconds(1));
   checkEndOfGame();
   }
 }
