@@ -4,7 +4,7 @@
 class survivor{
 public:
   survivor(std::string name, int age, char gender, double height,
-          double weight, int hunger = 5, int thirst = 5, bool isAlive = true,bool isHealthy = true);
+          double weight, int hunger = 5, int thirst = 5);
   void printData();
   void updateData();
   void eat();
@@ -12,6 +12,7 @@ public:
   void setIsDead();
   void setIsSick();
   void checkIsAlive();
+  std::string getName();
   double updateHunger();
   double updateThirst();
   bool getIsAlive();

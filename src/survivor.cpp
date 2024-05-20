@@ -2,11 +2,12 @@
 #include <iomanip>
 #include <random>
 #include <iostream>
+#include <string>
 
 survivor::survivor(std::string name, int age, char gender, double height,
-                   double weight, int hunger, int thirst, bool isAlive, bool isHealthy)
+                   double weight, int hunger, int thirst)
 : name(name), age(age), gender(gender), height(height), weight(weight),
-  hunger(hunger), thirst(thirst), isAlive(isAlive), isHealthy(isHealthy),
+  hunger(hunger), thirst(thirst), isAlive(true), isHealthy(true),
   daySinceSick(0) {}
 
 void survivor::printData()
@@ -29,6 +30,8 @@ void survivor::checkIsAlive()
 {
   if (!isHealthy)
     daySinceSick++;
+  else 
+    daySinceSick = 0;
 
   if (hunger <= 0 || thirst <= 0 || daySinceSick >= 7)
     isAlive = false;
@@ -95,10 +98,18 @@ double survivor::updateThirst()
   return thirstLoss;
 }
 
-void survivor::setIsSick() {isHealthy = !isHealthy;}
+void survivor::setIsSick() {
+  if(isHealthy)
+    isHealthy = false;
+}
 
-void survivor::setIsDead() {isAlive = !isAlive;}
+void survivor::setIsDead() {
+  if(isAlive)
+    isAlive = false;
+}
 
 bool survivor::getIsAlive() {return isAlive;}
 
 bool survivor::getIsHealthy() {return isHealthy;}
+
+std::string survivor::getName() {return name;}

@@ -20,10 +20,10 @@ public:
   void initInventory();
   void initEvents();
   void printInventory();
+  std::unordered_map<std::shared_ptr<item>, int> inventory;
 private:
   bool isRun = true;
   static int dayCounter;
   std::vector<survivor> family;
   std::vector<FunctionPointer> events;
-  std::unordered_map<std::shared_ptr<item>, int> inventory;
 };

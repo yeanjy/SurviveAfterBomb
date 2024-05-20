@@ -20,7 +20,7 @@ int app::dayCounter = 1;
 
 void app::initEvents()
 {
-  events.push_back(&getSick);
+  // events.push_back(&getSick);
 }
 
 void app::addMember()
@@ -123,8 +123,6 @@ void app::run()
   printFamilyData(); 
 
   updateFamilyData();
-  //adicionar novos eventos e 
-  //consumir os eventos
   goToAnotherDay();
   checkEndOfGame();
   }
