@@ -1,7 +1,10 @@
 #include "events.hpp"
+#include "food.hpp"
 #include "item.hpp"
 #include "medkit.hpp"
+#include "repiratoryMask.hpp"
 #include "variables.hpp"
+#include "water.hpp"
 #include <iostream>
 #include <memory>
 #include <random>
@@ -12,16 +15,6 @@ bool verifyEvent(double porcentage)
   std::uniform_real_distribution<double> dis(0, 99);
   double aux = dis(gen);
   return porcentage>=aux? true:false;
-}
-
-std::shared_ptr<item> findMedkit(std::unordered_map<std::shared_ptr<item>, int>& inventory)
-{
-  for (const auto& pair : inventory) {
-    if (std::dynamic_pointer_cast<medkit>(pair.first)) {
-      return pair.first;
-    }
-  }
-  return nullptr;
 }
 
 void getSick(survivor &s, std::unordered_map<std::shared_ptr<item>,int> &inventory, double porcentage)
@@ -60,4 +53,41 @@ void getSick(survivor &s, std::unordered_map<std::shared_ptr<item>,int> &invento
         }
     }
   }
+}
+
+std::shared_ptr<item> findMedkit(std::unordered_map<std::shared_ptr<item>, int>& inventory)
+{
+  for (const auto& pair : inventory) {
+    if (std::dynamic_pointer_cast<medkit>(pair.first)) {
+      return pair.first;
+    }
+  }
+  return nullptr;
+}
+std::shared_ptr<item> findWater(std::unordered_map<std::shared_ptr<item>, int>& inventory)
+{
+  for (const auto& pair : inventory) {
+    if (std::dynamic_pointer_cast<water>(pair.first)) {
+      return pair.first;
+    }
+  }
+  return nullptr;
+}
+std::shared_ptr<item> findFood(std::unordered_map<std::shared_ptr<item>, int>& inventory)
+{
+  for (const auto& pair : inventory) {
+    if (std::dynamic_pointer_cast<food>(pair.first)) {
+      return pair.first;
+    }
+  }
+  return nullptr;
+}
+std::shared_ptr<item> findMask(std::unordered_map<std::shared_ptr<item>, int>& inventory)
+{
+  for (const auto& pair : inventory) {
+    if (std::dynamic_pointer_cast<respiratoryMask>(pair.first)) {
+      return pair.first;
+    }
+  }
+  return nullptr;
 }
