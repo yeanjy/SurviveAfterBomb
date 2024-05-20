@@ -135,14 +135,14 @@ void app::run()
 
   while (isRun)
   {
-  checkMenberIsAlive();
-  printDay();  
-  printInventory();
-  consumeEvents();
-  printFamilyData(); 
+    checkMenberIsAlive();
+    printDay();  
+    printInventory();
+    consumeEvents();
+    printFamilyData(); 
 
-  updateFamilyData();
-  std::this_thread::sleep_for(std::chrono::seconds(1));
-  checkEndOfGame();
+    updateFamilyData();
+    std::this_thread::sleep_for(std::chrono::seconds(1));
+    checkEndOfGame();
   }
 }

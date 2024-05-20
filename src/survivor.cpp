@@ -7,7 +7,7 @@
 survivor::survivor(std::string name, int age, char gender, double height,
                    double weight, int hunger, int thirst)
 : name(name), age(age), gender(gender), height(height), weight(weight),
-  hunger(hunger), thirst(thirst), isAlive(true), isHealthy(false),
+  hunger(hunger), thirst(thirst), isAlive(true), isHealthy(true),
   daySinceSick(0) {}
 
 void survivor::printData()
