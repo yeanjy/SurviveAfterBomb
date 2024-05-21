@@ -1,8 +1,13 @@
 #include "survivor.hpp"
+#include "item.hpp"
+#include "variables.hpp"
+#include "events.hpp"
 #include <iomanip>
+#include <memory>
 #include <random>
 #include <iostream>
 #include <string>
+#include <unordered_map>
 
 survivor::survivor(std::string name, int age, char gender, double height,
                    double weight, int hunger, int thirst)
@@ -32,12 +37,47 @@ void survivor::checkIsAlive()
     isAlive = false;
 }
 
-void survivor::updateData()
+void survivor::updateData(std::unordered_map<std::shared_ptr<item>, int> &inventory)
 {
   if (!isHealthy)
     daySinceSick++;
+
   else 
     daySinceSick = 0;
+
+  if (hunger < 2)
+  { 
+    std::shared_ptr<item> foodptr = findFood(inventory);
+    if(foodptr)
+    { 
+      auto it = inventory.find(foodptr);
+      if(it != inventory.end())
+      {
+        if(it->second > 0) 
+        {
+          eat();
+          it->second--;
+        }
+      }
+    }
+  }
+
+  if(thirst < 2)
+  {
+    std::shared_ptr<item> waterPtr = findWater(inventory);
+        if(waterPtr)
+        { 
+          auto it = inventory.find(waterPtr);
+          if(it != inventory.end())
+          {
+            if(it->second > 0) 
+            {
+              drink();
+              it->second--;
+            }
+          }
+        }
+  }
 
   if (isAlive)
   {
@@ -52,16 +92,16 @@ void survivor::eat()
 {
   if (isAlive)
    hunger++;
-  else
-   std::cout << "Personagem morto";
+  // else
+  //  std::cout << "Personagem morto";
 }
 
 void survivor::drink()
 {
   if(isAlive)
     thirst++;
-  else
-   std::cout << "Personagem morto";
+  // else
+  //  std::cout << "Personagem morto";
 }
 
 double survivor::updateHunger() {
@@ -87,12 +127,12 @@ double survivor::updateThirst()
   double thirstLoss;
   if (gender == 'm')
   { 
-    std::uniform_real_distribution<> dis(0.8, 1);
+    std::uniform_real_distribution<> dis(0.6, 0.8);
     thirstLoss = dis(gen);
   }
   else
   { 
-    std::uniform_real_distribution<> dis(0.7, 0.9);
+    std::uniform_real_distribution<> dis(0.5, 0.7);
     thirstLoss = dis(gen);
   }
   return thirstLoss;

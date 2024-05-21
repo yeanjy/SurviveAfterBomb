@@ -17,6 +17,50 @@ bool verifyEvent(double porcentage)
   return porcentage>=aux? true:false;
 }
 
+void getFood(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, double porcentage)
+{
+  bool occurred = verifyEvent(porcentage);
+
+  if(!occurred)
+    return;
+
+  std::shared_ptr<item> foodPtr = findFood(inventory);
+
+  if(foodPtr)
+  {
+    auto it = inventory.find(foodPtr);
+    if (it != inventory.end())
+    {
+      std::uniform_int_distribution<> dis(1, 2); 
+      int tmp = dis(gen);
+      it->second += tmp;
+      std::cout << "Foi achado " << tmp << "comida\n";
+    }
+  }
+}
+
+void getWater(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, double porcentage)
+{
+  bool occurred = verifyEvent(porcentage);
+
+  if(!occurred)
+    return;
+
+  std::shared_ptr<item> waterPtr = findWater(inventory);
+
+  if(waterPtr)
+  {
+    auto it = inventory.find(waterPtr);
+    if (it != inventory.end())
+    {
+      std::uniform_int_distribution<> dis(1, 2); 
+      int tmp = dis(gen);
+      it->second += tmp;
+      std::cout << "Foi achado " << tmp << "água\n";
+    }
+  }
+}
+
 void getSick(survivor &s, std::unordered_map<std::shared_ptr<item>,int> &inventory, double porcentage)
 {
   bool occurred = verifyEvent(porcentage);

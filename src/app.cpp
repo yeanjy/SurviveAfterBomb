@@ -23,6 +23,8 @@ int app::dayCounter = 1;
 void app::initEvents()
 {
   events.push_back(&getSick);
+  events.push_back(&getFood);
+  events.push_back(&getWater);
 }
 
 void app::consumeEvents()
@@ -70,7 +72,7 @@ void app::printFamilyData()
 void app::updateFamilyData()
 {
   for (auto &member : family)
-    member.updateData();
+    member.updateData(inventory);
 }
 
 void app::checkMenberIsAlive()
