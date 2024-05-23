@@ -92,16 +92,12 @@ void survivor::eat()
 {
   if (isAlive)
    hunger++;
-  // else
-  //  std::cout << "Personagem morto";
 }
 
 void survivor::drink()
 {
   if(isAlive)
     thirst++;
-  // else
-  //  std::cout << "Personagem morto";
 }
 
 double survivor::updateHunger() {
@@ -115,7 +111,7 @@ double survivor::updateHunger() {
  
   metabolicRate -= metabolicRate*0.99;
   double result = metabolicRate;
-  result -= result*0.98;
+  result -= result*0.96;
 
   return result;
 }

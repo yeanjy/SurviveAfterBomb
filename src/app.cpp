@@ -1,31 +1,16 @@
 #include "app.hpp"
-#include "repiratoryMask.hpp"
-#include "food.hpp"
-#include "medkit.hpp"
 #include "survivor.hpp"
-#include "water.hpp"
-#include "events.hpp"
 #include "variables.hpp"
 #include <chrono>
 #include <cstddef>
 #include <cstdio>
 #include <iostream>
-#include <memory>
 #include <random>
 #include <set>
 #include <thread>
 #include <vector>
 
 app::app(){};
-
-int app::dayCounter = 1; 
-
-void app::initEvents()
-{
-  events.push_back(&getSick);
-  events.push_back(&getFood);
-  events.push_back(&getWater);
-}
 
 void app::consumeEvents()
 {
@@ -55,14 +40,6 @@ void app::consumeEvents()
   // }
 }
 
-void app::addMember()
-{
-  family.push_back(dad); 
-  family.push_back(mon);
-  family.push_back(son);
-  family.push_back(daughter);
-}
-
 void app::printFamilyData()
 {
   for (survivor &member : family)
@@ -79,18 +56,6 @@ void app::checkMenberIsAlive()
 {
   for (auto &member : family)
     member.checkIsAlive();
-}
-
-void app::initInventory()
-{
-  std::shared_ptr<item> f = std::make_shared<food>();
-  std::shared_ptr<item> w = std::make_shared<water>();
-  std::shared_ptr<item> m = std::make_shared<medkit>();
-  std::shared_ptr<item> mask = std::make_shared<respiratoryMask>();
-  inventory.insert({f, 5});
-  inventory.insert({w, 5});
-  inventory.insert({m, 1});
-  inventory.insert({mask, 1});
 }
 
 void app::checkEndOfGame()
@@ -131,10 +96,7 @@ void app::printInventory()
 void app::run()
 {
   std::cout << openText;
-  addMember();
-  initInventory();
-  initEvents();
-
+  initInventory(inventory);
   while (isRun)
   {
     checkMenberIsAlive();
