@@ -16,6 +16,8 @@ public:
   void setIsSick();
   void updateData(std::unordered_map<std::shared_ptr<item>, int> &inventory);
   void checkIsAlive();
+  void antiWarn();
+  void setDaySinceSick(int n);
   std::string getName();
   double updateHunger();
   double updateThirst();

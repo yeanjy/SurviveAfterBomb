@@ -104,8 +104,8 @@ void app::run()
     printInventory();
     consumeEvents();
     printFamilyData(); 
-
     updateFamilyData();
+
     std::this_thread::sleep_for(std::chrono::seconds(1));
     checkEndOfGame();
   }

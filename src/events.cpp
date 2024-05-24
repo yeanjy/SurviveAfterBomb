@@ -19,6 +19,8 @@ bool verifyEvent(double porcentage)
 
 void getFood(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, double porcentage)
 {
+  s.antiWarn();
+
   bool occurred = verifyEvent(porcentage);
 
   if(!occurred)
@@ -41,6 +43,8 @@ void getFood(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &invent
 
 void getWater(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, double porcentage)
 {
+  s.antiWarn();
+
   bool occurred = verifyEvent(porcentage);
 
   if(!occurred)
@@ -75,26 +79,27 @@ void getSick(survivor &s, std::unordered_map<std::shared_ptr<item>,int> &invento
     auto it = inventory.find(medkitPtr);
     if (it != inventory.end())
     {
-        int quantity = it->second;
+      int quantity = it->second;
 
-        if (quantity > 0)
-        {
-            it->second--;
-            std::cout << s.getName() << " pegou uma doença, ainda bem que tinha um medkit e está curada\n";
-        }
-        else 
-        {
-            if (!s.getIsHealthy())
-            {
-                s.setIsDead();
-                std::cout << s.getName() << " pegou outra doença e morreu\n";
-            }
-            else 
-            {
-                s.setIsSick();
-                std::cout << s.getName() << " está doente\n";
-            }
-        }
+      if (quantity > 0)
+      {
+        it->second--;
+        std::cout << s.getName() << " pegou uma doença, ainda bem que tinha um medkit e está curada\n";
+        s.setDaySinceSick(0); 
+      }
+      else 
+      {
+          if (!s.getIsHealthy())
+          {
+            s.setIsDead();
+            std::cout << s.getName() << " pegou outra doença e morreu\n";
+          }
+          else 
+          {
+            s.setIsSick();
+            std::cout << s.getName() << " está doente\n";
+          }
+      }
     }
   }
 }

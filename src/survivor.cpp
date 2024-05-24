@@ -42,9 +42,6 @@ void survivor::updateData(std::unordered_map<std::shared_ptr<item>, int> &invent
   if (!isHealthy)
     daySinceSick++;
 
-  else 
-    daySinceSick = 0;
-
   if (hunger < 2)
   { 
     std::shared_ptr<item> foodptr = findFood(inventory);
@@ -143,6 +140,10 @@ void survivor::setIsDead() {
   if(isAlive)
     isAlive = false;
 }
+
+void survivor::antiWarn() {}
+
+void survivor::setDaySinceSick(int n) {daySinceSick = n;}
 
 bool survivor::getIsAlive() {return isAlive;}
 
