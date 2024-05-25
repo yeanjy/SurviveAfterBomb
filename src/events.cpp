@@ -41,6 +41,75 @@ void getFood(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &invent
   }
 }
 
+void lostFood(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, double porcentage)
+{
+  s.antiWarn();
+
+  bool occurred = verifyEvent(porcentage);
+
+  if(!occurred)
+    return;
+
+  std::shared_ptr<item> foodPtr = findFood(inventory);
+
+  if(foodPtr)
+  {
+    auto it = inventory.find(foodPtr);
+    if (it != inventory.end())
+    {
+      if (it->second <= 0)
+        return;
+      else if(it->second>2)
+      {
+        std::uniform_int_distribution<> dis(1, 2); 
+        int tmp = dis(gen);
+        it->second -= tmp;
+        std::cout << "Foi perdido " << tmp << "comida\n";
+      }
+      else
+      {
+        it->second --;
+        std::cout << "Foi perdido " << 1 << "comida\n";
+      }
+    }
+  }
+}
+
+void lostWater(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, double porcentage)
+{
+  s.antiWarn();
+
+  bool occurred = verifyEvent(porcentage);
+
+  if(!occurred)
+    return;
+
+  std::shared_ptr<item> waterptr = findWater(inventory);
+
+  if(waterptr)
+  {
+    auto it = inventory.find(waterptr);
+    if (it != inventory.end())
+    {
+      if (it->second <= 0)
+        return;
+      else if(it->second>2)
+      {
+        std::uniform_int_distribution<> dis(1, 2); 
+        int tmp = dis(gen);
+        it->second -= tmp;
+        std::cout << "Foi perdido " << tmp << "água\n";
+      }
+      else
+      {
+        it->second --;
+        std::cout << "Foi perdido " << 1 << "água\n";
+      }
+    }
+  }
+}
+
+
 void getWater(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, double porcentage)
 {
   s.antiWarn();
