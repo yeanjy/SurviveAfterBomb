@@ -173,6 +173,20 @@ void getSick(survivor &s, std::unordered_map<std::shared_ptr<item>,int> &invento
   }
 }
 
+
+void armyHelp(survivor &s, std::unordered_map<std::shared_ptr<item>,int> &inventory, double porcentage)
+{
+  bool occurred = verifyEvent(porcentage);
+
+  if (!occurred)
+    return;
+  s.antiWarn();
+  inventory.clear();
+
+  std::cout << "A família foi achado por militares, todos foram salvo, fim do jogo.\n";
+  isRun = false;
+}
+
 std::shared_ptr<item> findMedkit(std::unordered_map<std::shared_ptr<item>, int>& inventory)
 {
   for (const auto& pair : inventory) {

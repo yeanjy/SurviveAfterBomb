@@ -22,7 +22,7 @@ bool isRun = true;
 std::random_device rd;
 std::mt19937 gen(rd());
 std::vector<survivor> family = {dad, mon, son, daughter};
-std::vector<FunctionPointer> events = {getSick, getFood, getWater, lostFood, lostWater};
+std::vector<FunctionPointer> events = {getSick, getFood, getWater, lostFood, lostWater, armyHelp};
 std::unordered_map<std::shared_ptr<item>, int> inventory;
 
 void initInventory(std::unordered_map<std::shared_ptr<item>, int> &inventory)

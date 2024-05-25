@@ -16,30 +16,29 @@ app::~app(){}
 
 void app::consumeEvents()
 {
-  for(size_t i = 0; i < 3; i++)
+  std::uniform_int_distribution<int> dis(0, events.size()-1) ;
+  std::uniform_int_distribution<int> d(0, family.size()-1) ;
+
+  std::set<int> event;
+  std::set<int> member;
+
+  while (event.size() < 3)
   {
-    std::uniform_int_distribution<int> dis(0, events.size()-1) ;
-    std::uniform_int_distribution<int> d(0, family.size()-1) ;
     int e = dis(gen);
-    int m = d(gen);
-    events[e](family[m], inventory, 99);
+    event.insert(e);
   }
-  // std::uniform_int_distribution<int> dis(0, events.size()-1) ;
-  // std::uniform_int_distribution<int> d(0, family.size()-1) ;
-  //
-  // std::set<int> event;
-  // std::set<int> member;
-  //
-  // while (event.size() < 3)
-  // {
-  //   int e = dis(gen);
-  //   event.insert(e);
-  // }
-  // while(member.size() < 3)
-  // {
-  //   int m = d(gen);
-  //   member.insert(m);
-  // }
+  while(member.size() < 3)
+  {
+    int m = d(gen);
+    member.insert(m);
+  }
+  std::vector<int> event_indices(event.begin(), event.end());
+  std::vector<int> member_indices(member.begin(), member.end());
+
+  for (int i = 0; i < 3; ++i)
+    events[event_indices[i]](family[member_indices[i]], inventory, 99);
+
+  std::cout << "\n";
 }
 
 void app::printFamilyData()
@@ -78,7 +77,7 @@ void app::checkEndOfGame()
 
 void app::printDay()
 {
-  std::cout << "\n";
+  std::cout << "----------------------------------\n";
   std::cout << "Dia : " << dayCounter << "\n";
   std::cout << "\n";
   dayCounter++;
@@ -92,6 +91,7 @@ void app::printInventory()
     item.first->printItem();
     std::cout  << "x" << item.second << " "; 
   }
+  std::cout << "\n";
   std::cout << "\n";
 }
 
