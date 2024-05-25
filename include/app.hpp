@@ -4,6 +4,7 @@
 class app{
 public:
   app();
+  ~app();
   void run();
   void printDay(); 
   void printFamilyData();

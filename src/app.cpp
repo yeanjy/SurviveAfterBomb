@@ -12,6 +12,8 @@
 
 app::app(){};
 
+app::~app(){}
+
 void app::consumeEvents()
 {
   for(size_t i = 0; i < 3; i++)
