@@ -1,5 +1,5 @@
-#include "repiratoryMask.hpp"
 #include <iostream>
+#include "repiratoryMask.hpp"
 
 respiratoryMask::respiratoryMask()
 {}

@@ -1,13 +1,13 @@
-#include "survivor.hpp"
-#include "item.hpp"
-#include "variables.hpp"
-#include "events.hpp"
 #include <iomanip>
 #include <memory>
 #include <random>
 #include <iostream>
 #include <string>
 #include <unordered_map>
+#include "survivor.hpp"
+#include "item.hpp"
+#include "variables.hpp"
+#include "events.hpp"
 
 survivor::survivor(std::string name, int age, char gender, double height,
                    double weight, int hunger, int thirst)
@@ -88,13 +88,13 @@ void survivor::updateData(std::unordered_map<std::shared_ptr<item>, int> &invent
 void survivor::eat()
 {
   if (isAlive)
-   hunger++;
+   hunger += 1.3;
 }
 
 void survivor::drink()
 {
   if(isAlive)
-    thirst++;
+    thirst += 1.3;
 }
 
 double survivor::updateHunger() {
@@ -108,7 +108,7 @@ double survivor::updateHunger() {
  
   metabolicRate -= metabolicRate*0.99;
   double result = metabolicRate;
-  result -= result*0.96;
+  result -= result*0.97;
 
   return result;
 }

@@ -1,5 +1,5 @@
-#include "medkit.hpp"
 #include <iostream>
+#include "medkit.hpp"
 
 medkit::medkit()
 {}

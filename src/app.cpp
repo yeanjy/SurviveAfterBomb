@@ -1,6 +1,3 @@
-#include "app.hpp"
-#include "survivor.hpp"
-#include "variables.hpp"
 #include <chrono>
 #include <cstddef>
 #include <cstdio>
@@ -9,10 +6,11 @@
 #include <set>
 #include <thread>
 #include <vector>
+#include "app.hpp"
+#include "survivor.hpp"
+#include "variables.hpp"
 
 app::app(){};
-
-app::~app(){}
 
 void app::consumeEvents()
 {
@@ -71,6 +69,8 @@ void app::checkEndOfGame()
   if (survivorCounter == family.size()) 
   {
     std::cout << endText; 
+    inventory.clear();
+    std::cout << "----------------------------------\n";
     isRun = false;
   }
 }

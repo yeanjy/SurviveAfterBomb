@@ -1,5 +1,5 @@
-#include "food.hpp"
 #include <iostream>
+#include "food.hpp"
 
 food::food()
 {}

@@ -1,3 +1,7 @@
+#include <iostream>
+#include <memory>
+#include <random>
+#include <unordered_map>
 #include "events.hpp"
 #include "food.hpp"
 #include "item.hpp"
@@ -5,16 +9,13 @@
 #include "repiratoryMask.hpp"
 #include "variables.hpp"
 #include "water.hpp"
-#include <iostream>
-#include <memory>
-#include <random>
-#include <unordered_map>
+
 
 bool verifyEvent(double porcentage)
 {
   std::uniform_real_distribution<double> dis(0, 99);
   double aux = dis(gen);
-  return porcentage>=aux? true:false;
+  return porcentage>=aux;
 }
 
 void getFood(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, double porcentage)

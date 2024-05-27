@@ -18,11 +18,11 @@ public:
   void checkIsAlive();
   void antiWarn();
   void setDaySinceSick(int n);
-  std::string getName();
   double updateHunger();
   double updateThirst();
   bool getIsAlive();
   bool getIsHealthy();
+  std::string getName();
 private:
   std::string name;
   int age;
