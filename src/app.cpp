@@ -70,7 +70,6 @@ void app::checkEndOfGame()
   {
     std::cout << endText; 
     inventory.clear();
-    std::cout << "----------------------------------\n";
     isRun = false;
   }
 }
