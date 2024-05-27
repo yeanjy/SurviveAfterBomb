@@ -46,9 +46,20 @@ void survivor::checkIsAlive()
 void survivor::updateData(std::unordered_map<std::shared_ptr<item>, int> &inventory)
 {
   if (isExploring)
+  {
+    if (exploringDays >= 3)
+    {
+      isExploring = false;
+      exploringDays = 0;
+      hunger = 3;
+      thirst = 3;
+      getFood(*this, inventory, 99);
+      getWater(*this, inventory, 99);
+      return;
+    }
     exploringDays++;
-  else 
-    exploringDays = 0;
+    return;
+  }
 
   if (!isHealthy)
     daySinceSick++;

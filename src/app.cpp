@@ -1,11 +1,11 @@
-#include <chrono>
 #include <cstddef>
 #include <cstdio>
 #include <iostream>
 #include <random>
 #include <set>
-#include <thread>
 #include <vector>
+#include <chrono>
+#include <thread>
 #include "app.hpp"
 #include "survivor.hpp"
 #include "variables.hpp"

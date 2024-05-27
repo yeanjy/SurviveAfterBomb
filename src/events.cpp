@@ -17,13 +17,15 @@ bool verifyEvent(double porcentage)
   return porcentage>=aux;
 }
 
+// void goToExplore(survivor &s, std::unordered_map<std::shared_ptr<item>,int> &inventory, double porcentage)
+// {
+// }
+
 void getFood(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, double porcentage)
 {
   s.antiWarn();
 
-  bool occurred = verifyEvent(porcentage);
-
-  if(!occurred)
+  if(!verifyEvent(porcentage))
     return;
 
   std::shared_ptr<item> foodPtr = findFood(inventory);
@@ -45,9 +47,7 @@ void lostFood(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inven
 {
   s.antiWarn();
 
-  bool occurred = verifyEvent(porcentage);
-
-  if(!occurred)
+  if(!verifyEvent(porcentage))
     return;
 
   std::shared_ptr<item> foodPtr = findFood(inventory);
@@ -79,9 +79,7 @@ void getWater(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inven
 {
   s.antiWarn();
 
-  bool occurred = verifyEvent(porcentage);
-
-  if(!occurred)
+  if(!verifyEvent(porcentage))
     return;
 
   std::shared_ptr<item> waterPtr = findWater(inventory);
@@ -103,16 +101,14 @@ void lostWater(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inve
 {
   s.antiWarn();
 
-  bool occurred = verifyEvent(porcentage);
-
-  if(!occurred)
+  if(!verifyEvent(porcentage))
     return;
 
-  std::shared_ptr<item> waterptr = findWater(inventory);
+  std::shared_ptr<item> waterPtr = findWater(inventory);
 
-  if(waterptr)
+  if(waterPtr)
   {
-    auto it = inventory.find(waterptr);
+    auto it = inventory.find(waterPtr);
     if (it != inventory.end())
     {
       if (it->second <= 0)
@@ -137,9 +133,7 @@ void getMedkit(survivor &s, std::unordered_map<std::shared_ptr<item>,int> &inven
 {
   s.antiWarn();
 
-  bool occurred = verifyEvent(porcentage);
-
-  if(!occurred)
+  if(!verifyEvent(porcentage))
     return;
 
   std::shared_ptr<item> medkitPtr = findMedkit(inventory);
@@ -157,9 +151,7 @@ void getMedkit(survivor &s, std::unordered_map<std::shared_ptr<item>,int> &inven
 
 void getSick(survivor &s, std::unordered_map<std::shared_ptr<item>,int> &inventory, double porcentage)
 {
-  bool occurred = verifyEvent(porcentage);
-
-  if (!occurred || !s.getIsAlive())
+  if (!verifyEvent(porcentage) || !s.getIsAlive())
     return;
 
   std::shared_ptr<item> medkitPtr = findMedkit(inventory);
@@ -197,9 +189,7 @@ void getSick(survivor &s, std::unordered_map<std::shared_ptr<item>,int> &invento
 
 void armyHelp(survivor &s, std::unordered_map<std::shared_ptr<item>,int> &inventory, double porcentage)
 {
-  bool occurred = verifyEvent(porcentage);
-
-  if (!occurred)
+  if (!verifyEvent(porcentage))
     return;
   s.antiWarn();
   inventory.clear();
