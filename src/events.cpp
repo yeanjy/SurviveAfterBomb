@@ -10,7 +10,6 @@
 #include "variables.hpp"
 #include "water.hpp"
 
-
 bool verifyEvent(double porcentage)
 {
   std::uniform_real_distribution<double> dis(0, 99);
@@ -76,6 +75,30 @@ void lostFood(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inven
   }
 }
 
+void getWater(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, double porcentage)
+{
+  s.antiWarn();
+
+  bool occurred = verifyEvent(porcentage);
+
+  if(!occurred)
+    return;
+
+  std::shared_ptr<item> waterPtr = findWater(inventory);
+
+  if(waterPtr)
+  {
+    auto it = inventory.find(waterPtr);
+    if (it != inventory.end())
+    {
+      std::uniform_int_distribution<> dis(1, 2); 
+      int tmp = dis(gen);
+      it->second += tmp;
+      std::cout << "Foi achado " << tmp << "água\n";
+    }
+  }
+}
+
 void lostWater(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, double porcentage)
 {
   s.antiWarn();
@@ -110,8 +133,7 @@ void lostWater(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inve
   }
 }
 
-
-void getWater(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, double porcentage)
+void getMedkit(survivor &s, std::unordered_map<std::shared_ptr<item>,int> &inventory, double porcentage)
 {
   s.antiWarn();
 
@@ -120,17 +142,15 @@ void getWater(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inven
   if(!occurred)
     return;
 
-  std::shared_ptr<item> waterPtr = findWater(inventory);
+  std::shared_ptr<item> medkitPtr = findMedkit(inventory);
 
-  if(waterPtr)
+  if(medkitPtr)
   {
-    auto it = inventory.find(waterPtr);
+    auto it = inventory.find(medkitPtr);
     if (it != inventory.end())
     {
-      std::uniform_int_distribution<> dis(1, 2); 
-      int tmp = dis(gen);
-      it->second += tmp;
-      std::cout << "Foi achado " << tmp << "água\n";
+      it->second ++;
+      std::cout << "Foi achado " << 1 << "medkit\n";
     }
   }
 }

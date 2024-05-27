@@ -4,7 +4,6 @@
 #include <unordered_map>
 #include <string>
 
-
 class survivor{
 public:
   survivor(std::string name, int age, char gender, double height,
@@ -35,4 +34,6 @@ private:
   bool isAlive; 
   bool isHealthy;
   int daySinceSick;
+  bool isExploring;
+  int exploringDays;
 };

@@ -8,6 +8,7 @@ bool verifyEvent(double porcentage);
 void getSick(survivor &s, std::unordered_map<std::shared_ptr<item>,int> &inventory, double porcentage);
 void getFood(survivor &s, std::unordered_map<std::shared_ptr<item>,int> &inventory, double porcentage);
 void getWater(survivor &s, std::unordered_map<std::shared_ptr<item>,int> &inventory, double porcentage);
+void getMedkit(survivor &s, std::unordered_map<std::shared_ptr<item>,int> &inventory, double porcentage);
 void lostFood(survivor &s, std::unordered_map<std::shared_ptr<item>,int> &inventory, double porcentage);
 void lostWater(survivor &s, std::unordered_map<std::shared_ptr<item>,int> &inventory, double porcentage);
 void armyHelp(survivor &s, std::unordered_map<std::shared_ptr<item>,int> &inventory, double porcentage);

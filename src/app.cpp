@@ -84,7 +84,7 @@ void app::printDay()
 
 void app::printInventory()
 {
-  std::cout << "Inventório: ";
+  std::cout << "Inventário: ";
   for (auto item : inventory)
   {
     item.first->printItem();
@@ -107,7 +107,7 @@ void app::run()
     printFamilyData(); 
     updateFamilyData();
 
-    std::this_thread::sleep_for(std::chrono::seconds(1));
+    // std::this_thread::sleep_for(std::chrono::seconds(1));
     checkEndOfGame();
   }
 }

@@ -13,12 +13,18 @@ survivor::survivor(std::string name, int age, char gender, double height,
                    double weight, int hunger, int thirst)
 : name(name), age(age), gender(gender), height(height), weight(weight),
   hunger(hunger), thirst(thirst), isAlive(true), isHealthy(true),
-  daySinceSick(0) {}
+  daySinceSick(0), isExploring(false), exploringDays(0) {}
 
 void survivor::printData()
 {
   if (isAlive)
   {
+    if (isExploring)
+    {
+      std::cout << this->name << " - explorando. Volta em : " << 3-exploringDays << " dia\n";
+      return;
+    }
+
     std::cout << this->name << " : " << "fome:" << std::setprecision(2)<< this->hunger 
      << " sede:" << this->thirst;
     if (!isHealthy)
@@ -39,6 +45,11 @@ void survivor::checkIsAlive()
 
 void survivor::updateData(std::unordered_map<std::shared_ptr<item>, int> &inventory)
 {
+  if (isExploring)
+    exploringDays++;
+  else 
+    exploringDays = 0;
+
   if (!isHealthy)
     daySinceSick++;
 

@@ -18,11 +18,12 @@ survivor mon("Dolores", 31, 'f', 181, 72);
 survivor son("Timmy", 14, 'm', 142, 42);
 survivor daughter("Mary Jane", 17, 'f', 163, 62);
 int dayCounter = 1;
+bool exploring = false;
 bool isRun = true;
 std::random_device rd;
 std::mt19937 gen(rd());
 std::vector<survivor> family = {dad, mon, son, daughter};
-std::vector<FunctionPointer> events = {getSick, getFood, getWater, lostFood, lostWater/* , armyHelp */};
+std::vector<FunctionPointer> events = {getSick, getFood, getWater, lostFood, lostWater, getMedkit/* , armyHelp */};
 std::unordered_map<std::shared_ptr<item>, int> inventory;
 
 void initInventory(std::unordered_map<std::shared_ptr<item>, int> &inventory)
