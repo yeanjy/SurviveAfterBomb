@@ -12,5 +12,6 @@ public:
   void checkMenberIsAlive();
   void checkEndOfGame();
   void consumeEvents();
+  void checkExplore();
   void printInventory();
 };

@@ -1,12 +1,14 @@
 #include <cstddef>
 #include <cstdio>
 #include <iostream>
+#include <memory>
 #include <random>
 #include <set>
 #include <vector>
 #include <chrono>
 #include <thread>
 #include "app.hpp"
+#include "events.hpp"
 #include "survivor.hpp"
 #include "variables.hpp"
 
@@ -39,16 +41,43 @@ void app::consumeEvents()
   std::cout << "\n";
 }
 
+//arrumar bug
+void app::checkExplore()
+{
+  if (exploring)
+    return;
+  
+  std::shared_ptr<item> foodPtr = findFood(inventory);
+  std::shared_ptr<item> waterPtr = findWater(inventory);
+  if (foodPtr && waterPtr)
+  {
+    auto it = inventory.find(foodPtr);
+    auto itt = inventory.find(waterPtr);
+    if (it != inventory.end() && itt !=inventory.end())
+    {
+      if (it->second <= 3 || itt->second <= 3)
+      {
+        exploring = true;
+        std::uniform_int_distribution<int> dis(0, family.size()-1) ;
+        int e = dis(gen);
+        std::cout << family[e].getName() << " foi explorar, devido a falta de comida/água\n";
+        family[e].goToExplore(); 
+      }
+    }
+  }
+}
+
 void app::printFamilyData()
 {
   for (survivor &member : family)
     member.printData();
+  std::cout << "\n";
 }
 
 void app::updateFamilyData()
 {
   for (auto &member : family)
-    member.updateData(inventory);
+    member.updateData();
 }
 
 void app::checkMenberIsAlive()
@@ -105,6 +134,7 @@ void app::run()
     printInventory();
     consumeEvents();
     printFamilyData(); 
+    checkExplore();
     updateFamilyData();
 
     // std::this_thread::sleep_for(std::chrono::seconds(1));

@@ -12,7 +12,6 @@ void getMedkit(survivor &s, std::unordered_map<std::shared_ptr<item>,int> &inven
 void lostFood(survivor &s, std::unordered_map<std::shared_ptr<item>,int> &inventory, double porcentage);
 void lostWater(survivor &s, std::unordered_map<std::shared_ptr<item>,int> &inventory, double porcentage);
 void armyHelp(survivor &s, std::unordered_map<std::shared_ptr<item>,int> &inventory, double porcentage);
-void goToExplore(survivor &s, std::unordered_map<std::shared_ptr<item>,int> &inventory, double porcentage);
 std::shared_ptr<item> findMedkit(std::unordered_map<std::shared_ptr<item>, int>& inventory);
 std::shared_ptr<item> findWater(std::unordered_map<std::shared_ptr<item>, int>& inventory);
 std::shared_ptr<item> findFood(std::unordered_map<std::shared_ptr<item>, int>& inventory);

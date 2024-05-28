@@ -37,18 +37,57 @@ void survivor::printData()
    std::cout << this->name << ": Morto\n";
 }
 
+//arrumar bug
+void survivor::goToExplore()
+{
+  isExploring = true;
+
+  std::shared_ptr<item> maskPtr = findMask(inventory);
+  if (maskPtr)
+  {
+    auto it = inventory.find(maskPtr);
+    if (it != inventory.end())
+    {
+      if (it->second < 1)
+      {
+        if (verifyEvent(75))
+        {
+          setIsDead();
+          isExploring = false;
+          exploring = false;
+          std::cout << name << " morreu por causa da radiação\n";
+          it->second--;
+        }
+        return;
+      }
+      if (verifyEvent(5)) 
+      {
+        setIsDead();
+        exploring = false;
+        isExploring = false;
+        std::cout << name << " morreu por causa da radiação\n";
+        it->second--;
+        return;
+      }
+    }
+  }
+
+}
+
 void survivor::checkIsAlive()
 {
    if (hunger <= 0 || thirst <= 0 || daySinceSick >= 7)
     isAlive = false;
 }
 
-void survivor::updateData(std::unordered_map<std::shared_ptr<item>, int> &inventory)
+//arrumar bug
+void survivor::updateData()
 {
   if (isExploring)
   {
     if (exploringDays >= 3)
     {
+      exploring = false;
       isExploring = false;
       exploringDays = 0;
       hunger = 3;

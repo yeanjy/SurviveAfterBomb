@@ -17,10 +17,6 @@ bool verifyEvent(double porcentage)
   return porcentage>=aux;
 }
 
-// void goToExplore(survivor &s, std::unordered_map<std::shared_ptr<item>,int> &inventory, double porcentage)
-// {
-// }
-
 void getFood(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, double porcentage)
 {
   s.antiWarn();

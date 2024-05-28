@@ -1,7 +1,4 @@
 #pragma once
-#include "item.hpp"
-#include <memory>
-#include <unordered_map>
 #include <string>
 
 class survivor{
@@ -14,9 +11,9 @@ public:
   void drink();
   void setIsDead();
   void setIsSick();
-  void updateData(std::unordered_map<std::shared_ptr<item>, int> &inventory);
   void checkIsAlive();
   void antiWarn();
+  void goToExplore();
   void setDaySinceSick(int n);
   double updateHunger();
   double updateThirst();
