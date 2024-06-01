@@ -20,6 +20,7 @@ survivor daughter("Mary Jane", 17, 'f', 163, 62);
 int dayCounter = 1;
 bool exploring = false;
 bool isRun = true;
+bool tookTheMask = false;
 std::random_device rd;
 std::mt19937 gen(rd());
 std::vector<survivor> family = {dad, mon, son, daughter};

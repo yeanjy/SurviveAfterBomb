@@ -48,7 +48,7 @@ void survivor::goToExplore()
     auto it = inventory.find(maskPtr);
     if (it != inventory.end())
     {
-      if (it->second <= 0)
+      if (!tookTheMask)
       {
         if (verifyEvent(75))
         {
@@ -58,13 +58,15 @@ void survivor::goToExplore()
           std::cout << name << " morreu por causa da radiação\n";
         }
       }
-      else if (verifyEvent(5)) 
+      else  
       {
-        setIsDead();
-        exploring = false;
-        isExploring = false;
-        std::cout << name << " morreu por causa da radiação\n";
-        it->second--;
+        if (verifyEvent(5))
+        { 
+          setIsDead();
+          exploring = false;
+          isExploring = false;
+          std::cout << name << " morreu por causa da radiação\n";
+        }
       }
     }
   }
@@ -197,7 +199,7 @@ void survivor::setDaySinceSick(int n) {daySinceSick = n;}
 
 void survivor::addExploringDays() {exploringDays+=1;}
 
-void survivor::setIsExlporing(bool n) {isExploring = n;}
+void survivor::setIsExploring(bool n) {isExploring = n;}
 
 void survivor::setExploringDays(int n) {exploringDays = n;}
 
@@ -205,7 +207,7 @@ void survivor::setHunger(int n) {hunger = n;}
 
 void survivor::setThirst(int n) {thirst = n;}
 
-int survivor::getExlporingDay() {return exploringDays;}
+int survivor::getExploringDay() {return exploringDays;}
 
 bool survivor::getIsAlive() {return isAlive;}
 

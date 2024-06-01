@@ -20,5 +20,6 @@ extern std::vector<FunctionPointer> events;
 extern std::unordered_map<std::shared_ptr<item>, int> inventory;
 extern bool exploring;
 extern bool isRun;
+extern bool tookTheMask;
 extern int dayCounter;
 void initInventory(std::unordered_map<std::shared_ptr<item>, int> &inventory);

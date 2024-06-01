@@ -11,7 +11,7 @@ public:
   void drink();
   void setIsDead();
   void setIsSick();
-  void setIsExlporing(bool n);
+  void setIsExploring(bool n);
   void setExploringDays(int n);
   void addExploringDays();
   void checkIsAlive();
@@ -22,7 +22,7 @@ public:
   void setDaySinceSick(int n);
   double updateHunger();
   double updateThirst();
-  int getExlporingDay();
+  int getExploringDay();
   bool getIsAlive();
   bool getIsHealthy();
   bool getIsExploring();

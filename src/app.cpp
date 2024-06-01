@@ -44,17 +44,25 @@ void app::consumeEvents()
 
 void app::checkExplore()
 {
-  if (exploring) 
+  std::shared_ptr<item> maskPtr = findMask(inventory);
+  auto maskIt = inventory.find(maskPtr);
+
+  if (exploring)
   {
     for (auto &menber : family)
-    { 
+    {
       if (menber.getIsExploring())
       {
-        menber.addExploringDays();  
-        if (menber.getExlporingDay() >= 3)
+        menber.addExploringDays();
+        if (menber.getExploringDay() >= 3)
         {
-          exploring = false; 
-          menber.setIsExlporing(false);
+          if (tookTheMask && maskPtr && maskIt != inventory.end())
+          {
+            tookTheMask = false;
+            maskIt->second++;
+          }
+          exploring = false;
+          menber.setIsExploring(false);
           menber.setExploringDays(0);
           menber.setThirst(3);
           menber.setHunger(3);
@@ -68,23 +76,23 @@ void app::checkExplore()
     }
     return;
   }
-  
+
   std::shared_ptr<item> foodPtr = findFood(inventory);
   std::shared_ptr<item> waterPtr = findWater(inventory);
 
   if (foodPtr && waterPtr)
   {
-    auto it = inventory.find(foodPtr);
-    auto itt = inventory.find(waterPtr);
+    auto foodIt = inventory.find(foodPtr);
+    auto waterIt = inventory.find(waterPtr);
 
-    if (it != inventory.end() && itt != inventory.end())
+    if (foodIt != inventory.end() && waterIt != inventory.end())
     {
-      if (it->second <= 3 || itt->second <= 3)
+      if (foodIt->second <= 3 || waterIt->second <= 3)
       {
         if (checkFamilyHealth())
           return;
 
-        exploring = true; 
+        exploring = true;
 
         std::uniform_int_distribution<int> dis(0, family.size() - 1);
         int e = dis(gen);
@@ -104,10 +112,17 @@ void app::checkExplore()
         {
           std::cout << family[e].getName() << " foi explorar, devido a falta de comida/água\n";
           std::cout << "\n";
-          family[e].goToExplore(); 
+          if (maskPtr && maskIt != inventory.end() && maskIt->second > 0)
+          {
+            tookTheMask = true;
+            maskIt->second--;
+          }
+          family[e].goToExplore();
         }
         else
-          exploring = false; 
+        {
+          exploring = false;
+        }
       }
     }
   }
