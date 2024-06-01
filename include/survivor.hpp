@@ -11,12 +11,18 @@ public:
   void drink();
   void setIsDead();
   void setIsSick();
+  void setIsExlporing(bool n);
+  void setExploringDays(int n);
+  void addExploringDays();
   void checkIsAlive();
+  void setHunger(int n);
+  void setThirst(int n);
   void antiWarn();
   void goToExplore();
   void setDaySinceSick(int n);
   double updateHunger();
   double updateThirst();
+  int getExlporingDay();
   bool getIsAlive();
   bool getIsHealthy();
   bool getIsExploring();

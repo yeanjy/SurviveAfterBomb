@@ -42,35 +42,72 @@ void app::consumeEvents()
   std::cout << "\n";
 }
 
-//arrumar bug
 void app::checkExplore()
 {
-  if (exploring)
+  if (exploring) 
+  {
+    for (auto &menber : family)
+    { 
+      if (menber.getIsExploring())
+      {
+        menber.addExploringDays();  
+        if (menber.getExlporingDay() >= 3)
+        {
+          exploring = false; 
+          menber.setIsExlporing(false);
+          menber.setExploringDays(0);
+          menber.setThirst(3);
+          menber.setHunger(3);
+          std::cout << menber.getName() << " voltou da exploração. Ganhos:\n\t";
+          getFood(menber, inventory, 99);
+          std::cout << "\t";
+          getWater(menber, inventory, 99);
+          std::cout << "\n";
+        }
+      }
+    }
     return;
+  }
   
   std::shared_ptr<item> foodPtr = findFood(inventory);
   std::shared_ptr<item> waterPtr = findWater(inventory);
+
   if (foodPtr && waterPtr)
   {
     auto it = inventory.find(foodPtr);
     auto itt = inventory.find(waterPtr);
-    if (it != inventory.end() && itt !=inventory.end())
+
+    if (it != inventory.end() && itt != inventory.end())
     {
       if (it->second <= 3 || itt->second <= 3)
       {
         if (checkFamilyHealth())
           return;
 
-        exploring = true;
-        std::uniform_int_distribution<int> dis(0, family.size()-1) ;
+        exploring = true; 
 
+        std::uniform_int_distribution<int> dis(0, family.size() - 1);
         int e = dis(gen);
 
-        while (!family[e].getIsAlive() || !family[e].getIsHealthy())
+        bool foundExplorer = false;
+        for (size_t attempts = 0; attempts < family.size(); ++attempts)
+        {
           e = dis(gen);
-        
-        std::cout << family[e].getName() << " foi explorar, devido a falta de comida/água\n";
-        family[e].goToExplore(); 
+          if (family[e].getIsAlive() && family[e].getIsHealthy())
+          {
+            foundExplorer = true;
+            break;
+          }
+        }
+
+        if (foundExplorer)
+        {
+          std::cout << family[e].getName() << " foi explorar, devido a falta de comida/água\n";
+          std::cout << "\n";
+          family[e].goToExplore(); 
+        }
+        else
+          exploring = false; 
       }
     }
   }
@@ -148,10 +185,10 @@ void app::run()
   {
     checkMenberIsAlive();
     printDay();  
-    printInventory();
     consumeEvents();
-    printFamilyData(); 
     checkExplore();
+    printInventory();
+    printFamilyData(); 
     updateFamilyData();
 
     // std::this_thread::sleep_for(std::chrono::seconds(1));
