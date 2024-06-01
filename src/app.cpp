@@ -36,7 +36,8 @@ void app::consumeEvents()
   std::vector<int> member_indices(member.begin(), member.end());
 
   for (int i = 0; i < 3; ++i)
-    events[event_indices[i]](family[member_indices[i]], inventory, 99);
+    if (!family[member_indices[i]].getIsExploring() && family[member_indices[i]].getIsAlive())
+      events[event_indices[i]](family[member_indices[i]], inventory, 99);
 
   std::cout << "\n";
 }
@@ -57,9 +58,17 @@ void app::checkExplore()
     {
       if (it->second <= 3 || itt->second <= 3)
       {
+        if (checkFamilyHealth())
+          return;
+
         exploring = true;
         std::uniform_int_distribution<int> dis(0, family.size()-1) ;
+
         int e = dis(gen);
+
+        while (!family[e].getIsAlive() || !family[e].getIsHealthy())
+          e = dis(gen);
+        
         std::cout << family[e].getName() << " foi explorar, devido a falta de comida/água\n";
         family[e].goToExplore(); 
       }
@@ -84,6 +93,14 @@ void app::checkMenberIsAlive()
 {
   for (auto &member : family)
     member.checkIsAlive();
+}
+
+bool app::checkFamilyHealth()
+{
+  return (!dad.getIsAlive() || !dad.getIsHealthy()) &&
+         (!mon.getIsAlive() || !mon.getIsHealthy()) &&
+         (!son.getIsAlive() || !son.getIsHealthy()) &&
+         (!daughter.getIsAlive() || !daughter.getIsHealthy());
 }
 
 void app::checkEndOfGame()

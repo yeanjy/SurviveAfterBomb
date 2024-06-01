@@ -19,6 +19,7 @@ public:
   double updateThirst();
   bool getIsAlive();
   bool getIsHealthy();
+  bool getIsExploring();
   std::string getName();
 private:
   std::string name;

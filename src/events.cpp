@@ -19,8 +19,6 @@ bool verifyEvent(double porcentage)
 
 void getFood(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, double porcentage)
 {
-  s.antiWarn();
-
   if(!verifyEvent(porcentage))
     return;
 
@@ -34,7 +32,7 @@ void getFood(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &invent
       std::uniform_int_distribution<> dis(1, 2); 
       int tmp = dis(gen);
       it->second += tmp;
-      std::cout << "Foi achado " << tmp << "comida\n";
+      std::cout << s.getName() <<" achou " << tmp << "comida\n";
     }
   }
 }
@@ -73,8 +71,6 @@ void lostFood(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inven
 
 void getWater(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, double porcentage)
 {
-  s.antiWarn();
-
   if(!verifyEvent(porcentage))
     return;
 
@@ -88,7 +84,7 @@ void getWater(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inven
       std::uniform_int_distribution<> dis(1, 2); 
       int tmp = dis(gen);
       it->second += tmp;
-      std::cout << "Foi achado " << tmp << "água\n";
+      std::cout << s.getName() << " achou " << tmp << "água\n";
     }
   }
 }

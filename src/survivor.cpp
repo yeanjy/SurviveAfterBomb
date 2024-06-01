@@ -19,14 +19,14 @@ void survivor::printData()
 {
   if (isAlive)
   {
-    if (isExploring)
+    if (isExploring && exploringDays <= 2)
     {
-      std::cout << this->name << " - explorando. Volta em : " << 3-exploringDays << " dia\n";
+      std::cout << name << " - explorando. Volta em : " << 3-exploringDays << " dia\n";
       return;
     }
 
-    std::cout << this->name << " : " << "fome:" << std::setprecision(2)<< this->hunger 
-     << " sede:" << this->thirst;
+    std::cout << name << " : " << "fome:" << std::setprecision(2)<< hunger 
+     << " sede:" << thirst;
     if (!isHealthy)
     {
       std::cout << " 💀x" << daySinceSick;
@@ -34,7 +34,7 @@ void survivor::printData()
     std::cout << "\n";
   }
   else
-   std::cout << this->name << ": Morto\n";
+   std::cout << name << ": Morto\n";
 }
 
 //arrumar bug
@@ -48,7 +48,7 @@ void survivor::goToExplore()
     auto it = inventory.find(maskPtr);
     if (it != inventory.end())
     {
-      if (it->second < 1)
+      if (it->second <= 0)
       {
         if (verifyEvent(75))
         {
@@ -56,22 +56,18 @@ void survivor::goToExplore()
           isExploring = false;
           exploring = false;
           std::cout << name << " morreu por causa da radiação\n";
-          it->second--;
         }
-        return;
       }
-      if (verifyEvent(5)) 
+      else if (verifyEvent(5)) 
       {
         setIsDead();
         exploring = false;
         isExploring = false;
         std::cout << name << " morreu por causa da radiação\n";
         it->second--;
-        return;
       }
     }
   }
-
 }
 
 void survivor::checkIsAlive()
@@ -83,24 +79,37 @@ void survivor::checkIsAlive()
 //arrumar bug
 void survivor::updateData()
 {
-  if (isExploring)
+  if (isAlive)
   {
-    if (exploringDays >= 3)
+    if (isExploring)
     {
-      exploring = false;
-      isExploring = false;
-      exploringDays = 0;
-      hunger = 3;
-      thirst = 3;
-      getFood(*this, inventory, 99);
-      getWater(*this, inventory, 99);
+      exploringDays++;
+      if (exploringDays >= 3)
+      {
+        exploring = false;
+        isExploring = false;
+        exploringDays = 0;
+        hunger = 3;
+        thirst = 3;
+        std::cout << name << " voltou da exploração. Ganhos:\n";
+        getFood(*this, inventory, 99);
+        getWater(*this, inventory, 99);
+      }
       return;
     }
-    exploringDays++;
-    return;
   }
 
-  if (!isHealthy)
+  std::shared_ptr<item> medkitprt = findMedkit(inventory);
+  auto it = inventory.find(medkitprt);
+
+  if (!isHealthy && it->second >0)
+  {
+    daySinceSick = 0;
+    isHealthy = true;
+    it->second--;
+    std::cout << name << " se curou com um medkit\n";
+  }
+  else if (!isHealthy)
     daySinceSick++;
 
   if (hunger < 2)
@@ -209,5 +218,7 @@ void survivor::setDaySinceSick(int n) {daySinceSick = n;}
 bool survivor::getIsAlive() {return isAlive;}
 
 bool survivor::getIsHealthy() {return isHealthy;}
+
+bool survivor::getIsExploring() {return isExploring;}
 
 std::string survivor::getName() {return name;}

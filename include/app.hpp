@@ -14,4 +14,5 @@ public:
   void consumeEvents();
   void checkExplore();
   void printInventory();
+  bool checkFamilyHealth();
 };
