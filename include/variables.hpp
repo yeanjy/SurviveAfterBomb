@@ -5,7 +5,7 @@
 #include <memory>
 #include "item.hpp"
 #include "survivor.hpp"
-typedef void (*FunctionPointer)(survivor&, std::unordered_map<std::shared_ptr<item>,int>&, double porcentage);
+typedef void (*FunctionPointer)(survivor&, std::unordered_map<std::shared_ptr<item>,int>&);
 
 extern survivor dad;
 extern survivor mon;
@@ -22,4 +22,10 @@ extern bool exploring;
 extern bool isRun;
 extern bool tookTheMask;
 extern int dayCounter;
+extern double getSickPorcentage;
+extern double getLostFoodPorcentage;
+extern double getLostWaterPorcentage;
+extern double getLostMedkitPorcentage;
+extern double armyHelpPorcentage;
 void initInventory(std::unordered_map<std::shared_ptr<item>, int> &inventory);
+void updatePorcentage();

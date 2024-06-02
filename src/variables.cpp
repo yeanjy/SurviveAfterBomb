@@ -26,6 +26,12 @@ std::mt19937 gen(rd());
 std::vector<survivor> family = {dad, mon, son, daughter};
 std::vector<FunctionPointer> events = {getSick, getFood, getWater, lostFood, lostWater, getMedkit/* , armyHelp */};
 std::unordered_map<std::shared_ptr<item>, int> inventory;
+double getSickPorcentage = 5;
+double getLostFoodPorcentage = 15;
+double getLostWaterPorcentage = 15;
+double getLostMedkitPorcentage = 10;
+double armyHelpPorcentage = 1;
+
 
 void initInventory(std::unordered_map<std::shared_ptr<item>, int> &inventory)
 {
@@ -37,4 +43,13 @@ void initInventory(std::unordered_map<std::shared_ptr<item>, int> &inventory)
   inventory.insert({w, 10});
   inventory.insert({m, 1});
   inventory.insert({med, 1});
+}
+
+void updatePorcentage()
+{
+  getSickPorcentage += 0.5;
+  getLostMedkitPorcentage += 0.3;
+  getLostFoodPorcentage += 0.4;
+  getLostWaterPorcentage += 0.4;
+  armyHelpPorcentage += 0.3;
 }

@@ -37,7 +37,7 @@ void app::consumeEvents()
 
   for (int i = 0; i < 3; ++i)
     if (!family[member_indices[i]].getIsExploring() && family[member_indices[i]].getIsAlive())
-      events[event_indices[i]](family[member_indices[i]], inventory, 99);
+      events[event_indices[i]](family[member_indices[i]], inventory);
 
   std::cout << "\n";
 }
@@ -66,11 +66,8 @@ void app::checkExplore()
           menber.setExploringDays(0);
           menber.setThirst(3);
           menber.setHunger(3);
-          std::cout << menber.getName() << " voltou da exploração. Ganhos:\n\t";
-          getFood(menber, inventory, 99);
-          std::cout << "\t";
-          getWater(menber, inventory, 99);
-          std::cout << "\n";
+          std::cout << menber.getName() << " voltou da exploração. Ganhos:\n";
+          exploreGain(inventory);
         }
       }
     }
@@ -207,6 +204,7 @@ void app::run()
     updateFamilyData();
 
     // std::this_thread::sleep_for(std::chrono::seconds(1));
+    updatePorcentage();
     checkEndOfGame();
   }
 }
