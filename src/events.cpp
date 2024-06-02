@@ -9,6 +9,7 @@
 #include "repiratoryMask.hpp"
 #include "variables.hpp"
 #include "water.hpp"
+#include "app.hpp"
 
 bool verifyEvent(double porcentage)
 {
@@ -17,9 +18,9 @@ bool verifyEvent(double porcentage)
   return porcentage>=aux;
 }
 
-void getFood(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory)
+void getFood(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, app &a)
 {
-  if(!verifyEvent(getLostFoodPorcentage))
+  if(!verifyEvent(a.getLostFoodPorcentage))
     return;
 
   std::shared_ptr<item> foodPtr = findFood(inventory);
@@ -32,16 +33,16 @@ void getFood(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &invent
       std::uniform_int_distribution<> dis(1, 2); 
       int tmp = dis(gen);
       it->second += tmp;
-      std::cout << s.getName() <<" achou " << tmp << "comida\n";
+      std::cout << s.getName() <<" achou " << tmp << " comida\n";
     }
   }
 }
 
-void lostFood(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory)
+void lostFood(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, app &a)
 {
   s.antiWarn();
 
-  if(!verifyEvent(getLostFoodPorcentage))
+  if(!verifyEvent(a.getLostFoodPorcentage))
     return;
 
   std::shared_ptr<item> foodPtr = findFood(inventory);
@@ -53,25 +54,25 @@ void lostFood(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inven
     {
       if (it->second <= 0)
         return;
-      else if(it->second>2)
+      else if(it->second > 2)
       {
         std::uniform_int_distribution<> dis(1, 2); 
         int tmp = dis(gen);
         it->second -= tmp;
-        std::cout << "Foi perdido " << tmp << "comida\n";
+        std::cout << "Foi perdido " << tmp << " comida\n";
       }
       else
       {
-        it->second --;
-        std::cout << "Foi perdido " << 1 << "comida\n";
+        it->second--;
+        std::cout << "Foi perdido " << 1 << " comida\n";
       }
     }
   }
 }
 
-void getWater(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory)
+void getWater(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, app &a)
 {
-  if(!verifyEvent(getLostWaterPorcentage))
+  if(!verifyEvent(a.getLostWaterPorcentage))
     return;
 
   std::shared_ptr<item> waterPtr = findWater(inventory);
@@ -89,11 +90,11 @@ void getWater(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inven
   }
 }
 
-void lostWater(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory)
+void lostWater(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, app &a)
 {
   s.antiWarn();
 
-  if(!verifyEvent(getLostWaterPorcentage))
+  if(!verifyEvent(a.getLostWaterPorcentage))
     return;
 
   std::shared_ptr<item> waterPtr = findWater(inventory);
@@ -121,11 +122,11 @@ void lostWater(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inve
   }
 }
 
-void getMedkit(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory)
+void getMedkit(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, app &a)
 {
   s.antiWarn();
 
-  if(!verifyEvent(getLostMedkitPorcentage))
+  if(!verifyEvent(a.getLostMedkitPorcentage))
     return;
 
   std::shared_ptr<item> medkitPtr = findMedkit(inventory);
@@ -141,9 +142,9 @@ void getMedkit(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inve
   }
 }
 
-void getSick(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory)
+void getSick(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, app &a)
 {
-  if (!verifyEvent(getSickPorcentage) || !s.getIsAlive())
+  if (!verifyEvent(a.getSickPorcentage) || !s.getIsAlive())
     return;
 
   std::shared_ptr<item> medkitPtr = findMedkit(inventory);
@@ -178,15 +179,15 @@ void getSick(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &invent
   }
 }
 
-void armyHelp(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory)
+void armyHelp(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, app &a)
 {
-  if (!verifyEvent(armyHelpPorcentage))
+  if (!verifyEvent(a.armyHelpPorcentage))
     return;
   s.antiWarn();
   inventory.clear();
 
   std::cout << "A família foi achado por militares, todos foram salvos, fim do jogo.\n";
-  isRun = false;
+  a.isRun = false;
 }
 
 std::shared_ptr<item> findMedkit(std::unordered_map<std::shared_ptr<item>, int>& inventory)

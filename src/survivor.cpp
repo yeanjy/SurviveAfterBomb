@@ -37,8 +37,7 @@ void survivor::printData()
    std::cout << name << ": Morto\n";
 }
 
-//arrumar bug
-void survivor::goToExplore()
+void survivor::goToExplore(std::unordered_map<std::shared_ptr<item>, int> &inventory, bool &exploring, bool &tookTheMask)
 {
   isExploring = true;
 
@@ -78,7 +77,7 @@ void survivor::checkIsAlive()
     isAlive = false;
 }
 
-void survivor::updateData()
+void survivor::updateData(std::unordered_map<std::shared_ptr<item>, int> &inventory)
 {
   if (isAlive)
   {
