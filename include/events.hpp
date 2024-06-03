@@ -10,6 +10,7 @@ void getSick(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &invent
 void getFood(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, app &a);
 void getWater(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, app &a);
 void getMedkit(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, app &a);
+void lostMedkit(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, app &a);
 void lostFood(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, app &a);
 void lostWater(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, app &a);
 void armyHelp(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, app &a);

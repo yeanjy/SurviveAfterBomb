@@ -13,9 +13,9 @@
 
 bool verifyEvent(double porcentage)
 {
-  std::uniform_real_distribution<double> dis(0, 99);
+  std::uniform_real_distribution<double> dis(0, 100);
   double aux = dis(gen);
-  return porcentage>=aux;
+  return porcentage>aux;
 }
 
 void getFood(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, app &a)
@@ -36,6 +36,7 @@ void getFood(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &invent
       std::cout << s.getName() <<" achou " << tmp << " comida\n";
     }
   }
+  a.ocurredEvent.push_back("getFood");
 }
 
 void lostFood(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, app &a)
@@ -68,6 +69,7 @@ void lostFood(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inven
       }
     }
   }
+  a.ocurredEvent.push_back("lostFood");
 }
 
 void getWater(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, app &a)
@@ -88,6 +90,7 @@ void getWater(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inven
       std::cout << s.getName() << " achou " << tmp << " água\n";
     }
   }
+  a.ocurredEvent.push_back("getWater");
 }
 
 void lostWater(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, app &a)
@@ -120,6 +123,7 @@ void lostWater(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inve
       }
     }
   }
+  a.ocurredEvent.push_back("lostWater");
 }
 
 void getMedkit(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, app &a)
@@ -140,6 +144,31 @@ void getMedkit(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inve
       std::cout << "Foi achado " << 1 << " medkit\n";
     }
   }
+  a.ocurredEvent.push_back("getMedkit");
+}
+
+void lostMedkit(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, app &a)
+{
+  s.antiWarn();
+
+  if(!verifyEvent(a.getLostMedkitPorcentage))
+    return;
+
+  std::shared_ptr<item> medkitPtr = findMedkit(inventory);
+
+  if(medkitPtr)
+  {
+    auto it = inventory.find(medkitPtr);
+    if (it != inventory.end())
+    {
+      if (it->second > 0)
+      {
+        std::cout << "Foi perdido 1 medkit\n";
+        it->second--;
+      }
+    }
+  }
+  a.ocurredEvent.push_back("lostMedkit");
 }
 
 void getSick(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, app &a)
@@ -177,6 +206,7 @@ void getSick(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &invent
       }
     }
   }
+  a.ocurredEvent.push_back("getSick");
 }
 
 void armyHelp(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, app &a)
@@ -188,6 +218,7 @@ void armyHelp(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inven
 
   std::cout << "A família foi achado por militares, todos foram salvos, fim do jogo.\n";
   a.isRun = false;
+  a.ocurredEvent.push_back("armyHelp");
 }
 
 std::shared_ptr<item> findMedkit(std::unordered_map<std::shared_ptr<item>, int>& inventory)
@@ -251,5 +282,4 @@ void exploreGain(std::unordered_map<std::shared_ptr<item>, int> &inventory)
       std::cout << "\tMedkit : " << dist(gen) << "\n";
     }
   }
-
 }

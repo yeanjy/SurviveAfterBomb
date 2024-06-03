@@ -6,8 +6,8 @@
 #include <set>
 #include <unordered_map>
 #include <vector>
-#include <chrono>
-#include <thread>
+// #include <chrono>
+// #include <thread>
 #include "app.hpp"
 #include "events.hpp"
 #include "item.hpp"
@@ -19,7 +19,8 @@
 #include "variables.hpp"
 
 app::app()
-:isRun(true), getSickPorcentage(5), getLostFoodPorcentage(15), getLostWaterPorcentage(15), getLostMedkitPorcentage(10), armyHelpPorcentage(5)  
+:isRun(true), getSickPorcentage(5), getLostFoodPorcentage(15), getLostWaterPorcentage(15), getLostMedkitPorcentage(10), armyHelpPorcentage(0),
+dayCounter(1)
 {};
 
 void app::consumeEvents(std::unordered_map<std::shared_ptr<item>, int> &inventory, std::vector<survivor> &family, std::vector<FunctionPointer> &events)
@@ -177,7 +178,7 @@ void app::checkEndOfGame(std::vector<survivor> &family, std::unordered_map<std::
   }
 }
 
-void app::printDay(int &dayCounter)
+void app::printDay()
 {
   std::cout << "----------------------------------\n";
   std::cout << "Dia : " << dayCounter << "\n";
@@ -224,11 +225,10 @@ void app::run()
   survivor mon("Dolores", 31, 'f', 181, 72);
   survivor son("Timmy", 14, 'm', 142, 42);
   survivor daughter("Mary Jane", 17, 'f', 163, 62);
-  int dayCounter = 1;
   bool exploring = false;
   bool tookTheMask = false;
   std::vector<survivor> family = {dad, mon, son, daughter};
-  std::vector<FunctionPointer> events = {getSick, getFood, getWater, lostFood, lostWater, getMedkit/* , armyHelp */};
+  std::vector<FunctionPointer> events = {getSick, getFood, getWater, lostFood, lostWater, getMedkit, lostMedkit, armyHelp};
   std::unordered_map<std::shared_ptr<item>, int> inventory;
 
   std::cout << openText;
@@ -236,7 +236,7 @@ void app::run()
 
   while (isRun) {
     checkMemberIsAlive(family);
-    printDay(dayCounter);
+    printDay();
     consumeEvents(inventory, family, events);
     checkExplore(inventory, family, exploring, tookTheMask);
     printInventory(inventory);
@@ -244,7 +244,7 @@ void app::run()
     updateFamilyData(family, inventory);
 
     // std::this_thread::sleep_for(std::chrono::seconds(1));
-    updatePorcentage();
     checkEndOfGame(family, inventory);
+    updatePorcentage();
   }
 }
