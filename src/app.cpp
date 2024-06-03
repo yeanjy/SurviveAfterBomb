@@ -173,6 +173,7 @@ void app::checkEndOfGame(std::vector<survivor> &family, std::unordered_map<std::
   if (survivorCounter == family.size()) 
   {
     std::cout << endText; 
+    std::cout << "----------------------------------\n";
     inventory.clear();
     isRun = false;
   }
@@ -180,8 +181,8 @@ void app::checkEndOfGame(std::vector<survivor> &family, std::unordered_map<std::
 
 void app::printDay()
 {
-  std::cout << "----------------------------------\n";
   std::cout << "Dia : " << dayCounter << "\n";
+  std::cout << "----------------------------------\n";
   std::cout << "\n";
   dayCounter++;
 }
