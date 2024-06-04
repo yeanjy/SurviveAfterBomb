@@ -8,7 +8,7 @@
 int main(){
   unsigned int recordDay = 0;
   int simulationCounter = 1;
-  int simulation;
+  int simulationRecord;
   std::vector<std::string> v;
 
   for (int i = 0; i < 10; i++)
@@ -19,18 +19,16 @@ int main(){
     {
       recordDay = mApp->dayCounter;
       v = mApp->ocurredEvent;
-      simulation = simulationCounter;
+      simulationRecord = simulationCounter;
     }
     simulationCounter++;
   }
 
   std::cout << "Dia recorde : " << recordDay-1 << std::endl;
-  std::cout << "Simulacao numero : " << simulation << std::endl;
+  std::cout << "Simulacao numero : " << simulationRecord << std::endl;
 
   for (size_t i = 0; i < v.size(); i++)
-    std::cout << v[i] << " " ;
-
-  std::cout << "\n";
+    std::cout << v[i] << "\n" ;
 
   return 0;
 }

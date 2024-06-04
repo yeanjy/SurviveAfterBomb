@@ -5,4 +5,5 @@ class medkit : public item{
 public:
   medkit();
   void printItem() override;  
+  std::string toString() override;
 };

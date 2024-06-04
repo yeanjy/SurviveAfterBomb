@@ -22,6 +22,7 @@ public:
   void printInventory(std::unordered_map<std::shared_ptr<item>, int> &inventory);
   void updatePorcentage();
   void initInventory(std::unordered_map<std::shared_ptr<item>, int> &inventory);
+  std::string toStringInventory(std::unordered_map<std::shared_ptr<item>, int> &inventory);
   std::vector<std::string> ocurredEvent;
   bool checkFamilyHealth(std::vector<survivor> &family);
   bool isRun;

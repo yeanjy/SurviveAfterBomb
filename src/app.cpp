@@ -4,6 +4,7 @@
 #include <memory>
 #include <random>
 #include <set>
+#include <string>
 #include <unordered_map>
 #include <vector>
 // #include <chrono>
@@ -46,7 +47,9 @@ void app::consumeEvents(std::unordered_map<std::shared_ptr<item>, int> &inventor
 
   for (int i = 0; i < 3; ++i)
     if (!family[member_indices[i]].getIsExploring() && family[member_indices[i]].getIsAlive())
+    {
       events[event_indices[i]](family[member_indices[i]], inventory, *this);
+    }
 
   std::cout << "\n";
 }
@@ -181,16 +184,26 @@ void app::checkEndOfGame(std::vector<survivor> &family, std::unordered_map<std::
 
 void app::printDay()
 {
-  std::cout << "Dia : " << dayCounter << "\n";
   std::cout << "----------------------------------\n";
+  std::cout << "Dia : " << dayCounter << "\n";
   std::cout << "\n";
   dayCounter++;
+}
+
+std::string app::toStringInventory(std::unordered_map<std::shared_ptr<item>, int> &inventory)
+{
+  std::string result = "Inventário: " ;
+  for (auto &item : inventory)
+  {
+    result += item.first->toString() + "x" + std::to_string(item.second) + " ";
+  }
+  return result;
 }
 
 void app::printInventory(std::unordered_map<std::shared_ptr<item>, int> &inventory)
 {
   std::cout << "Inventário: ";
-  for (auto item : inventory)
+  for (auto &item : inventory)
   {
     item.first->printItem();
     std::cout  << "x" << item.second << " "; 
