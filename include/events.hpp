@@ -1,9 +1,9 @@
 #pragma once
 #include <unordered_map>
 #include <memory>
+#include <app.hpp>
 #include "survivor.hpp"
 #include "item.hpp"
-#include <app.hpp>
 
 bool verifyEvent(double porcentage);
 void getSick(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, app &a);

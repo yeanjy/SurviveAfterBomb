@@ -7,8 +7,6 @@
 #include <string>
 #include <unordered_map>
 #include <vector>
-// #include <chrono>
-// #include <thread>
 #include "app.hpp"
 #include "events.hpp"
 #include "item.hpp"
@@ -20,8 +18,8 @@
 #include "variables.hpp"
 
 app::app()
-:isRun(true), getSickPorcentage(5), getLostFoodPorcentage(15), getLostWaterPorcentage(15), getLostMedkitPorcentage(10), armyHelpPorcentage(0),
-dayCounter(1)
+:isRun(true), getSickPorcentage(5), getLostFoodPorcentage(15), getLostWaterPorcentage(15), 
+getLostMedkitPorcentage(10), armyHelpPorcentage(2), dayCounter(1)
 {};
 
 void app::consumeEvents(std::unordered_map<std::shared_ptr<item>, int> &inventory, std::vector<survivor> &family, std::vector<FunctionPointer> &events)
@@ -256,8 +254,6 @@ void app::run()
     printInventory(inventory);
     printFamilyData(family);
     updateFamilyData(family, inventory);
-
-    // std::this_thread::sleep_for(std::chrono::seconds(1));
     checkEndOfGame(family, inventory);
     updatePorcentage();
   }

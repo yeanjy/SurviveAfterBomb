@@ -14,9 +14,8 @@
 
 bool verifyEvent(double porcentage)
 {
-  std::uniform_real_distribution<double> dis(0, 100);
-  double aux = dis(gen);
-  return porcentage>aux;
+  std::uniform_real_distribution<double> dis(0.0, 1.0);
+  return dis(gen) < (porcentage/100.0);
 }
 
 void getFood(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, app &a)
@@ -215,11 +214,10 @@ void armyHelp(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inven
   if (!verifyEvent(a.armyHelpPorcentage))
     return;
   s.antiWarn();
-  inventory.clear();
-
   std::cout << "A família foi achada por militares, todos foram salvos, fim do jogo.\n";
   a.isRun = false;
   a.ocurredEvent.push_back("Evento: armyHelp, Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
+  inventory.clear();
 }
 
 std::shared_ptr<item> findMedkit(std::unordered_map<std::shared_ptr<item>, int>& inventory)

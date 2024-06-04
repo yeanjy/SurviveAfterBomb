@@ -11,7 +11,7 @@ int main(){
   int simulationRecord;
   std::vector<std::string> v;
 
-  for (int i = 0; i < 10; i++)
+  for (int i = 0; i < 1000; i++)
   { 
     std::unique_ptr<app> mApp = std::make_unique<app>();
     mApp->run();
