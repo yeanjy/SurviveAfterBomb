@@ -32,5 +32,6 @@ public:
   double getLostMedkitPorcentage;
   double armyHelpPorcentage;
   unsigned int dayCounter;
+  double freakOutPorcentage;
 };
 

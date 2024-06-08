@@ -19,7 +19,7 @@
 
 app::app()
 :isRun(true), getSickPorcentage(5), getLostFoodPorcentage(15), getLostWaterPorcentage(15), 
-getLostMedkitPorcentage(10), armyHelpPorcentage(2), dayCounter(1)
+getLostMedkitPorcentage(10), armyHelpPorcentage(2), dayCounter(1), freakOutPorcentage(1)
 {};
 
 void app::consumeEvents(std::unordered_map<std::shared_ptr<item>, int> &inventory, std::vector<survivor> &family, std::vector<FunctionPointer> &events)
@@ -217,6 +217,7 @@ void app::updatePorcentage()
   getLostFoodPorcentage += 0.4;
   getLostWaterPorcentage += 0.4;
   armyHelpPorcentage += 0.3;
+  freakOutPorcentage += 0.2;
 }
 
 void app::initInventory(std::unordered_map<std::shared_ptr<item>, int> &inventory)
@@ -240,7 +241,7 @@ void app::run()
   bool exploring = false;
   bool tookTheMask = false;
   std::vector<survivor> family = {dad, mon, son, daughter};
-  std::vector<FunctionPointer> events = {getSick, getFood, getWater, lostFood, lostWater, getMedkit, lostMedkit, armyHelp};
+  std::vector<FunctionPointer> events = {getSick, getFood, getWater, lostFood, lostWater, getMedkit, lostMedkit, armyHelp, freakOut};
   std::unordered_map<std::shared_ptr<item>, int> inventory;
 
   std::cout << openText;

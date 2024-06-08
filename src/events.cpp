@@ -209,6 +209,17 @@ void getSick(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &invent
   a.ocurredEvent.push_back("Evento: getSick, Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
 }
 
+
+void freakOut(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, app &a)
+{
+  if (!verifyEvent(a.freakOutPorcentage))
+    return;
+
+  s.setIsDead();
+  std::cout << s.getName() << " enlouqueceu e fugiu da família, morreu de radiação\n";
+  a.ocurredEvent.push_back("Evento: freakOut, Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
+}
+
 void armyHelp(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, app &a)
 {
   if (!verifyEvent(a.armyHelpPorcentage))
