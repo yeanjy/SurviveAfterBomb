@@ -31,23 +31,17 @@ void app::consumeEvents(std::unordered_map<std::shared_ptr<item>, int> &inventor
   std::set<int> member;
 
   while (event.size() < 3)
-  {
-    int e = dis(gen);
-    event.insert(e);
-  }
+    event.insert(dis(gen));
+
   while(member.size() < 3)
-  {
-    int m = d(gen);
-    member.insert(m);
-  }
+    member.insert(d(gen));
+
   std::vector<int> event_indices(event.begin(), event.end());
   std::vector<int> member_indices(member.begin(), member.end());
 
-  for (int i = 0; i < 3; ++i)
+  for (int i = 0; i < 3; i++)
     if (!family[member_indices[i]].getIsExploring() && family[member_indices[i]].getIsAlive())
-    {
       events[event_indices[i]](family[member_indices[i]], inventory, *this);
-    }
 
   std::cout << "\n";
 }

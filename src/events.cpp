@@ -36,13 +36,11 @@ void getFood(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &invent
       std::cout << s.getName() <<" achou " << tmp << " comida\n";
     }
   }
-  a.ocurredEvent.push_back("Evento: getFood, Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
+  a.ocurredEvent.push_back("Evento: getFood, Sobrevivente: " + s.getName() + ", Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
 }
 
 void lostFood(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, app &a)
 {
-  s.antiWarn();
-
   if(!verifyEvent(a.getLostFoodPorcentage))
     return;
 
@@ -69,7 +67,7 @@ void lostFood(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inven
       }
     }
   }
-  a.ocurredEvent.push_back("Evento: lostFood, Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
+  a.ocurredEvent.push_back("Evento: lostFood, Sobrevivente: " + s.getName() + ", Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
 }
 
 void getWater(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, app &a)
@@ -90,13 +88,11 @@ void getWater(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inven
       std::cout << s.getName() << " achou " << tmp << " água\n";
     }
   }
-  a.ocurredEvent.push_back("Evento: getWater, Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
+  a.ocurredEvent.push_back("Evento: getWater, Sobrevivente: " + s.getName() + ", Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
 }
 
 void lostWater(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, app &a)
 {
-  s.antiWarn();
-
   if(!verifyEvent(a.getLostWaterPorcentage))
     return;
 
@@ -123,13 +119,11 @@ void lostWater(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inve
       }
     }
   }
-  a.ocurredEvent.push_back("Evento: lostWater, Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
+  a.ocurredEvent.push_back("Evento: lostWater, Sobrevivente: " + s.getName() + ", Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
 }
 
 void getMedkit(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, app &a)
 {
-  s.antiWarn();
-
   if(!verifyEvent(a.getLostMedkitPorcentage))
     return;
 
@@ -144,13 +138,11 @@ void getMedkit(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inve
       std::cout << "Foi achado " << 1 << " medkit\n";
     }
   }
-  a.ocurredEvent.push_back("Evento: getMedkit, Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
+  a.ocurredEvent.push_back("Evento: getMedkit, Sobrevivente: " + s.getName() + ", Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
 }
 
 void lostMedkit(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, app &a)
 {
-  s.antiWarn();
-
   if(!verifyEvent(a.getLostMedkitPorcentage))
     return;
 
@@ -168,7 +160,7 @@ void lostMedkit(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inv
       }
     }
   }
-  a.ocurredEvent.push_back("Evento: lostMedkit, Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
+  a.ocurredEvent.push_back("Evento: lostMedkit, Sobrevivente: " + s.getName() + ", Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
 }
 
 void getSick(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, app &a)
@@ -206,7 +198,7 @@ void getSick(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &invent
       }
     }
   }
-  a.ocurredEvent.push_back("Evento: getSick, Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
+  a.ocurredEvent.push_back("Evento: getSick, Sobrevivente: " + s.getName() + ", Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
 }
 
 
@@ -217,18 +209,16 @@ void freakOut(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inven
 
   s.setIsDead();
   std::cout << s.getName() << " enlouqueceu e fugiu da família, morreu de radiação\n";
-  a.ocurredEvent.push_back("Evento: freakOut, Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
+  a.ocurredEvent.push_back("Evento: freakOut, Sobrevivente: " + s.getName() + ", Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
 }
 
 void armyHelp(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inventory, app &a)
 {
   if (!verifyEvent(a.armyHelpPorcentage))
     return;
-  s.antiWarn();
   std::cout << "A família foi achada por militares, todos foram salvos, fim do jogo.\n";
   a.isRun = false;
-  a.ocurredEvent.push_back("Evento: armyHelp, Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
-  inventory.clear();
+  a.ocurredEvent.push_back("Evento: armyHelp, Sobrevivente: " + s.getName() + ", Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
 }
 
 std::shared_ptr<item> findMedkit(std::unordered_map<std::shared_ptr<item>, int>& inventory)

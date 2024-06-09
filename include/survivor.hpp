@@ -20,7 +20,6 @@ public:
   void checkIsAlive();
   void setHunger(int n);
   void setThirst(int n);
-  void antiWarn();
   void goToExplore(std::unordered_map<std::shared_ptr<item>, int> &inventory, bool &exploring, bool &tookTheMask);
   void setDaySinceSick(int n);
   double updateHunger();

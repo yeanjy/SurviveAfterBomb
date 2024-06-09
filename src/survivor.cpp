@@ -192,8 +192,6 @@ void survivor::setIsDead() {
     isAlive = false;
 }
 
-void survivor::antiWarn() {}
-
 void survivor::setDaySinceSick(int n) {daySinceSick = n;}
 
 void survivor::addExploringDays() {exploringDays+=1;}
