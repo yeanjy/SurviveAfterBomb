@@ -265,14 +265,15 @@ void app::run()
   std::cout << openText;
   initInventory(inventory);
 
-  while (isRun) {
+  while (isRun)
+  {
     checkMemberIsAlive(family);
     printDay();
     consumeEvents(inventory, family, events);
     checkExplore(inventory, family, exploring, tookTheMask);
     printInventory(inventory);
-    updateFamilyData(family, inventory);
     printFamilyData(family);
+    updateFamilyData(family, inventory);
     checkEndOfGame(family, inventory);
     updatePorcentage();
   }
