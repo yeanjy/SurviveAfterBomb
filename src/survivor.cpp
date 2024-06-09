@@ -94,58 +94,47 @@ void survivor::updateData(std::unordered_map<std::shared_ptr<item>, int> &invent
       std::cout << name << " se curou com um medkit\n";
     }
     else if (!isHealthy)
-    {
       daySinceSick++;
-    }
 
-    if (hunger < 2)
+    double metabolicLoss = updateHunger();
+    hunger -= metabolicLoss;
+    double thirstLoss = updateThirst();
+    thirst -= thirstLoss;
+  }
+}
+
+void survivor::eat(std::unordered_map<std::shared_ptr<item>, int> &inventory)
+{
+  if (isAlive && !isExploring && hunger <= 2)
+  { 
+    std::shared_ptr<item> foodPtr = findFood(inventory);
+    if (foodPtr)
     {
-      std::shared_ptr<item> foodPtr = findFood(inventory);
-      if (foodPtr)
+      auto itFood = inventory.find(foodPtr);
+      if (itFood != inventory.end() && itFood->second > 0)
       {
-        auto itFood = inventory.find(foodPtr);
-        if (itFood != inventory.end() && itFood->second > 0)
-        {
-          eat();
-          itFood->second--;
-        }
+        itFood->second--;
+        hunger += 2;
       }
-    }
-
-    if (thirst < 2)
-    {
-      std::shared_ptr<item> waterPtr = findWater(inventory);
-      if (waterPtr)
-      {
-        auto itWater = inventory.find(waterPtr);
-        if (itWater != inventory.end() && itWater->second > 0)
-        {
-          drink();
-          itWater->second--;
-        }
-      }
-    }
-
-    if (isAlive)
-    {
-      double metabolicLoss = updateHunger();
-      hunger -= metabolicLoss;
-      double thirstLoss = updateThirst();
-      thirst -= thirstLoss;
     }
   }
 }
 
-void survivor::eat()
+void survivor::drink(std::unordered_map<std::shared_ptr<item>, int> &inventory)
 {
-  if (isAlive)
-   hunger += 1.3;
-}
-
-void survivor::drink()
-{
-  if(isAlive)
-    thirst += 1.3;
+  if(isAlive && !isExploring && thirst <= 2)
+  {
+    std::shared_ptr<item> waterPtr = findWater(inventory);
+    if (waterPtr)
+    {
+      auto itWater = inventory.find(waterPtr);
+      if (itWater != inventory.end() && itWater->second > 0)
+      {
+        itWater->second--;
+        thirst += 2;
+      }
+    }
+  }
 }
 
 double survivor::updateHunger() {
@@ -211,5 +200,9 @@ bool survivor::getIsAlive() {return isAlive;}
 bool survivor::getIsHealthy() {return isHealthy;}
 
 bool survivor::getIsExploring() {return isExploring;}
+
+double survivor::getHunger() const {return hunger;}
+
+double survivor::getThirst() const {return thirst;}
 
 std::string survivor::getName() {return name;}

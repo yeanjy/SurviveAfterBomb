@@ -32,3 +32,11 @@ int main(){
 
   return 0;
 }
+
+// int main()
+// {
+//   std::unique_ptr<app> mApp = std::make_unique<app>();
+//   mApp->run();
+//
+//   return 0;
+// }

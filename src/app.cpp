@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <cstddef>
 #include <cstdio>
 #include <iostream>
@@ -19,7 +20,7 @@
 
 app::app()
 :isRun(true), getSickPorcentage(5), getLostFoodPorcentage(15), getLostWaterPorcentage(15), 
-getLostMedkitPorcentage(10), armyHelpPorcentage(2), dayCounter(1), freakOutPorcentage(1)
+getLostMedkitPorcentage(10), armyHelpPorcentage(0), dayCounter(1), freakOutPorcentage(1)
 {};
 
 void app::consumeEvents(std::unordered_map<std::shared_ptr<item>, int> &inventory, std::vector<survivor> &family, std::vector<FunctionPointer> &events)
@@ -138,8 +139,31 @@ void app::printFamilyData(std::vector<survivor> &family)
 
 void app::updateFamilyData(std::vector<survivor> &family, std::unordered_map<std::shared_ptr<item>, int> &inventory)
 {
+  std::vector<survivor*> thirstVector;
+  std::vector<survivor*> hungerVector; 
+
+  for (auto& member : family)
+  {
+    thirstVector.push_back(&member);
+    hungerVector.push_back(&member);
+  }
+
+  std::sort(thirstVector.begin(), thirstVector.end(), [](const survivor* s1, const survivor* s2) {
+    return s1->getThirst() < s2->getThirst();
+  });
+
+  std::sort(hungerVector.begin(), hungerVector.end(), [](const survivor* s1, const survivor* s2) {
+    return s1->getHunger() < s2->getHunger();
+  });
+
   for (auto &member : family)
     member.updateData(inventory);
+
+  for (auto *menber : thirstVector)
+    menber->drink(inventory);
+
+  for (auto *menber : hungerVector)
+    menber->eat(inventory);
 }
 
 void app::checkMemberIsAlive(std::vector<survivor> &family)
@@ -247,8 +271,8 @@ void app::run()
     consumeEvents(inventory, family, events);
     checkExplore(inventory, family, exploring, tookTheMask);
     printInventory(inventory);
-    printFamilyData(family);
     updateFamilyData(family, inventory);
+    printFamilyData(family);
     checkEndOfGame(family, inventory);
     updatePorcentage();
   }
