@@ -179,10 +179,12 @@ void app::checkMemberIsAlive(std::vector<survivor> &family)
 
 bool app::checkFamilyHealth(std::vector<survivor> &family)
 {
-  return (!family[0].getIsAlive() || !family[0].getIsHealthy()) &&
-         (!family[1].getIsAlive() || !family[1].getIsHealthy()) &&
-         (!family[2].getIsAlive() || !family[2].getIsHealthy()) &&
-         (!family[3].getIsAlive() || !family[3].getIsHealthy());
+    for (auto &member : family) {
+        if (!member.getIsAlive() || !member.getIsHealthy()) {
+            return true; 
+        }
+    }
+    return false; 
 }
 
 void app::checkEndOfGame(std::vector<survivor> &family, std::unordered_map<std::shared_ptr<item>, int> &inventory)
@@ -260,9 +262,10 @@ void app::run()
   survivor mon("Dolores", 31, 'f', 181, 72);
   survivor son("Timmy", 14, 'm', 142, 42);
   survivor daughter("Mary Jane", 17, 'f', 163, 62);
+  survivor daughter2("Mary Jane2", 17, 'f', 163, 62);
   bool exploring = false;
   bool tookTheMask = false;
-  std::vector<survivor> family = {dad, mon, son, daughter};
+  std::vector<survivor> family = {dad, mon, son, daughter, daughter2};
   std::vector<FunctionPointer> events = {getSick, getFood, getWater, lostFood, lostWater, getMedkit, lostMedkit, armyHelp, freakOut};
   std::unordered_map<std::shared_ptr<item>, int> inventory;
 
