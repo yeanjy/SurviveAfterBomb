@@ -13,12 +13,13 @@ int main(){
   int n;
   std::cout << "Quantas simulacoes? \n";
   std::cin >> n;
-  int s;
+  size_t s;
   std::cout << "Quantos sobreviventes? \n";
   std::cin >> s;
 
-  std::ifstream i("survivors.json");
-  json j = json::parse(i);
+  // std::ifstream i("survivors.json");
+  // json j = json::parse(i);
+  json survivorsJson = json::parse(jsonString);
   unsigned int recordDay = 0;
   int simulationCounter = 1;
   int simulationRecord;
@@ -28,8 +29,22 @@ int main(){
   { 
     std::vector<survivor> family;
 
-    for (auto it : j)
-      family.emplace_back(it["name"], it["age"], it["gender"].get<std::string>()[0], it["height"], it["weight"]);
+    if (s > survivorsJson.size())
+    {
+      std::cout << "Quantidade de sobreviventes maior que o total de sobreviventes\n";
+      return 0;
+    }
+
+    for (size_t i = 0; i < s; ++i) 
+    {
+      family.emplace_back(
+          survivorsJson[i]["name"],
+          survivorsJson[i]["age"],
+          survivorsJson[i]["gender"].get<std::string>()[0],
+          survivorsJson[i]["height"],
+          survivorsJson[i]["weight"]
+      );
+    }
 
     std::unique_ptr<app> mApp = std::make_unique<app>();
     mApp->run(family);
