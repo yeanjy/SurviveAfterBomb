@@ -140,11 +140,11 @@ void survivor::drink(std::unordered_map<std::shared_ptr<item>, int> &inventory)
 double survivor::updateHunger() {
   double metabolicRate;
 
-  if (gender == 'm') {
-     metabolicRate = 66.5 + 13.7 * weight + 5 * height - 6.8 * age;
-  } else {
-     metabolicRate = 655 + 9.6 * weight + 1.8 * height - 4.7 * age;
-  }
+  if (gender == 'm') 
+    metabolicRate = 66.5 + 13.7 * weight + 5 * height - 6.8 * age;
+  else 
+    metabolicRate = 655 + 9.6 * weight + 1.8 * height - 4.7 * age;
+  
  
   metabolicRate -= metabolicRate*0.99;
   double result = metabolicRate;
@@ -155,8 +155,6 @@ double survivor::updateHunger() {
 
 double survivor::updateThirst()
 {
-  std::random_device rd;
-  std::mt19937 gen(rd());
   double thirstLoss;
   if (gender == 'm')
   { 

@@ -135,7 +135,7 @@ void getMedkit(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inve
     if (it != inventory.end())
     {
       it->second++;
-      std::cout << "Foi achado " << 1 << " medkit\n";
+      std::cout << "Foi perdido 1 medkit\n";
     }
   }
   a.ocurredEvent.push_back("Evento: getMedkit, Sobrevivente: " + s.getName() + ", Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
@@ -175,9 +175,7 @@ void getSick(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &invent
     auto it = inventory.find(medkitPtr);
     if (it != inventory.end())
     {
-      int quantity = it->second;
-
-      if (quantity > 0)
+      if (it->second > 0)
       {
         it->second--;
         std::cout << s.getName() << " pegou uma doença, ainda bem que tinha um medkit e está curada\n";
@@ -264,22 +262,28 @@ void exploreGain(std::unordered_map<std::shared_ptr<item>, int> &inventory)
   std::shared_ptr<item> foodPtr = findFood(inventory);
   std::shared_ptr<item> medKitPtr = findMedkit(inventory);
 
-  if(waterPtr && foodPtr)
+  if(waterPtr && foodPtr && medKitPtr)
   {
     auto waterIt = inventory.find(waterPtr);
     auto foodIt = inventory.find(foodPtr);
     auto medIt = inventory.find(medKitPtr);
     if (waterIt != inventory.end() && foodIt != inventory.end() && medIt != inventory.end())
     {
-      std::uniform_int_distribution<> dis(2, 5); 
-      std::uniform_int_distribution<> d(2, 5); 
-      std::uniform_int_distribution<> dist(0, 1); 
-      waterIt->second += dis(gen);
-      foodIt->second += d(gen);
-      medIt->second += dist(gen);
-      std::cout << "\tComida : " << d(gen) << "\n";
-      std::cout << "\tÁgua : " << dis(gen) << "\n";
-      std::cout << "\tMedkit : " << dist(gen) << "\n";
+      std::uniform_int_distribution<int> waterDist(2, 5); 
+      std::uniform_int_distribution<int> foodDist(2, 5); 
+      std::uniform_int_distribution<int> medkitDist(0, 1); 
+
+      int water = waterDist(gen);
+      int food = foodDist(gen);
+      int medkit = medkitDist(gen);
+
+      waterIt->second += water;
+      foodIt->second += food;
+      medIt->second += medkit;
+
+      std::cout << "\tComida : " << food << "\n";
+      std::cout << "\tÁgua : " << water << "\n";
+      std::cout << "\tMedkit : " << medkit << "\n";
       std::cout << "\n";
     }
   }

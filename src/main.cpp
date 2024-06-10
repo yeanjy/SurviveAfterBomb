@@ -24,6 +24,7 @@ int main(){
     simulationCounter++;
   }
 
+  std::cout << "----------------------------------\n";
   std::cout << "Dia recorde : " << recordDay-1 << std::endl;
   std::cout << "Simulacao numero : " << simulationRecord << std::endl;
 

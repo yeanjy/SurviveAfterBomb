@@ -32,10 +32,15 @@ void app::consumeEvents(std::unordered_map<std::shared_ptr<item>, int> &inventor
   std::set<int> member;
 
   while (event.size() < 3)
-    event.insert(dis(gen));
-
+  { 
+    int temp = dis(gen);
+    event.insert(temp);
+  }
   while(member.size() < 3)
-    member.insert(d(gen));
+  {
+    int temp = d(gen);
+    member.insert(temp);
+  }
 
   std::vector<int> event_indices(event.begin(), event.end());
   std::vector<int> member_indices(member.begin(), member.end());
@@ -192,7 +197,6 @@ void app::checkEndOfGame(std::vector<survivor> &family, std::unordered_map<std::
   if (survivorCounter == family.size()) 
   {
     std::cout << endText; 
-    std::cout << "----------------------------------\n";
     inventory.clear();
     isRun = false;
   }
