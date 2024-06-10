@@ -11,7 +11,7 @@ public:
   typedef void (*FunctionPointer)(survivor&, std::unordered_map<std::shared_ptr<item>,int>&, app&);
   app();
   ~app() = default;
-  void run();
+  void run(std::vector<survivor> &family);
   void printDay(); 
   void printFamilyData(std::vector<survivor> &family);
   void updateFamilyData(std::vector<survivor> &family, std::unordered_map<std::shared_ptr<item>, int> &inventory);
@@ -34,4 +34,3 @@ public:
   unsigned int dayCounter;
   double freakOutPorcentage;
 };
-

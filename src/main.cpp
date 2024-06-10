@@ -3,41 +3,67 @@
 #include <memory>
 #include <string>
 #include <vector>
+#include <fstream>
 #include "app.hpp"
+#include "json.hpp" 
+#include "survivor.hpp"
+using json = nlohmann::json;
 
-// int main(){
-//   unsigned int recordDay = 0;
-//   int simulationCounter = 1;
-//   int simulationRecord;
-//   std::vector<std::string> v;
-//
-//   for (int i = 0; i < 10; i++)
-//   { 
-//     std::unique_ptr<app> mApp = std::make_unique<app>();
-//     mApp->run();
-//     if (mApp->dayCounter > recordDay)
-//     {
-//       recordDay = mApp->dayCounter;
-//       v = mApp->ocurredEvent;
-//       simulationRecord = simulationCounter;
-//     }
-//     simulationCounter++;
-//   }
-//
-//   std::cout << "----------------------------------\n";
-//   std::cout << "Dia recorde : " << recordDay-1 << std::endl;
-//   std::cout << "Simulacao numero : " << simulationRecord << std::endl;
-//
-//   for (size_t i = 0; i < v.size(); i++)
-//     std::cout << v[i] << "\n" ;
-//
-//   return 0;
-// }
+int main(){
+  int n;
+  std::cout << "Quantas simulacoes? \n";
+  std::cin >> n;
+  int s;
+  std::cout << "Quantos sobreviventes? \n";
+  std::cin >> s;
 
-int main()
-{
-  std::unique_ptr<app> mApp = std::make_unique<app>();
-  mApp->run();
+  std::ifstream i("survivors.json");
+  json j = json::parse(i);
+  unsigned int recordDay = 0;
+  int simulationCounter = 1;
+  int simulationRecord;
+  std::vector<std::string> v;
+
+  for (int i = 0; i < n; i++)
+  { 
+    std::vector<survivor> family;
+
+    for (auto it : j)
+      family.emplace_back(it["name"], it["age"], it["gender"].get<std::string>()[0], it["height"], it["weight"]);
+
+    std::unique_ptr<app> mApp = std::make_unique<app>();
+    mApp->run(family);
+    if (mApp->dayCounter > recordDay)
+    {
+      recordDay = mApp->dayCounter;
+      v = mApp->ocurredEvent;
+      simulationRecord = simulationCounter;
+    }
+    simulationCounter++;
+  }
+
+  std::cout << "----------------------------------\n";
+  std::cout << "Dia recorde : " << recordDay-1 << std::endl;
+  std::cout << "Simulacao numero : " << simulationRecord << std::endl;
+
+  for (size_t i = 0; i < v.size(); i++)
+    std::cout << v[i] << "\n" ;
 
   return 0;
 }
+
+// int main()
+// {
+//   std::ifstream i("survivors.json");
+//   json j = json::parse(i);
+//
+//   std::vector<survivor> family;
+//
+//   for (auto it : j)
+//     family.emplace_back(it["name"], it["age"], it["gender"].get<std::string>()[0], it["height"], it["weight"]);
+//
+//   std::unique_ptr<app> mApp = std::make_unique<app>();
+//   mApp->run(family);
+//
+//   return 0;
+// }

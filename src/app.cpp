@@ -74,7 +74,7 @@ void app::checkExplore(std::unordered_map<std::shared_ptr<item>, int> &inventory
           exploring = false;
           menber.setIsExploring(false);
           menber.setExploringDays(0);
-          menber.setThirst(3);
+          menber.setThirst(3);        
           menber.setHunger(3);
           std::cout << menber.getName() << " voltou da exploração. Ganhos:\n";
           exploreGain(inventory);
@@ -255,19 +255,12 @@ void app::initInventory(std::unordered_map<std::shared_ptr<item>, int> &inventor
   inventory.insert({med, 1});
 }
 
-void app::run()
+void app::run(std::vector<survivor> &family)
 {
-  survivor dad("Ted", 35, 'm', 173, 90);
-  survivor mon("Dolores", 31, 'f', 181, 72);
-  survivor son("Timmy", 14, 'm', 142, 42);
-  survivor daughter("Mary Jane", 17, 'f', 163, 62);
-  survivor daughter2("Mary Jane2", 17, 'f', 163, 62);
   bool exploring = false;
   bool tookTheMask = false;
-  std::vector<survivor> family = {dad, mon, son, daughter, daughter2};
   std::vector<FunctionPointer> events = {getSick, getFood, getWater, lostFood, lostWater, getMedkit, lostMedkit, armyHelp, freakOut};
   std::unordered_map<std::shared_ptr<item>, int> inventory;
-
   std::cout << openText;
   initInventory(inventory);
 
