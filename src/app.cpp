@@ -179,12 +179,11 @@ void app::checkMemberIsAlive(std::vector<survivor> &family)
 
 bool app::checkFamilyHealth(std::vector<survivor> &family)
 {
-    for (auto &member : family) {
-        if (!member.getIsAlive() || !member.getIsHealthy()) {
-            return true; 
-        }
-    }
-    return false; 
+    size_t n = 0;
+    for (auto &member : family) 
+      if (!member.getIsAlive() || !member.getIsHealthy()) 
+        n++; 
+    return n == family.size(); 
 }
 
 void app::checkEndOfGame(std::vector<survivor> &family, std::unordered_map<std::shared_ptr<item>, int> &inventory)
