@@ -6,6 +6,7 @@ std::string openText = "Após a eclosão da Terceira Guerra Mundial e a subseque
 std::string endText = "Todos os membros morreram, fim do jogo\n";
 std::random_device rd;
 std::mt19937 gen(rd());
+
 std::string jsonString = R"([
         {"name": "Ted", "age": 35, "gender": "m", "height": 173.0, "weight": 90.0},
         {"name": "Dolores", "age": 31, "gender": "f", "height": 181.0, "weight": 72.0},

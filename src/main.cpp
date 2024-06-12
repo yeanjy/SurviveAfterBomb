@@ -3,7 +3,6 @@
 #include <memory>
 #include <string>
 #include <vector>
-#include <fstream>
 #include "app.hpp"
 #include "json.hpp" 
 #include "survivor.hpp"
@@ -17,8 +16,6 @@ int main(){
   std::cout << "Quantos sobreviventes? \n";
   std::cin >> s;
 
-  // std::ifstream i("survivors.json");
-  // json j = json::parse(i);
   json survivorsJson = json::parse(jsonString);
   unsigned int recordDay = 0;
   int simulationCounter = 1;
