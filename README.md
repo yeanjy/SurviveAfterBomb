@@ -2,7 +2,7 @@
 
 Survival simulation made with c++
 
-## To run
+## How to run
 
 ```bash
 cmake .
