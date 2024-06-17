@@ -18,11 +18,13 @@
 #include "survivor.hpp"
 #include "variables.hpp"
 
+//app constructor
 app::app()
 :isRun(true), getSickPorcentage(5), getLostFoodPorcentage(15), getLostWaterPorcentage(15), 
 getLostMedkitPorcentage(10), armyHelpPorcentage(0), dayCounter(1), freakOutPorcentage(1)
 {};
 
+//randomizar eventos e consumir
 void app::consumeEvents(std::unordered_map<std::shared_ptr<item>, int> &inventory, std::vector<survivor> &family, std::vector<FunctionPointer> &events)
 {
   std::uniform_int_distribution<int> dis(0, events.size()-1) ;
@@ -31,6 +33,7 @@ void app::consumeEvents(std::unordered_map<std::shared_ptr<item>, int> &inventor
   std::set<int> event;
   std::set<int> member;
 
+  //adicionar eventos e membros no set para nao repetir
   while (event.size() < 3)
   { 
     int temp = dis(gen);
@@ -42,28 +45,36 @@ void app::consumeEvents(std::unordered_map<std::shared_ptr<item>, int> &inventor
     member.insert(temp);
   }
 
+  //converter set para vector
   std::vector<int> event_indices(event.begin(), event.end());
   std::vector<int> member_indices(member.begin(), member.end());
 
   for (int i = 0; i < 3; i++)
+    //verificar se o membro nao esta explorando e vivo
     if (!family[member_indices[i]].getIsExploring() && family[member_indices[i]].getIsAlive())
       events[event_indices[i]](family[member_indices[i]], inventory, *this);
 
   std::cout << "\n";
 }
 
+//verificar se necessario explorar
 void app::checkExplore(std::unordered_map<std::shared_ptr<item>, int> &inventory, std::vector<survivor> &family, bool &exploring, bool &tookTheMask)
 {
+  //procurar ponteiro do item mascara
   std::shared_ptr<item> maskPtr = findMask(inventory);
   auto maskIt = inventory.find(maskPtr);
 
+  //se alguem ja estiver explorando
   if (exploring)
   {
     for (auto &menber : family)
     {
+      //se o membro estiver explorando
       if (menber.getIsExploring())
       {
+        //adicionar dias de exploracao
         menber.addExploringDays();
+        //se o membro ja tiver explorado 3 dias
         if (menber.getExploringDay() >= 3)
         {
           if (tookTheMask && maskPtr && maskIt != inventory.end())
@@ -71,6 +82,7 @@ void app::checkExplore(std::unordered_map<std::shared_ptr<item>, int> &inventory
             tookTheMask = false;
             maskIt->second++;
           }
+          //atualizar dados do membro apos a exploracao
           exploring = false;
           menber.setIsExploring(false);
           menber.setExploringDays(0);
@@ -84,6 +96,7 @@ void app::checkExplore(std::unordered_map<std::shared_ptr<item>, int> &inventory
     return;
   }
 
+  //procurar ponteiro do item comida e agua
   std::shared_ptr<item> foodPtr = findFood(inventory);
   std::shared_ptr<item> waterPtr = findWater(inventory);
 
@@ -94,8 +107,10 @@ void app::checkExplore(std::unordered_map<std::shared_ptr<item>, int> &inventory
 
     if (foodIt != inventory.end() && waterIt != inventory.end())
     {
+      //se a comida ou agua for menor que 3
       if (foodIt->second <= 3 || waterIt->second <= 3)
       {
+        //verificar se todos os membros estao mortos ou doentes
         if (checkFamilyHealth(family))
           return;
 
@@ -104,6 +119,7 @@ void app::checkExplore(std::unordered_map<std::shared_ptr<item>, int> &inventory
         std::uniform_int_distribution<int> dis(0, family.size() - 1);
         int e = dis(gen);
 
+        //procurar membro vivo e saudavel para explorar
         bool foundExplorer = false;
         for (size_t attempts = 0; attempts < family.size(); ++attempts)
         {
@@ -115,10 +131,12 @@ void app::checkExplore(std::unordered_map<std::shared_ptr<item>, int> &inventory
           }
         }
 
+        //se encontrar membro
         if (foundExplorer)
         {
           std::cout << family[e].getName() << " foi explorar, devido a falta de comida/água\n";
           std::cout << "\n";
+          //verificar se o inventorio possuir mascara
           if (maskPtr && maskIt != inventory.end() && maskIt->second > 0)
           {
             tookTheMask = true;
@@ -127,14 +145,13 @@ void app::checkExplore(std::unordered_map<std::shared_ptr<item>, int> &inventory
           family[e].goToExplore(inventory, exploring, tookTheMask);
         }
         else
-        {
           exploring = false;
-        }
       }
     }
   }
 }
 
+//imprimir dados da familia
 void app::printFamilyData(std::vector<survivor> &family)
 {
   for (survivor &member : family)
@@ -142,6 +159,7 @@ void app::printFamilyData(std::vector<survivor> &family)
   std::cout << "\n";
 }
 
+//atualizar dados da familia
 void app::updateFamilyData(std::vector<survivor> &family, std::unordered_map<std::shared_ptr<item>, int> &inventory)
 {
   std::vector<survivor*> thirstVector;
@@ -153,6 +171,7 @@ void app::updateFamilyData(std::vector<survivor> &family, std::unordered_map<std
     hungerVector.push_back(&member);
   }
 
+  //alimentar os menbros de acordo com a fome e sede
   std::sort(thirstVector.begin(), thirstVector.end(), [](const survivor* s1, const survivor* s2) {
     return s1->getThirst() < s2->getThirst();
   });
@@ -161,6 +180,7 @@ void app::updateFamilyData(std::vector<survivor> &family, std::unordered_map<std
     return s1->getHunger() < s2->getHunger();
   });
 
+  //atualizar os dados dos membros
   for (auto &member : family)
     member.updateData(inventory);
 
@@ -171,21 +191,25 @@ void app::updateFamilyData(std::vector<survivor> &family, std::unordered_map<std
     menber->eat(inventory);
 }
 
+//verificar se membro esta vivo
 void app::checkMemberIsAlive(std::vector<survivor> &family)
 {
   for (auto &member : family)
     member.checkIsAlive();
 }
 
+//verificar saude da familia
 bool app::checkFamilyHealth(std::vector<survivor> &family)
 {
     size_t n = 0;
     for (auto &member : family) 
       if (!member.getIsAlive() || !member.getIsHealthy()) 
         n++; 
+    //retornar true se todos os membros estiverem mortos ou doentes
     return n == family.size(); 
 }
 
+//verificar fim do jogo
 void app::checkEndOfGame(std::vector<survivor> &family, std::unordered_map<std::shared_ptr<item>, int> &inventory)
 {
   size_t survivorCounter = 0;
@@ -195,6 +219,7 @@ void app::checkEndOfGame(std::vector<survivor> &family, std::unordered_map<std::
       survivorCounter++;
   }
 
+  //se a quantidade de membros mortos for igual a quantidade de membros
   if (survivorCounter == family.size()) 
   {
     std::cout << endText; 
@@ -203,6 +228,7 @@ void app::checkEndOfGame(std::vector<survivor> &family, std::unordered_map<std::
   }
 }
 
+//imprimir dia
 void app::printDay()
 {
   std::cout << "----------------------------------\n";
@@ -211,6 +237,7 @@ void app::printDay()
   dayCounter++;
 }
 
+//converter inventario para string
 std::string app::toStringInventory(std::unordered_map<std::shared_ptr<item>, int> &inventory)
 {
   std::string result = "Inventário: " ;
@@ -221,6 +248,7 @@ std::string app::toStringInventory(std::unordered_map<std::shared_ptr<item>, int
   return result;
 }
 
+//imprimir inventario
 void app::printInventory(std::unordered_map<std::shared_ptr<item>, int> &inventory)
 {
   std::cout << "Inventário: ";
@@ -233,6 +261,7 @@ void app::printInventory(std::unordered_map<std::shared_ptr<item>, int> &invento
   std::cout << "\n";
 }
 
+//atualizar porcentagem de eventos
 void app::updatePorcentage()
 {
   getSickPorcentage += 0.5;
@@ -243,6 +272,7 @@ void app::updatePorcentage()
   freakOutPorcentage += 0.2;
 }
 
+//inicializar inventario
 void app::initInventory(std::unordered_map<std::shared_ptr<item>, int> &inventory)
 {
   std::shared_ptr<item> w = std::make_shared<water>(); 
@@ -255,6 +285,7 @@ void app::initInventory(std::unordered_map<std::shared_ptr<item>, int> &inventor
   inventory.insert({med, 1});
 }
 
+//executar app
 void app::run(std::vector<survivor> &family)
 {
   bool exploring = false;
@@ -264,6 +295,7 @@ void app::run(std::vector<survivor> &family)
   std::cout << openText;
   initInventory(inventory);
 
+  //loop principal 
   while (isRun)
   {
     checkMemberIsAlive(family);
