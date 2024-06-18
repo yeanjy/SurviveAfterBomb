@@ -31,7 +31,7 @@ void app::consumeEvents(std::unordered_map<std::shared_ptr<item>, int> &inventor
   std::uniform_int_distribution<int> d(0, family.size()-1) ;
 
   std::set<int> event;
-  std::set<int> member;
+  std::vector<int> member;
 
   //adicionar eventos e membros no set para nao repetir
   while (event.size() < 3)
@@ -39,20 +39,21 @@ void app::consumeEvents(std::unordered_map<std::shared_ptr<item>, int> &inventor
     int temp = dis(gen);
     event.insert(temp);
   }
-  while(member.size() < 3)
+
+  //adicionar membros no vetor
+  for(int i = 0; i < 3; i++)
   {
     int temp = d(gen);
-    member.insert(temp);
+    member.push_back(temp);
   }
 
   //converter set para vector
   std::vector<int> event_indices(event.begin(), event.end());
-  std::vector<int> member_indices(member.begin(), member.end());
 
   for (int i = 0; i < 3; i++)
     //verificar se o membro nao esta explorando e vivo
-    if (!family[member_indices[i]].getIsExploring() && family[member_indices[i]].getIsAlive())
-      events[event_indices[i]](family[member_indices[i]], inventory, *this);
+    if (!family[member[i]].getIsExploring() && family[member[i]].getIsAlive())
+      events[event_indices[i]](family[member[i]], inventory, *this);
 
   std::cout << "\n";
 }

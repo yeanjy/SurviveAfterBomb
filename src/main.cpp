@@ -32,10 +32,12 @@ int main()
 
   //dia recorde
   unsigned int recordDay = 0;
+  //contador de simulacoes
   int simulationCounter = 1;
-  int simulationRecord;
-  //vetor de evnetos do dia recorde
-  std::vector<std::string> v;
+  //simulacao que teve o dia recorde
+  int recordSimultation;
+  //vetor de eventos do dia recorde
+  std::vector<std::string> recordEvents;
 
   //loop para rodar as simulacoes n vezes
   for (int i = 0; i < n; i++)
@@ -43,7 +45,7 @@ int main()
     //vetor de sobreviventes
     std::vector<survivor> family;
 
-    //adicionar sobreviventes ao vetor
+    //adicionar s sobreviventes ao vetor
     for (size_t i = 0; i < s; ++i)
     {
       auto& it = familyjson.at(i);
@@ -57,8 +59,8 @@ int main()
     if (mApp->dayCounter > recordDay)
     {
       recordDay = mApp->dayCounter;
-      v = mApp->ocurredEvent;
-      simulationRecord = simulationCounter;
+      recordEvents = mApp->ocurredEvent;
+      recordSimultation = simulationCounter;
     }
     simulationCounter++;
   }
@@ -66,11 +68,11 @@ int main()
   //imprimir o dia recorde 
   std::cout << "----------------------------------\n";
   std::cout << "Dia recorde : " << recordDay-1 << std::endl;
-  std::cout << "Simulacao numero : " << simulationRecord << std::endl;
+  std::cout << "Simulacao numero : " << recordSimultation << std::endl;
 
   //imprimir eventos do dia recorde
-  for (size_t i = 0; i < v.size(); i++)
-    std::cout << v[i] << "\n" ;
+  for (size_t i = 0; i < recordEvents.size(); i++)
+    std::cout << recordEvents[i] << "\n" ;
 
   return 0;
 }
