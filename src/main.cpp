@@ -23,10 +23,10 @@ int main()
   std::cout << "Quantos sobreviventes? \n";
   std::cin >> s;
 
-  //verificar se a quantidade de sobreviventes e maior que o total de sobreviventes
-  if (s > familyjson.size())
+  //verificar se a quantidade de simulacoes e sobreviventes e valida
+  if (n <= 0 || s <= 0 || s > familyjson.size())
   {
-    std::cout << "Quantidade de sobreviventes maior que o total de sobreviventes\n";
+    std::cout << "Numero de simulacoes ou sobreviventes invalido\n";
     return 0;
   }
 
