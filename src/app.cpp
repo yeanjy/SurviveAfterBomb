@@ -113,10 +113,6 @@ void app::checkExplore(std::unordered_map<std::shared_ptr<item>, int> &inventory
       //se a comida ou agua do inventario for menor que 3
       if (foodIt->second <= 3 || waterIt->second <= 3)
       {
-        //verificar se todos os membros estao mortos ou doentes
-        if (checkFamilyHealth(family))
-          return;
-
         //randomizar membro para explorar
         std::uniform_int_distribution<int> dis(0, family.size() - 1);
         int e = dis(gen);
@@ -139,13 +135,13 @@ void app::checkExplore(std::unordered_map<std::shared_ptr<item>, int> &inventory
         {
           std::cout << family[e].getName() << " foi explorar, devido a falta de comida/água\n";
           std::cout << "\n";
-          //verificar se o inventorio possuir mascara
+          //verificar se o inventario possui mascara
           if (maskPtr && maskIt != inventory.end() && maskIt->second > 0)
           {
-            exploring = true;
             tookTheMask = true;
             maskIt->second--;
           }
+          exploring = true;
           family[e].goToExplore(inventory, exploring, tookTheMask);
         }
       }
@@ -202,32 +198,24 @@ void app::checkMemberIsAlive(std::vector<survivor> &family)
     member.checkIsAlive();
 }
 
-//verificar saude da familia
-bool app::checkFamilyHealth(std::vector<survivor> &family)
-{
-    size_t n = 0;
-    for (auto &member : family) 
-      if (!member.getIsAlive() || !member.getIsHealthy()) 
-        n++; 
-    //retornar true se todos os membros estiverem mortos ou doentes
-    return n == family.size(); 
-}
-
 //verificar fim do jogo
 void app::checkEndOfGame(std::vector<survivor> &family, std::unordered_map<std::shared_ptr<item>, int> &inventory)
 {
-  //contar membros mortos
-  size_t survivorCounter = 0;
+  // Verifica se todos os membros estão mortos
+  bool allMembersDead = true;
   for (auto &member : family)
   {
-    if (!member.getIsAlive())
-      survivorCounter++;
+    if (member.getIsAlive())
+    {
+      allMembersDead = false;
+      break;
+    }
   }
 
-  //verificar se a quantidade de membros mortos for igual a quantidade de membros
-  if (survivorCounter == family.size()) 
+  // Se todos os membros estiverem mortos, termina o jogo
+  if (allMembersDead)
   {
-    std::cout << endText; 
+    std::cout << endText;
     inventory.clear();
     isRun = false;
   }
