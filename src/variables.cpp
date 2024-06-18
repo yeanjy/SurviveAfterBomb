@@ -6,16 +6,3 @@ std::string endText = "Todos os membros morreram, fim do jogo\n";
 //gerador de numeros aleatorios
 std::random_device rd;
 std::mt19937 gen(rd());
-
-std::string jsonString = R"([
-        {"name": "Ted", "age": 35, "gender": "m", "height": 173.0, "weight": 90.0},
-        {"name": "Dolores", "age": 31, "gender": "f", "height": 181.0, "weight": 72.0},
-        {"name": "Timmy", "age": 14, "gender": "m", "height": 142.0, "weight": 42.0},
-        {"name": "Mary Jane", "age": 17, "gender": "f", "height": 163.0, "weight": 62.0},
-        {"name": "John", "age": 68, "gender": "m", "height": 165.0, "weight": 70.0},
-        {"name": "Evelyn", "age": 66, "gender": "f", "height": 160.0, "weight": 65.0},
-        {"name": "Mike", "age": 40, "gender": "m", "height": 175.0, "weight": 85.0},
-        {"name": "Linda", "age": 38, "gender": "f", "height": 170.0, "weight": 68.0},
-        {"name": "Jack", "age": 16, "gender": "m", "height": 160.0, "weight": 55.0},
-        {"name": "Tom", "age": 45, "gender": "m", "height": 178.0, "weight": 88.0}
-    ])";
