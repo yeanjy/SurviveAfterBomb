@@ -27,20 +27,22 @@ getLostMedkitPorcentage(10), armyHelpPorcentage(0), dayCounter(1), freakOutPorce
 //randomizar eventos e consumir
 void app::consumeEvents(std::unordered_map<std::shared_ptr<item>, int> &inventory, std::vector<survivor> &family, std::vector<FunctionPointer> &events)
 {
+  //randomizar eventos
   std::uniform_int_distribution<int> dis(0, events.size()-1) ;
+  //randomizar membros
   std::uniform_int_distribution<int> d(0, family.size()-1) ;
 
   std::set<int> event;
   std::vector<int> member;
 
-  //adicionar eventos e membros no set para nao repetir
+  //adicionar eventos no set para nao repetir
   while (event.size() < 3)
   { 
     int temp = dis(gen);
     event.insert(temp);
   }
 
-  //adicionar membros no vetor
+  //adicionar membros randomizados no vetor
   for(int i = 0; i < 3; i++)
   {
     int temp = d(gen);
@@ -108,15 +110,14 @@ void app::checkExplore(std::unordered_map<std::shared_ptr<item>, int> &inventory
 
     if (foodIt != inventory.end() && waterIt != inventory.end())
     {
-      //se a comida ou agua for menor que 3
+      //se a comida ou agua do inventario for menor que 3
       if (foodIt->second <= 3 || waterIt->second <= 3)
       {
         //verificar se todos os membros estao mortos ou doentes
         if (checkFamilyHealth(family))
           return;
 
-        exploring = true;
-
+        //randomizar membro para explorar
         std::uniform_int_distribution<int> dis(0, family.size() - 1);
         int e = dis(gen);
 
@@ -125,6 +126,7 @@ void app::checkExplore(std::unordered_map<std::shared_ptr<item>, int> &inventory
         for (size_t attempts = 0; attempts < family.size(); ++attempts)
         {
           e = dis(gen);
+          //verificar se o membro estiver vivo e saudavel
           if (family[e].getIsAlive() && family[e].getIsHealthy())
           {
             foundExplorer = true;
@@ -132,7 +134,7 @@ void app::checkExplore(std::unordered_map<std::shared_ptr<item>, int> &inventory
           }
         }
 
-        //se encontrar membro
+        //verificar se encontrou membro
         if (foundExplorer)
         {
           std::cout << family[e].getName() << " foi explorar, devido a falta de comida/água\n";
@@ -140,13 +142,12 @@ void app::checkExplore(std::unordered_map<std::shared_ptr<item>, int> &inventory
           //verificar se o inventorio possuir mascara
           if (maskPtr && maskIt != inventory.end() && maskIt->second > 0)
           {
+            exploring = true;
             tookTheMask = true;
             maskIt->second--;
           }
           family[e].goToExplore(inventory, exploring, tookTheMask);
         }
-        else
-          exploring = false;
       }
     }
   }
@@ -163,16 +164,18 @@ void app::printFamilyData(std::vector<survivor> &family)
 //atualizar dados da familia
 void app::updateFamilyData(std::vector<survivor> &family, std::unordered_map<std::shared_ptr<item>, int> &inventory)
 {
+  //vetores para ordenar membros de acordo com a fome e sede
   std::vector<survivor*> thirstVector;
   std::vector<survivor*> hungerVector; 
 
+  //adicionar membros aos vetores
   for (auto& member : family)
   {
     thirstVector.push_back(&member);
     hungerVector.push_back(&member);
   }
 
-  //alimentar os menbros de acordo com a fome e sede
+  //ordenar os vetores de acordo com a sede e fome
   std::sort(thirstVector.begin(), thirstVector.end(), [](const survivor* s1, const survivor* s2) {
     return s1->getThirst() < s2->getThirst();
   });
@@ -213,6 +216,7 @@ bool app::checkFamilyHealth(std::vector<survivor> &family)
 //verificar fim do jogo
 void app::checkEndOfGame(std::vector<survivor> &family, std::unordered_map<std::shared_ptr<item>, int> &inventory)
 {
+  //contar membros mortos
   size_t survivorCounter = 0;
   for (auto &member : family)
   {
@@ -220,7 +224,7 @@ void app::checkEndOfGame(std::vector<survivor> &family, std::unordered_map<std::
       survivorCounter++;
   }
 
-  //se a quantidade de membros mortos for igual a quantidade de membros
+  //verificar se a quantidade de membros mortos for igual a quantidade de membros
   if (survivorCounter == family.size()) 
   {
     std::cout << endText; 

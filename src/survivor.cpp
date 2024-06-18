@@ -75,6 +75,8 @@ void survivor::goToExplore(std::unordered_map<std::shared_ptr<item>, int> &inven
         if (verifyEvent(5))
         { 
           setIsDead();
+          it->second = 0;
+          tookTheMask = false;
           exploring = false;
           isExploring = false;
           std::cout << name << " morreu por causa da radiação\n";
