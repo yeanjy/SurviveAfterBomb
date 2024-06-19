@@ -60,8 +60,8 @@ void survivor::goToExplore(std::unordered_map<std::shared_ptr<item>, int> &inven
       if (!tookTheMask)
       {
         //verificar se o sobrevivente vai morrer
-        //75% se nao tiver mascara
-        if (verifyEvent(75))
+        //30% se nao tiver mascara
+        if (verifyEvent(30))
         {
           setIsDead();
           isExploring = false;
@@ -71,8 +71,8 @@ void survivor::goToExplore(std::unordered_map<std::shared_ptr<item>, int> &inven
       }
       else  
       {
-        //5% de chance de morrer caso tenha mascara
-        if (verifyEvent(5))
+        //2% de chance de morrer caso tenha mascara
+        if (verifyEvent(2))
         { 
           setIsDead();
           tookTheMask = false;

@@ -25,7 +25,8 @@ getLostMedkitPorcentage(10), armyHelpPorcentage(0), dayCounter(1), freakOutPorce
 {};
 
 //randomizar eventos e consumir
-void app::consumeEvents(std::unordered_map<std::shared_ptr<item>, int> &inventory, std::vector<survivor> &family, std::vector<FunctionPointer> &events)
+void app::consumeEvents(std::unordered_map<std::shared_ptr<item>, int> &inventory, 
+                        std::vector<survivor> &family, std::vector<FunctionPointer> &events)
 {
   //randomizar eventos
   std::uniform_int_distribution<int> dis(0, events.size()-1) ;
@@ -116,7 +117,7 @@ void app::checkExplore(std::unordered_map<std::shared_ptr<item>, int> &inventory
       {
         //randomizar membro para explorar
         std::uniform_int_distribution<int> dis(0, family.size() - 1);
-        int e = dis(gen);
+        int e;
 
         //procurar membro vivo e saudavel para explorar
         bool foundExplorer = false;
@@ -268,26 +269,28 @@ void app::updatePorcentage()
 }
 
 //inicializar inventario
-void app::initInventory(std::unordered_map<std::shared_ptr<item>, int> &inventory)
+void app::initInventory(std::unordered_map<std::shared_ptr<item>, int> &inventory,
+                        int food_q, int water_q, int mask_q, int medkit_q)
 {
-  std::shared_ptr<item> w = std::make_shared<water>(); 
   std::shared_ptr<item> f = std::make_shared<food>(); 
+  std::shared_ptr<item> w = std::make_shared<water>(); 
   std::shared_ptr<item> m = std::make_shared<respiratoryMask>(); 
   std::shared_ptr<item> med = std::make_shared<medkit>(); 
-  inventory.insert({f, 10});
-  inventory.insert({w, 10});
-  inventory.insert({m, 1});
-  inventory.insert({med, 1});
+  inventory.insert({f, food_q});
+  inventory.insert({w, water_q});
+  inventory.insert({m, mask_q});
+  inventory.insert({med, medkit_q});
 }
 
 //executar app
 void app::run(std::vector<survivor> &family, std::vector<FunctionPointer> &events, 
-              std::unordered_map<std::shared_ptr<item>, int> &inventory,int eat_e, int drink_e, int explore_e)
+              std::unordered_map<std::shared_ptr<item>, int> &inventory,int eat_e, int drink_e, int explore_e,
+              int food_q, int water_q, int mask_q, int medkit_q)
 {
   bool exploring = false;
   bool tookTheMask = false;
   std::cout << openText;
-  initInventory(inventory);
+  initInventory(inventory, food_q, water_q, mask_q, medkit_q);
 
   //loop principal 
   while (isRun)

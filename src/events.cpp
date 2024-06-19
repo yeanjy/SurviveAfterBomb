@@ -167,7 +167,7 @@ void getMedkit(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inve
     {
       //adicionar 1 medkit ao inventorio
       it->second++;
-      std::cout << "Foi perdido 1 medkit\n";
+      std::cout << "Foi achado 1 medkit\n";
     }
   }
   //adicionar evento ao vetor de eventos ocorridos

@@ -41,6 +41,8 @@ int main()
     return 0;
   }
 
+  //variavel para armazenar a quantidade de dias acumulados
+  int acumulatedDays = 0;
   //dia recorde
   unsigned int recordDay = 0;
   //contador de simulacoes
@@ -66,7 +68,8 @@ int main()
 
     //instanciar app e rodar
     std::unique_ptr<app> mApp = std::make_unique<app>();
-    mApp->run(family, events, inventory, strategyjson["eat_e"], strategyjson["drink_e"], strategyjson["explore_e"]);
+    mApp->run(family, events, inventory, strategyjson["eat_e"], strategyjson["drink_e"], strategyjson["explore_e"],
+              strategyjson["food_q"], strategyjson["water_q"], strategyjson["mask_q"], strategyjson["medkit_q"]);
     //verificar se o dia atual e maior que o dia recorde
     if (mApp->dayCounter > recordDay)
     {
@@ -75,6 +78,7 @@ int main()
       recordSimultation = simulationCounter;
     }
     simulationCounter++;
+    acumulatedDays += mApp->dayCounter;
   }
 
   //imprimir o dia recorde 
@@ -85,6 +89,9 @@ int main()
   //imprimir eventos do dia recorde
   for (size_t i = 0; i < recordEvents.size(); i++)
     std::cout << recordEvents[i] << "\n" ;
+
+  //imprimir media de dias
+  std::cout << "Media de dias : " << acumulatedDays/n << std::endl;
 
   return 0;
 }

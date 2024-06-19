@@ -12,7 +12,8 @@ public:
   app();
   ~app() = default;
   void run(std::vector<survivor> &family, std::vector<FunctionPointer> &events, 
-              std::unordered_map<std::shared_ptr<item>, int> &inventory,int eat_e, int drink_e, int explore_e);
+              std::unordered_map<std::shared_ptr<item>, int> &inventory,int eat_e, int drink_e, int explore_e,
+           int food_q, int water_q, int mask_q, int medkit_q);
   void printDay(); 
   void printFamilyData(std::vector<survivor> &family);
   void updateFamilyData(std::vector<survivor> &family, std::unordered_map<std::shared_ptr<item>, int> &inventory, int eat_e, int drink_e);
@@ -23,7 +24,8 @@ public:
                     std::vector<survivor> &family, bool &exploring, bool &tookTheMask, int explore_e);
   void printInventory(std::unordered_map<std::shared_ptr<item>, int> &inventory);
   void updatePorcentage();
-  void initInventory(std::unordered_map<std::shared_ptr<item>, int> &inventory);
+  void initInventory(std::unordered_map<std::shared_ptr<item>, int> &inventory,
+                        int food_q, int water_q, int mask_q, int medkit_q);
   std::string toStringInventory(std::unordered_map<std::shared_ptr<item>, int> &inventory);
   std::vector<std::string> ocurredEvent;
   bool isRun;
