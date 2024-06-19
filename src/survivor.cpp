@@ -127,10 +127,10 @@ void survivor::updateData(std::unordered_map<std::shared_ptr<item>, int> &invent
 }
 
 //funcao comer
-void survivor::eat(std::unordered_map<std::shared_ptr<item>, int> &inventory)
+void survivor::eat(std::unordered_map<std::shared_ptr<item>, int> &inventory, int eat_e)
 {
-  //verificar se necessario comer
-  if (isAlive && !isExploring && hunger <= 2)
+  //verificar se necessario comer de acordo com eat_e
+  if (isAlive && !isExploring && hunger <= eat_e)
   { 
     //achar ponteiro do item comida
     std::shared_ptr<item> foodPtr = findFood(inventory);
@@ -140,18 +140,22 @@ void survivor::eat(std::unordered_map<std::shared_ptr<item>, int> &inventory)
       //verificar se o inventorio tem comida
       if (itFood != inventory.end() && itFood->second > 0)
       {
+        //diminuir a quantidade de comida
         itFood->second--;
         hunger += 2;
+        //verificar se a fome passou de 5
+        if (hunger > 5)
+          hunger = 5;
       }
     }
   }
 }
 
 //funcao beber
-void survivor::drink(std::unordered_map<std::shared_ptr<item>, int> &inventory)
+void survivor::drink(std::unordered_map<std::shared_ptr<item>, int> &inventory, int drink_e)
 {
-  //verificar se necessario beber
-  if(isAlive && !isExploring && thirst <= 2)
+  //verificar se necessario beber de acordo com drink_e
+  if(isAlive && !isExploring && thirst <= drink_e)
   {
     //achar ponteiro do item agua
     std::shared_ptr<item> waterPtr = findWater(inventory);
@@ -161,8 +165,12 @@ void survivor::drink(std::unordered_map<std::shared_ptr<item>, int> &inventory)
       //verificar se o inventorio tem agua
       if (itWater != inventory.end() && itWater->second > 0)
       {
+        //diminuir a quantidade de agua
         itWater->second--;
         thirst += 2;
+        //verificar se a sede passou de 5 
+        if (thirst > 5)
+          thirst = 5;
       }
     }
   }

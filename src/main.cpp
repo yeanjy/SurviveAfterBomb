@@ -2,18 +2,29 @@
 #include <iostream>
 #include <memory>
 #include <string>
+#include <unordered_map>
 #include <vector>
 #include <fstream>
 #include "app.hpp"
+#include "events.hpp"
+#include "item.hpp"
 #include "json.hpp" 
 #include "survivor.hpp"
 using json = nlohmann::json;
+//definicao de ponteiro de funcao
+typedef void (*FunctionPointer)(survivor&, std::unordered_map<std::shared_ptr<item>,int>&, app&);
+//vetor de eventos
+std::vector<FunctionPointer> events = {getSick, getFood, getWater, lostFood, lostWater, getMedkit, lostMedkit, armyHelp, freakOut};
 
 int main()
 {
-  //ler arquivo json
+  //ler arquivo survivors.json
   std::ifstream j("survivors.json");
   json familyjson = json::parse(j);
+
+  //ler arquivo strategy.json
+  std::ifstream k("strategy.json");
+  json strategyjson = json::parse(k);
 
   //input de quantidade de simulacoes e sobreviventes
   int n;
@@ -42,6 +53,7 @@ int main()
   //loop para rodar as simulacoes n vezes
   for (int i = 0; i < n; i++)
   { 
+    std::unordered_map<std::shared_ptr<item>, int> inventory;
     //vetor de sobreviventes
     std::vector<survivor> family;
 
@@ -54,7 +66,7 @@ int main()
 
     //instanciar app e rodar
     std::unique_ptr<app> mApp = std::make_unique<app>();
-    mApp->run(family);
+    mApp->run(family, events, inventory, strategyjson["eat_e"], strategyjson["drink_e"], strategyjson["explore_e"]);
     //verificar se o dia atual e maior que o dia recorde
     if (mApp->dayCounter > recordDay)
     {
@@ -67,7 +79,7 @@ int main()
 
   //imprimir o dia recorde 
   std::cout << "----------------------------------\n";
-  std::cout << "Dia recorde : " << recordDay-1 << std::endl;
+  std::cout << "Dia recorde : " << recordDay << std::endl;
   std::cout << "Simulacao numero : " << recordSimultation << std::endl;
 
   //imprimir eventos do dia recorde

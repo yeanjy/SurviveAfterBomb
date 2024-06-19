@@ -61,7 +61,8 @@ void app::consumeEvents(std::unordered_map<std::shared_ptr<item>, int> &inventor
 }
 
 //verificar se necessario explorar
-void app::checkExplore(std::unordered_map<std::shared_ptr<item>, int> &inventory, std::vector<survivor> &family, bool &exploring, bool &tookTheMask)
+void app::checkExplore(std::unordered_map<std::shared_ptr<item>, int> &inventory, 
+                       std::vector<survivor> &family, bool &exploring, bool &tookTheMask, int explore_e)
 {
   //procurar ponteiro do item mascara
   std::shared_ptr<item> maskPtr = findMask(inventory);
@@ -110,8 +111,8 @@ void app::checkExplore(std::unordered_map<std::shared_ptr<item>, int> &inventory
 
     if (foodIt != inventory.end() && waterIt != inventory.end())
     {
-      //se a comida ou agua do inventario for menor que 3
-      if (foodIt->second <= 3 || waterIt->second <= 3)
+      //se a comida ou agua do inventario for menor que a estrategia de exploracao
+      if (foodIt->second <= explore_e || waterIt->second <= explore_e)
       {
         //randomizar membro para explorar
         std::uniform_int_distribution<int> dis(0, family.size() - 1);
@@ -158,7 +159,8 @@ void app::printFamilyData(std::vector<survivor> &family)
 }
 
 //atualizar dados da familia
-void app::updateFamilyData(std::vector<survivor> &family, std::unordered_map<std::shared_ptr<item>, int> &inventory)
+void app::updateFamilyData(std::vector<survivor> &family, std::unordered_map<std::shared_ptr<item>, int> &inventory,
+                           int eat_e, int drink_e)
 {
   //vetores para ordenar membros de acordo com a fome e sede
   std::vector<survivor*> thirstVector;
@@ -185,10 +187,10 @@ void app::updateFamilyData(std::vector<survivor> &family, std::unordered_map<std
     member.updateData(inventory);
 
   for (auto *menber : thirstVector)
-    menber->drink(inventory);
+    menber->drink(inventory, drink_e);
 
   for (auto *menber : hungerVector)
-    menber->eat(inventory);
+    menber->eat(inventory, eat_e);
 }
 
 //verificar se membro esta vivo
@@ -279,12 +281,11 @@ void app::initInventory(std::unordered_map<std::shared_ptr<item>, int> &inventor
 }
 
 //executar app
-void app::run(std::vector<survivor> &family)
+void app::run(std::vector<survivor> &family, std::vector<FunctionPointer> &events, 
+              std::unordered_map<std::shared_ptr<item>, int> &inventory,int eat_e, int drink_e, int explore_e)
 {
   bool exploring = false;
   bool tookTheMask = false;
-  std::vector<FunctionPointer> events = {getSick, getFood, getWater, lostFood, lostWater, getMedkit, lostMedkit, armyHelp, freakOut};
-  std::unordered_map<std::shared_ptr<item>, int> inventory;
   std::cout << openText;
   initInventory(inventory);
 
@@ -294,10 +295,10 @@ void app::run(std::vector<survivor> &family)
     checkMemberIsAlive(family);
     printDay();
     consumeEvents(inventory, family, events);
-    checkExplore(inventory, family, exploring, tookTheMask);
+    checkExplore(inventory, family, exploring, tookTheMask, explore_e);
     printInventory(inventory);
     printFamilyData(family);
-    updateFamilyData(family, inventory);
+    updateFamilyData(family, inventory, eat_e, drink_e);
     checkEndOfGame(family, inventory);
     updatePorcentage();
   }

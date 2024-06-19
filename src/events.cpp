@@ -270,6 +270,8 @@ void armyHelp(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inven
   a.isRun = false;
   //adicionar evento ao vetor de eventos ocorridos
   a.ocurredEvent.push_back("Evento: armyHelp, Sobrevivente: " + s.getName() + ", Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
+  //limpar inventorio
+  inventory.clear();
 }
 
 //funcoes para achar ponteiro de item

@@ -10,8 +10,8 @@ public:
           double weight, int hunger = 5, int thirst = 5);
   void printData();
   void updateData(std::unordered_map<std::shared_ptr<item>, int> &inventory);
-  void eat(std::unordered_map<std::shared_ptr<item>, int> &inventory);
-  void drink(std::unordered_map<std::shared_ptr<item>, int> &inventory);
+  void eat(std::unordered_map<std::shared_ptr<item>, int> &inventory, int eat_e);
+  void drink(std::unordered_map<std::shared_ptr<item>, int> &inventory, int drink_e);
   void setIsDead();
   void setIsSick();
   void setIsExploring(bool n);
