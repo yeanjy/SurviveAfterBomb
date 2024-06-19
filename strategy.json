@@ -1,5 +1,9 @@
 {
   "eat_e" : 2,
   "drink_e" : 2,
-  "explore_e" : 5
+  "explore_e" : 5,
+  "food_q" : 10,
+  "water_q" : 10,
+  "mask_q" : 1,
+  "medkit_q" : 1
 }
