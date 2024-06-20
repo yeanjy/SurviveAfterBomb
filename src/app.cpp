@@ -78,7 +78,7 @@ void app::checkExplore(std::unordered_map<std::shared_ptr<item>, int> &inventory
       if (menber.getIsExploring())
       {
         //adicionar dias de exploracao
-        menber.addExploringDays();
+        menber.increaseExploringDays();
         //se o membro ja tiver explorado 3 dias
         if (menber.getExploringDay() >= 3)
         {

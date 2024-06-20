@@ -16,7 +16,7 @@ public:
   void setIsSick();
   void setIsExploring(bool n);
   void setExploringDays(int n);
-  void addExploringDays();
+  void increaseExploringDays();
   void checkIsAlive();
   void setHunger(int n);
   void setThirst(int n);

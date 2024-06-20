@@ -44,7 +44,8 @@ void getFood(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &invent
     }
   }
   //adicionar evento ao vetor de eventos ocorridos
-  a.ocurredEvent.push_back("Evento: getFood, Sobrevivente: " + s.getName() + ", Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
+  a.ocurredEvent.push_back("Evento: getFood, Sobrevivente: " + s.getName() + 
+                           ", Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
 }
 
 //evento se perdeu comida
@@ -83,7 +84,8 @@ void lostFood(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inven
     }
   }
   //adicionar evento ao vetor de eventos ocorridos
-  a.ocurredEvent.push_back("Evento: lostFood, Sobrevivente: " + s.getName() + ", Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
+  a.ocurredEvent.push_back("Evento: lostFood, Sobrevivente: " + s.getName() + 
+                           ", Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
 }
 
 //evento se achou água
@@ -109,7 +111,8 @@ void getWater(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inven
     }
   }
   //adicionar evento ao vetor de eventos ocorridos
-  a.ocurredEvent.push_back("Evento: getWater, Sobrevivente: " + s.getName() + ", Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
+  a.ocurredEvent.push_back("Evento: getWater, Sobrevivente: " + s.getName() +
+                           ", Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
 }
 
 //evento se perdeu água
@@ -147,7 +150,8 @@ void lostWater(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inve
     }
   }
   //adicionar evento ao vetor de eventos ocorridos
-  a.ocurredEvent.push_back("Evento: lostWater, Sobrevivente: " + s.getName() + ", Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
+  a.ocurredEvent.push_back("Evento: lostWater, Sobrevivente: " + s.getName() + 
+                           ", Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
 }
 
 //evento se achou medkit
@@ -171,7 +175,8 @@ void getMedkit(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inve
     }
   }
   //adicionar evento ao vetor de eventos ocorridos
-  a.ocurredEvent.push_back("Evento: getMedkit, Sobrevivente: " + s.getName() + ", Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
+  a.ocurredEvent.push_back("Evento: getMedkit, Sobrevivente: " + s.getName() + 
+                           ", Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
 }
 
 //evento se perdeu medkit
@@ -198,7 +203,8 @@ void lostMedkit(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inv
     }
   }
   //adicionar evento ao vetor de eventos ocorridos
-  a.ocurredEvent.push_back("Evento: lostMedkit, Sobrevivente: " + s.getName() + ", Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
+  a.ocurredEvent.push_back("Evento: lostMedkit, Sobrevivente: " + s.getName() + 
+                           ", Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
 }
 
 //evento se um subrevivente ficou doente
@@ -241,7 +247,8 @@ void getSick(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &invent
     }
   }
   //adicionar evento ao vetor de eventos ocorridos
-  a.ocurredEvent.push_back("Evento: getSick, Sobrevivente: " + s.getName() + ", Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
+  a.ocurredEvent.push_back("Evento: getSick, Sobrevivente: " + s.getName() + 
+                           ", Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
 }
 
 //evento se um subrevivente enlouqueceu
@@ -255,7 +262,8 @@ void freakOut(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inven
   s.setIsDead();
   std::cout << s.getName() << " enlouqueceu e fugiu da família, morreu de radiação\n";
   //adicionar evento ao vetor de eventos ocorridos
-  a.ocurredEvent.push_back("Evento: freakOut, Sobrevivente: " + s.getName() + ", Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
+  a.ocurredEvent.push_back("Evento: freakOut, Sobrevivente: " + s.getName() + 
+                           ", Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
 }
 
 //evento se a família foi achada por militares
@@ -269,7 +277,8 @@ void armyHelp(survivor &s, std::unordered_map<std::shared_ptr<item>, int> &inven
   std::cout << "A família foi achada por militares, todos foram salvos, fim do jogo.\n";
   a.isRun = false;
   //adicionar evento ao vetor de eventos ocorridos
-  a.ocurredEvent.push_back("Evento: armyHelp, Sobrevivente: " + s.getName() + ", Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
+  a.ocurredEvent.push_back("Evento: armyHelp, Sobrevivente: " + s.getName() + 
+                           ", Dia: " + std::to_string(a.dayCounter) + ", " + a.toStringInventory(inventory));
   //limpar inventorio
   inventory.clear();
 }

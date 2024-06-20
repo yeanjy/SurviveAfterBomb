@@ -227,7 +227,7 @@ void survivor::setIsDead() {
 
 void survivor::setDaySinceSick(int n) {daySinceSick = n;}
 
-void survivor::addExploringDays() {exploringDays+=1;}
+void survivor::increaseExploringDays() {exploringDays++;}
 
 void survivor::setIsExploring(bool n) {isExploring = n;}
 
