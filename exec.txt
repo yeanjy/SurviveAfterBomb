@@ -1,0 +1,2929 @@
+Quantas simulacoes? 
+Quantos sobreviventes? 
+Após a eclosão da Terceira Guerra Mundial e a subsequente guerra nuclear, uma família de Frankenmuth emerge como sobrevivente, confrontada não apenas pela devastação imediata, mas também pelo desafio constante de manter-se viva em um mundo transformado em um deserto radioativo e hostil. Com sua casa resistindo ao impacto direto da bomba, eles agora enfrentam a difícil tarefa de sobreviver em um ambiente de recursos escassos, radiação perigosa e a constante ameaça de outros sobreviventes desesperados.
+----------------------------------
+Dia : 1
+
+
+Inventário: 🆘x1 ☣️x1 🍶x10 🥫x10 
+
+Ted : fome:5 sede:5
+Dolores : fome:5 sede:5
+Timmy : fome:5 sede:5
+Mary Jane : fome:5 sede:5
+
+----------------------------------
+Dia : 2
+
+
+Inventário: 🆘x1 ☣️x1 🍶x10 🥫x10 
+
+Ted : fome:4.4 sede:4.3
+Dolores : fome:4.5 sede:4.5
+Timmy : fome:4.6 sede:4.3
+Mary Jane : fome:4.6 sede:4.3
+
+----------------------------------
+Dia : 3
+
+
+Inventário: 🆘x1 ☣️x1 🍶x10 🥫x10 
+
+Ted : fome:3.8 sede:3.6
+Dolores : fome:4.1 sede:3.8
+Timmy : fome:4.2 sede:3.6
+Mary Jane : fome:4.1 sede:3.7
+
+----------------------------------
+Dia : 4
+
+Foi perdido 1 comida
+
+Inventário: 🆘x1 ☣️x1 🍶x10 🥫x9 
+
+Ted : fome:3.3 sede:2.9
+Dolores : fome:3.6 sede:3.2
+Timmy : fome:3.9 sede:3
+Mary Jane : fome:3.7 sede:3
+
+----------------------------------
+Dia : 5
+
+
+Inventário: 🆘x1 ☣️x1 🍶x10 🥫x9 
+
+Ted : fome:2.7 sede:2.2
+Dolores : fome:3.2 sede:2.6
+Timmy : fome:3.5 sede:2.2
+Mary Jane : fome:3.2 sede:2.5
+
+----------------------------------
+Dia : 6
+
+Dolores achou 2 água
+
+Inventário: 🆘x1 ☣️x1 🍶x8 🥫x9 
+
+Ted : fome:2.1 sede:3.6
+Dolores : fome:2.7 sede:4
+Timmy : fome:3.1 sede:3.5
+Mary Jane : fome:2.8 sede:3.8
+
+----------------------------------
+Dia : 7
+
+
+Inventário: 🆘x1 ☣️x1 🍶x8 🥫x8 
+
+Ted : fome:3.5 sede:2.9
+Dolores : fome:2.3 sede:3.5
+Timmy : fome:2.7 sede:2.7
+Mary Jane : fome:2.4 sede:3.2
+
+----------------------------------
+Dia : 8
+
+
+Inventário: 🆘x1 ☣️x1 🍶x7 🥫x6 
+
+Ted : fome:3 sede:2.2
+Dolores : fome:3.8 sede:2.8
+Timmy : fome:2.4 sede:4
+Mary Jane : fome:3.9 sede:2.6
+
+----------------------------------
+Dia : 9
+
+
+Ted foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x1 ☣️x0 🍶x6 🥫x5 
+
+Ted : explorando. Volta em 3 dia
+Dolores : fome:3.3 sede:2.2
+Timmy : fome:4 sede:3.3
+Mary Jane : fome:3.5 sede:2.1
+
+----------------------------------
+Dia : 10
+
+Dolores achou 1 água
+
+Inventário: 🆘x1 ☣️x0 🍶x5 🥫x5 
+
+Ted : explorando. Volta em 2 dia
+Dolores : fome:2.9 sede:3.5
+Timmy : fome:3.6 sede:2.6
+Mary Jane : fome:3 sede:3.5
+
+----------------------------------
+Dia : 11
+
+
+Inventário: 🆘x1 ☣️x0 🍶x4 🥫x5 
+
+Ted : explorando. Volta em 1 dia
+Dolores : fome:2.4 sede:2.9
+Timmy : fome:3.2 sede:3.8
+Mary Jane : fome:2.6 sede:3
+
+----------------------------------
+Dia : 12
+
+
+Ted voltou da exploração. Ganhos:
+	Comida : 5
+	Água : 2
+	Medkit : 1
+
+Inventário: 🆘x2 ☣️x1 🍶x6 🥫x9 
+
+Ted : fome:3 sede:3
+Dolores : fome:4 sede:2.3
+Timmy : fome:2.9 sede:3
+Mary Jane : fome:2.2 sede:2.3
+
+----------------------------------
+Dia : 13
+
+
+Dolores foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x2 ☣️x0 🍶x4 🥫x8 
+
+Ted : fome:2.4 sede:2.3
+Dolores : explorando. Volta em 3 dia
+Timmy : fome:2.5 sede:2.2
+Mary Jane : fome:3.7 sede:3.7
+
+----------------------------------
+Dia : 14
+
+
+Inventário: 🆘x2 ☣️x0 🍶x2 🥫x7 
+
+Ted : fome:3.8 sede:3.6
+Dolores : explorando. Volta em 2 dia
+Timmy : fome:2.1 sede:3.5
+Mary Jane : fome:3.3 sede:3
+
+----------------------------------
+Dia : 15
+
+
+Inventário: 🆘x2 ☣️x0 🍶x2 🥫x6 
+
+Ted : fome:3.3 sede:2.8
+Dolores : explorando. Volta em 1 dia
+Timmy : fome:3.7 sede:2.7
+Mary Jane : fome:2.9 sede:2.3
+
+----------------------------------
+Dia : 16
+
+Foi perdido 1 água
+
+Dolores voltou da exploração. Ganhos:
+	Comida : 2
+	Água : 4
+	Medkit : 0
+
+Inventário: 🆘x2 ☣️x1 🍶x4 🥫x8 
+
+Ted : fome:2.7 sede:2
+Dolores : fome:3 sede:3
+Timmy : fome:3.3 sede:2.1
+Mary Jane : fome:2.4 sede:3.7
+
+----------------------------------
+Dia : 17
+
+
+Mary Jane foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x2 ☣️x0 🍶x2 🥫x7 
+
+Ted : fome:2.1 sede:3.4
+Dolores : fome:2.5 sede:2.4
+Timmy : fome:3 sede:3.3
+Mary Jane : explorando. Volta em 3 dia
+
+----------------------------------
+Dia : 18
+
+
+Inventário: 🆘x2 ☣️x0 🍶x1 🥫x6 
+
+Ted : fome:3.5 sede:2.6
+Dolores : fome:2.1 sede:3.8
+Timmy : fome:2.6 sede:2.5
+Mary Jane : explorando. Volta em 2 dia
+
+----------------------------------
+Dia : 19
+
+Foi achado 1 medkit
+
+Inventário: 🆘x3 ☣️x0 🍶x0 🥫x5 
+
+Ted : fome:3 sede:1.9
+Dolores : fome:3.6 sede:3.1
+Timmy : fome:2.2 sede:3.9
+Mary Jane : explorando. Volta em 1 dia
+
+----------------------------------
+Dia : 20
+
+
+Mary Jane voltou da exploração. Ganhos:
+	Comida : 2
+	Água : 3
+	Medkit : 0
+
+Inventário: 🆘x3 ☣️x1 🍶x3 🥫x6 
+
+Ted : fome:2.4 sede:1.2
+Dolores : fome:3.2 sede:2.5
+Timmy : fome:3.8 sede:3.3
+Mary Jane : fome:3 sede:3
+
+----------------------------------
+Dia : 21
+
+
+Dolores foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x3 ☣️x0 🍶x1 🥫x5 
+
+Ted : fome:3.8 sede:2.6
+Dolores : explorando. Volta em 3 dia
+Timmy : fome:3.5 sede:2.6
+Mary Jane : fome:2.6 sede:2.5
+
+----------------------------------
+Dia : 22
+
+Foi achado 1 medkit
+
+Inventário: 🆘x4 ☣️x0 🍶x0 🥫x5 
+
+Ted : fome:3.2 sede:2
+Dolores : explorando. Volta em 2 dia
+Timmy : fome:3.1 sede:1.8
+Mary Jane : fome:2.1 sede:3.9
+
+----------------------------------
+Dia : 23
+
+
+Inventário: 🆘x4 ☣️x0 🍶x0 🥫x4 
+
+Ted : fome:2.6 sede:1.2
+Dolores : explorando. Volta em 1 dia
+Timmy : fome:2.7 sede:1.1
+Mary Jane : fome:3.7 sede:3.3
+
+----------------------------------
+Dia : 24
+
+Ted achou 2 água
+A família foi achada por militares, todos foram salvos, fim do jogo.
+
+Dolores voltou da exploração. Ganhos:
+Inventário: 
+
+Ted : fome:2.1 sede:0.53
+Dolores : fome:3 sede:3
+Timmy : fome:2.3 sede:0.42
+Mary Jane : fome:3.2 sede:2.7
+
+Após a eclosão da Terceira Guerra Mundial e a subsequente guerra nuclear, uma família de Frankenmuth emerge como sobrevivente, confrontada não apenas pela devastação imediata, mas também pelo desafio constante de manter-se viva em um mundo transformado em um deserto radioativo e hostil. Com sua casa resistindo ao impacto direto da bomba, eles agora enfrentam a difícil tarefa de sobreviver em um ambiente de recursos escassos, radiação perigosa e a constante ameaça de outros sobreviventes desesperados.
+----------------------------------
+Dia : 1
+
+Foi perdido 1 água
+Foi perdido 1 medkit
+
+Inventário: 🆘x0 ☣️x1 🍶x9 🥫x10 
+
+Ted : fome:5 sede:5
+Dolores : fome:5 sede:5
+Timmy : fome:5 sede:5
+Mary Jane : fome:5 sede:5
+
+----------------------------------
+Dia : 2
+
+
+Inventário: 🆘x0 ☣️x1 🍶x9 🥫x10 
+
+Ted : fome:4.4 sede:4.3
+Dolores : fome:4.5 sede:4.4
+Timmy : fome:4.6 sede:4.4
+Mary Jane : fome:4.6 sede:4.3
+
+----------------------------------
+Dia : 3
+
+
+Inventário: 🆘x0 ☣️x1 🍶x9 🥫x10 
+
+Ted : fome:3.8 sede:3.6
+Dolores : fome:4.1 sede:3.8
+Timmy : fome:4.2 sede:3.6
+Mary Jane : fome:4.1 sede:3.7
+
+----------------------------------
+Dia : 4
+
+
+Inventário: 🆘x0 ☣️x1 🍶x9 🥫x10 
+
+Ted : fome:3.3 sede:2.9
+Dolores : fome:3.6 sede:3.2
+Timmy : fome:3.9 sede:2.8
+Mary Jane : fome:3.7 sede:3.1
+
+----------------------------------
+Dia : 5
+
+
+Inventário: 🆘x0 ☣️x1 🍶x9 🥫x10 
+
+Ted : fome:2.7 sede:2.2
+Dolores : fome:3.2 sede:2.6
+Timmy : fome:3.5 sede:2.2
+Mary Jane : fome:3.2 sede:2.4
+
+----------------------------------
+Dia : 6
+
+
+Inventário: 🆘x0 ☣️x1 🍶x6 🥫x10 
+
+Ted : fome:2.1 sede:3.4
+Dolores : fome:2.7 sede:2
+Timmy : fome:3.1 sede:3.4
+Mary Jane : fome:2.8 sede:3.8
+
+----------------------------------
+Dia : 7
+
+Foi perdido 2 comida
+
+Timmy foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x0 ☣️x0 🍶x5 🥫x7 
+
+Ted : fome:3.5 sede:2.8
+Dolores : fome:2.3 sede:3.3
+Timmy : explorando. Volta em 3 dia
+Mary Jane : fome:2.4 sede:3.1
+
+----------------------------------
+Dia : 8
+
+Ted achou 1 comida
+
+Inventário: 🆘x0 ☣️x0 🍶x5 🥫x6 
+
+Ted : fome:3 sede:2.1
+Dolores : fome:3.8 sede:2.7
+Timmy : explorando. Volta em 2 dia
+Mary Jane : fome:3.9 sede:2.5
+
+----------------------------------
+Dia : 9
+
+
+Inventário: 🆘x0 ☣️x0 🍶x3 🥫x6 
+
+Ted : fome:2.4 sede:3.5
+Dolores : fome:3.3 sede:2.2
+Timmy : explorando. Volta em 1 dia
+Mary Jane : fome:3.5 sede:3.8
+
+----------------------------------
+Dia : 10
+
+
+Timmy voltou da exploração. Ganhos:
+	Comida : 5
+	Água : 4
+	Medkit : 1
+
+Inventário: 🆘x1 ☣️x1 🍶x6 🥫x10 
+
+Ted : fome:3.8 sede:2.9
+Dolores : fome:2.9 sede:3.5
+Timmy : fome:3 sede:3
+Mary Jane : fome:3 sede:3.2
+
+----------------------------------
+Dia : 11
+
+Mary Jane achou 1 água
+
+Inventário: 🆘x1 ☣️x1 🍶x7 🥫x10 
+
+Ted : fome:3.2 sede:2.2
+Dolores : fome:2.4 sede:2.9
+Timmy : fome:2.6 sede:2.3
+Mary Jane : fome:2.6 sede:2.7
+
+----------------------------------
+Dia : 12
+
+
+Dolores foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x1 ☣️x0 🍶x5 🥫x9 
+
+Ted : fome:2.6 sede:3.4
+Dolores : explorando. Volta em 3 dia
+Timmy : fome:2.2 sede:3.6
+Mary Jane : fome:2.2 sede:2.1
+
+----------------------------------
+Dia : 13
+
+
+Inventário: 🆘x1 ☣️x0 🍶x4 🥫x7 
+
+Ted : fome:2.1 sede:2.7
+Dolores : explorando. Volta em 2 dia
+Timmy : fome:3.9 sede:2.9
+Mary Jane : fome:3.7 sede:3.6
+
+----------------------------------
+Dia : 14
+
+
+Inventário: 🆘x1 ☣️x0 🍶x3 🥫x6 
+
+Ted : fome:3.5 sede:3.9
+Dolores : explorando. Volta em 1 dia
+Timmy : fome:3.5 sede:2.2
+Mary Jane : fome:3.3 sede:3
+
+----------------------------------
+Dia : 15
+
+
+Dolores voltou da exploração. Ganhos:
+	Comida : 2
+	Água : 5
+	Medkit : 1
+
+Inventário: 🆘x2 ☣️x1 🍶x7 🥫x8 
+
+Ted : fome:2.9 sede:3.2
+Dolores : fome:3 sede:3
+Timmy : fome:3.1 sede:3.5
+Mary Jane : fome:2.9 sede:2.5
+
+----------------------------------
+Dia : 16
+
+
+Inventário: 🆘x2 ☣️x1 🍶x6 🥫x8 
+
+Ted : fome:2.3 sede:2.5
+Dolores : fome:2.5 sede:2.3
+Timmy : fome:2.7 sede:2.8
+Mary Jane : fome:2.4 sede:3.8
+
+----------------------------------
+Dia : 17
+
+
+Mary Jane foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x2 ☣️x0 🍶x4 🥫x6 
+
+Ted : fome:3.8 sede:3.7
+Dolores : fome:2.1 sede:3.7
+Timmy : fome:2.4 sede:2
+Mary Jane : explorando. Volta em 3 dia
+
+----------------------------------
+Dia : 18
+
+
+Inventário: 🆘x2 ☣️x0 🍶x3 🥫x4 
+
+Ted : fome:3.2 sede:2.9
+Dolores : fome:3.6 sede:3.2
+Timmy : fome:4 sede:3.2
+Mary Jane : explorando. Volta em 2 dia
+
+----------------------------------
+Dia : 19
+
+
+Inventário: 🆘x2 ☣️x0 🍶x3 🥫x4 
+
+Ted : fome:2.6 sede:2.2
+Dolores : fome:3.2 sede:2.6
+Timmy : fome:3.6 sede:2.5
+Mary Jane : explorando. Volta em 1 dia
+
+----------------------------------
+Dia : 20
+
+
+Mary Jane voltou da exploração. Ganhos:
+	Comida : 4
+	Água : 4
+	Medkit : 0
+
+Inventário: 🆘x2 ☣️x1 🍶x4 🥫x8 
+
+Ted : fome:2 sede:3.6
+Dolores : fome:2.7 sede:4
+Timmy : fome:3.2 sede:3.8
+Mary Jane : fome:3 sede:3
+
+----------------------------------
+Dia : 21
+
+
+Mary Jane foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x2 ☣️x0 🍶x4 🥫x7 
+
+Ted : fome:3.4 sede:2.8
+Dolores : fome:2.3 sede:3.4
+Timmy : fome:2.9 sede:3.1
+Mary Jane : explorando. Volta em 3 dia
+
+----------------------------------
+Dia : 22
+
+Foi perdido 1 comida
+
+Inventário: 🆘x2 ☣️x0 🍶x4 🥫x5 
+
+Ted : fome:2.9 sede:2.1
+Dolores : fome:3.8 sede:2.7
+Timmy : fome:2.5 sede:2.4
+Mary Jane : explorando. Volta em 2 dia
+
+----------------------------------
+Dia : 23
+
+Dolores pegou uma doença, ainda bem que tinha um medkit e está curada
+
+Inventário: 🆘x1 ☣️x0 🍶x2 🥫x5 
+
+Ted : fome:2.3 sede:3.4
+Dolores : fome:3.3 sede:2.1
+Timmy : fome:2.1 sede:3.7
+Mary Jane : explorando. Volta em 1 dia
+
+----------------------------------
+Dia : 24
+
+Ted enlouqueceu e fugiu da família, morreu de radiação
+
+Mary Jane voltou da exploração. Ganhos:
+	Comida : 5
+	Água : 2
+	Medkit : 1
+
+Inventário: 🆘x2 ☣️x1 🍶x3 🥫x8 
+
+Ted: Morto
+Dolores : fome:2.9 sede:3.5
+Timmy : fome:3.7 sede:3
+Mary Jane : fome:3 sede:3
+
+----------------------------------
+Dia : 25
+
+
+Mary Jane foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x2 ☣️x0 🍶x3 🥫x8 
+
+Ted: Morto
+Dolores : fome:2.4 sede:2.9
+Timmy : fome:3.3 sede:2.2
+Mary Jane : explorando. Volta em 3 dia
+
+----------------------------------
+Dia : 26
+
+Timmy achou 1 comida
+Foi perdido 1 comida
+
+Inventário: 🆘x2 ☣️x0 🍶x2 🥫x7 
+
+Ted: Morto
+Dolores : fome:4 sede:2.2
+Timmy : fome:3 sede:3.5
+Mary Jane : explorando. Volta em 2 dia
+
+----------------------------------
+Dia : 27
+
+Foi perdido 2 comida
+
+Inventário: 🆘x2 ☣️x0 🍶x1 🥫x5 
+
+Ted: Morto
+Dolores : fome:3.5 sede:3.6
+Timmy : fome:2.6 sede:2.7
+Mary Jane : explorando. Volta em 1 dia
+
+----------------------------------
+Dia : 28
+
+Foi perdido 2 comida
+
+Mary Jane voltou da exploração. Ganhos:
+	Comida : 2
+	Água : 3
+	Medkit : 0
+
+Inventário: 🆘x2 ☣️x1 🍶x3 🥫x5 
+
+Ted: Morto
+Dolores : fome:3 sede:3
+Timmy : fome:2.2 sede:4
+Mary Jane : fome:3 sede:3
+
+----------------------------------
+Dia : 29
+
+
+Mary Jane foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x2 ☣️x0 🍶x3 🥫x4 
+
+Ted: Morto
+Dolores : fome:2.6 sede:2.3
+Timmy : fome:3.8 sede:3.3
+Mary Jane : explorando. Volta em 3 dia
+
+----------------------------------
+Dia : 30
+
+Dolores pegou uma doença, ainda bem que tinha um medkit e está curada
+
+Inventário: 🆘x1 ☣️x0 🍶x2 🥫x4 
+
+Ted: Morto
+Dolores : fome:2.1 sede:3.6
+Timmy : fome:3.5 sede:2.7
+Mary Jane : explorando. Volta em 2 dia
+
+----------------------------------
+Dia : 31
+
+Foi perdido 1 água
+
+Inventário: 🆘x1 ☣️x0 🍶x0 🥫x3 
+
+Ted: Morto
+Dolores : fome:3.7 sede:3.1
+Timmy : fome:3.1 sede:3.9
+Mary Jane : explorando. Volta em 1 dia
+
+----------------------------------
+Dia : 32
+
+
+Mary Jane voltou da exploração. Ganhos:
+	Comida : 5
+	Água : 3
+	Medkit : 1
+
+Inventário: 🆘x2 ☣️x1 🍶x3 🥫x8 
+
+Ted: Morto
+Dolores : fome:3.2 sede:2.6
+Timmy : fome:2.7 sede:3.1
+Mary Jane : fome:3 sede:3
+
+----------------------------------
+Dia : 33
+
+
+Dolores foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x2 ☣️x0 🍶x3 🥫x8 
+
+Ted: Morto
+Dolores : explorando. Volta em 3 dia
+Timmy : fome:2.3 sede:2.4
+Mary Jane : fome:2.6 sede:2.3
+
+----------------------------------
+Dia : 34
+
+
+Inventário: 🆘x2 ☣️x0 🍶x1 🥫x7 
+
+Ted: Morto
+Dolores : explorando. Volta em 2 dia
+Timmy : fome:4 sede:3.7
+Mary Jane : fome:2.1 sede:3.8
+
+----------------------------------
+Dia : 35
+
+
+Inventário: 🆘x2 ☣️x0 🍶x1 🥫x6 
+
+Ted: Morto
+Dolores : explorando. Volta em 1 dia
+Timmy : fome:3.6 sede:3
+Mary Jane : fome:3.7 sede:3.2
+
+----------------------------------
+Dia : 36
+
+Foi achado 1 medkit
+
+Dolores voltou da exploração. Ganhos:
+	Comida : 5
+	Água : 5
+	Medkit : 0
+
+Inventário: 🆘x3 ☣️x1 🍶x6 🥫x11 
+
+Ted: Morto
+Dolores : fome:3 sede:3
+Timmy : fome:3.2 sede:2.2
+Mary Jane : fome:3.2 sede:2.6
+
+----------------------------------
+Dia : 37
+
+
+Timmy foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x3 ☣️x0 🍶x5 🥫x11 
+
+Ted: Morto
+Dolores : fome:2.5 sede:2.5
+Timmy : explorando. Volta em 3 dia
+Mary Jane : fome:2.8 sede:2.1
+
+----------------------------------
+Dia : 38
+
+
+Inventário: 🆘x3 ☣️x0 🍶x3 🥫x11 
+
+Ted: Morto
+Dolores : fome:2.1 sede:3.8
+Timmy : explorando. Volta em 2 dia
+Mary Jane : fome:2.4 sede:3.4
+
+----------------------------------
+Dia : 39
+
+
+Inventário: 🆘x3 ☣️x0 🍶x3 🥫x9 
+
+Ted: Morto
+Dolores : fome:3.6 sede:3.3
+Timmy : explorando. Volta em 1 dia
+Mary Jane : fome:3.9 sede:2.8
+
+----------------------------------
+Dia : 40
+
+
+Timmy voltou da exploração. Ganhos:
+	Comida : 3
+	Água : 5
+	Medkit : 1
+
+Inventário: 🆘x4 ☣️x1 🍶x8 🥫x12 
+
+Ted: Morto
+Dolores : fome:3.2 sede:2.7
+Timmy : fome:3 sede:3
+Mary Jane : fome:3.5 sede:2.2
+
+----------------------------------
+Dia : 41
+
+Foi perdido 2 água
+
+Dolores foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x4 ☣️x0 🍶x5 🥫x12 
+
+Ted: Morto
+Dolores : explorando. Volta em 3 dia
+Timmy : fome:2.6 sede:2.4
+Mary Jane : fome:3 sede:3.6
+
+----------------------------------
+Dia : 42
+
+Foi perdido 2 água
+
+Inventário: 🆘x4 ☣️x0 🍶x2 🥫x12 
+
+Ted: Morto
+Dolores : explorando. Volta em 2 dia
+Timmy : fome:2.2 sede:3.7
+Mary Jane : fome:2.6 sede:3.1
+
+----------------------------------
+Dia : 43
+
+
+Inventário: 🆘x4 ☣️x0 🍶x2 🥫x11 
+
+Ted: Morto
+Dolores : explorando. Volta em 1 dia
+Timmy : fome:3.9 sede:3
+Mary Jane : fome:2.2 sede:2.4
+
+----------------------------------
+Dia : 44
+
+
+Dolores voltou da exploração. Ganhos:
+	Comida : 4
+	Água : 3
+	Medkit : 1
+
+Inventário: 🆘x5 ☣️x1 🍶x4 🥫x14 
+
+Ted: Morto
+Dolores : fome:3 sede:3
+Timmy : fome:3.5 sede:2.4
+Mary Jane : fome:3.7 sede:3.9
+
+----------------------------------
+Dia : 45
+
+Foi perdido 1 medkit
+
+Timmy foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x4 ☣️x0 🍶x3 🥫x14 
+
+Ted: Morto
+Dolores : fome:2.5 sede:2.3
+Timmy : explorando. Volta em 3 dia
+Mary Jane : fome:3.3 sede:3.4
+
+----------------------------------
+Dia : 46
+
+Foi perdido 1 comida
+
+Inventário: 🆘x4 ☣️x0 🍶x2 🥫x13 
+
+Ted: Morto
+Dolores : fome:2.1 sede:3.8
+Timmy : explorando. Volta em 2 dia
+Mary Jane : fome:2.9 sede:2.7
+
+----------------------------------
+Dia : 47
+
+
+Inventário: 🆘x4 ☣️x0 🍶x2 🥫x12 
+
+Ted: Morto
+Dolores : fome:3.6 sede:3.1
+Timmy : explorando. Volta em 1 dia
+Mary Jane : fome:2.4 sede:2
+
+----------------------------------
+Dia : 48
+
+
+Timmy voltou da exploração. Ganhos:
+	Comida : 5
+	Água : 2
+	Medkit : 1
+
+Inventário: 🆘x5 ☣️x1 🍶x3 🥫x16 
+
+Ted: Morto
+Dolores : fome:3.2 sede:2.5
+Timmy : fome:3 sede:3
+Mary Jane : fome:4 sede:3.4
+
+----------------------------------
+Dia : 49
+
+Foi perdido 1 água
+
+Inventário: 🆘x5 ☣️x1 🍶x1 🥫x16 
+
+Ted: Morto
+Dolores : fome:2.7 sede:3.9
+Timmy : fome:2.6 sede:2.3
+Mary Jane : fome:3.5 sede:2.7
+
+----------------------------------
+Dia : 50
+
+Dolores pegou uma doença, ainda bem que tinha um medkit e está curada
+
+Mary Jane foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x4 ☣️x0 🍶x0 🥫x16 
+
+Ted: Morto
+Dolores : fome:2.3 sede:3.2
+Timmy : fome:2.2 sede:3.6
+Mary Jane : explorando. Volta em 3 dia
+
+----------------------------------
+Dia : 51
+
+Dolores achou 1 comida
+
+Inventário: 🆘x4 ☣️x0 🍶x0 🥫x15 
+
+Ted: Morto
+Dolores : fome:3.8 sede:2.6
+Timmy : fome:3.9 sede:2.9
+Mary Jane : explorando. Volta em 2 dia
+
+----------------------------------
+Dia : 52
+
+
+Inventário: 🆘x4 ☣️x0 🍶x0 🥫x15 
+
+Ted: Morto
+Dolores : fome:3.3 sede:2
+Timmy : fome:3.5 sede:2.3
+Mary Jane : explorando. Volta em 1 dia
+
+----------------------------------
+Dia : 53
+
+Dolores pegou uma doença, ainda bem que tinha um medkit e está curada
+
+Mary Jane voltou da exploração. Ganhos:
+	Comida : 4
+	Água : 5
+	Medkit : 0
+
+Inventário: 🆘x3 ☣️x1 🍶x5 🥫x19 
+
+Ted: Morto
+Dolores : fome:2.9 sede:1.3
+Timmy : fome:3.1 sede:1.7
+Mary Jane : fome:3 sede:3
+
+----------------------------------
+Dia : 54
+
+
+Mary Jane foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x3 ☣️x0 🍶x3 🥫x19 
+
+Ted: Morto
+Dolores : fome:2.4 sede:2.6
+Timmy : fome:2.7 sede:3
+Mary Jane : explorando. Volta em 3 dia
+
+----------------------------------
+Dia : 55
+
+
+Inventário: 🆘x3 ☣️x0 🍶x3 🥫x18 
+
+Ted: Morto
+Dolores : fome:4 sede:2.1
+Timmy : fome:2.4 sede:2.4
+Mary Jane : explorando. Volta em 2 dia
+
+----------------------------------
+Dia : 56
+
+
+Inventário: 🆘x3 ☣️x0 🍶x1 🥫x17 
+
+Ted: Morto
+Dolores : fome:3.5 sede:3.5
+Timmy : fome:4 sede:3.6
+Mary Jane : explorando. Volta em 1 dia
+
+----------------------------------
+Dia : 57
+
+
+Mary Jane voltou da exploração. Ganhos:
+	Comida : 3
+	Água : 4
+	Medkit : 1
+
+Inventário: 🆘x4 ☣️x1 🍶x5 🥫x20 
+
+Ted: Morto
+Dolores : fome:3 sede:3
+Timmy : fome:3.6 sede:3
+Mary Jane : fome:3 sede:3
+
+----------------------------------
+Dia : 58
+
+
+Timmy foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x4 ☣️x0 🍶x5 🥫x20 
+
+Ted: Morto
+Dolores : fome:2.6 sede:2.4
+Timmy : explorando. Volta em 3 dia
+Mary Jane : fome:2.6 sede:2.4
+
+----------------------------------
+Dia : 59
+
+
+Inventário: 🆘x4 ☣️x0 🍶x3 🥫x20 
+
+Ted: Morto
+Dolores : fome:2.1 sede:3.8
+Timmy : explorando. Volta em 2 dia
+Mary Jane : fome:2.1 sede:3.7
+
+----------------------------------
+Dia : 60
+
+Dolores achou 2 água
+
+Inventário: 🆘x4 ☣️x0 🍶x5 🥫x18 
+
+Ted: Morto
+Dolores : fome:3.7 sede:3.2
+Timmy : explorando. Volta em 1 dia
+Mary Jane : fome:3.7 sede:3.2
+
+----------------------------------
+Dia : 61
+
+Foi perdido 1 comida
+
+Timmy voltou da exploração. Ganhos:
+	Comida : 2
+	Água : 2
+	Medkit : 1
+
+Inventário: 🆘x5 ☣️x1 🍶x7 🥫x19 
+
+Ted: Morto
+Dolores : fome:3.2 sede:2.6
+Timmy : fome:3 sede:3
+Mary Jane : fome:3.2 sede:2.6
+
+----------------------------------
+Dia : 62
+
+
+Timmy foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x5 ☣️x0 🍶x5 🥫x19 
+
+Ted: Morto
+Dolores : fome:2.8 sede:3.9
+Timmy : explorando. Volta em 3 dia
+Mary Jane : fome:2.8 sede:3.9
+
+----------------------------------
+Dia : 63
+
+
+Inventário: 🆘x5 ☣️x0 🍶x5 🥫x19 
+
+Ted: Morto
+Dolores : fome:2.3 sede:3.3
+Timmy : explorando. Volta em 2 dia
+Mary Jane : fome:2.4 sede:3.4
+
+----------------------------------
+Dia : 64
+
+Foi perdido 2 água
+
+Inventário: 🆘x5 ☣️x0 🍶x3 🥫x17 
+
+Ted: Morto
+Dolores : fome:3.8 sede:2.8
+Timmy : explorando. Volta em 1 dia
+Mary Jane : fome:3.9 sede:2.8
+
+----------------------------------
+Dia : 65
+
+
+Timmy voltou da exploração. Ganhos:
+	Comida : 3
+	Água : 4
+	Medkit : 0
+
+Inventário: 🆘x5 ☣️x1 🍶x7 🥫x20 
+
+Ted: Morto
+Dolores : fome:3.4 sede:2.2
+Timmy : fome:3 sede:3
+Mary Jane : fome:3.5 sede:2.3
+
+----------------------------------
+Dia : 66
+
+
+Timmy foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x5 ☣️x0 🍶x5 🥫x20 
+
+Ted: Morto
+Dolores : fome:2.9 sede:3.6
+Timmy : explorando. Volta em 3 dia
+Mary Jane : fome:3 sede:3.7
+
+----------------------------------
+Dia : 67
+
+A família foi achada por militares, todos foram salvos, fim do jogo.
+
+Inventário: 
+
+Ted: Morto
+Dolores : fome:2.5 sede:2.9
+Timmy : explorando. Volta em 2 dia
+Mary Jane : fome:2.6 sede:3.1
+
+Após a eclosão da Terceira Guerra Mundial e a subsequente guerra nuclear, uma família de Frankenmuth emerge como sobrevivente, confrontada não apenas pela devastação imediata, mas também pelo desafio constante de manter-se viva em um mundo transformado em um deserto radioativo e hostil. Com sua casa resistindo ao impacto direto da bomba, eles agora enfrentam a difícil tarefa de sobreviver em um ambiente de recursos escassos, radiação perigosa e a constante ameaça de outros sobreviventes desesperados.
+----------------------------------
+Dia : 1
+
+Dolores pegou uma doença, ainda bem que tinha um medkit e está curada
+
+Inventário: 🆘x0 ☣️x1 🍶x10 🥫x10 
+
+Ted : fome:5 sede:5
+Dolores : fome:5 sede:5
+Timmy : fome:5 sede:5
+Mary Jane : fome:5 sede:5
+
+----------------------------------
+Dia : 2
+
+
+Inventário: 🆘x0 ☣️x1 🍶x10 🥫x10 
+
+Ted : fome:4.4 sede:4.3
+Dolores : fome:4.5 sede:4.4
+Timmy : fome:4.6 sede:4.3
+Mary Jane : fome:4.6 sede:4.4
+
+----------------------------------
+Dia : 3
+
+Dolores achou 2 água
+
+Inventário: 🆘x0 ☣️x1 🍶x12 🥫x10 
+
+Ted : fome:3.8 sede:3.6
+Dolores : fome:4.1 sede:3.7
+Timmy : fome:4.2 sede:3.7
+Mary Jane : fome:4.1 sede:3.8
+
+----------------------------------
+Dia : 4
+
+
+Inventário: 🆘x0 ☣️x1 🍶x12 🥫x10 
+
+Ted : fome:3.3 sede:2.9
+Dolores : fome:3.6 sede:3.1
+Timmy : fome:3.9 sede:3
+Mary Jane : fome:3.7 sede:3.1
+
+----------------------------------
+Dia : 5
+
+Dolores achou 2 água
+
+Inventário: 🆘x0 ☣️x1 🍶x14 🥫x10 
+
+Ted : fome:2.7 sede:2.1
+Dolores : fome:3.2 sede:2.4
+Timmy : fome:3.5 sede:2.4
+Mary Jane : fome:3.2 sede:2.6
+
+----------------------------------
+Dia : 6
+
+
+Inventário: 🆘x0 ☣️x1 🍶x10 🥫x10 
+
+Ted : fome:2.1 sede:3.4
+Dolores : fome:2.7 sede:3.7
+Timmy : fome:3.1 sede:3.8
+Mary Jane : fome:2.8 sede:3.9
+
+----------------------------------
+Dia : 7
+
+
+Inventário: 🆘x0 ☣️x1 🍶x10 🥫x9 
+
+Ted : fome:3.5 sede:2.7
+Dolores : fome:2.3 sede:3.1
+Timmy : fome:2.7 sede:3
+Mary Jane : fome:2.4 sede:3.3
+
+----------------------------------
+Dia : 8
+
+
+Inventário: 🆘x0 ☣️x1 🍶x9 🥫x7 
+
+Ted : fome:3 sede:3.9
+Dolores : fome:3.8 sede:2.5
+Timmy : fome:2.4 sede:2.4
+Mary Jane : fome:3.9 sede:2.7
+
+----------------------------------
+Dia : 9
+
+
+Inventário: 🆘x0 ☣️x1 🍶x7 🥫x6 
+
+Ted : fome:2.4 sede:3.2
+Dolores : fome:3.3 sede:3.9
+Timmy : fome:4 sede:3.6
+Mary Jane : fome:3.5 sede:2.1
+
+----------------------------------
+Dia : 10
+
+
+Ted foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x0 ☣️x0 🍶x6 🥫x5 
+
+Ted : explorando. Volta em 3 dia
+Dolores : fome:2.9 sede:3.3
+Timmy : fome:3.6 sede:2.8
+Mary Jane : fome:3 sede:3.5
+
+----------------------------------
+Dia : 11
+
+Dolores achou 1 comida
+
+Inventário: 🆘x0 ☣️x0 🍶x6 🥫x6 
+
+Ted : explorando. Volta em 2 dia
+Dolores : fome:2.4 sede:2.8
+Timmy : fome:3.2 sede:2
+Mary Jane : fome:2.6 sede:2.9
+
+----------------------------------
+Dia : 12
+
+Mary Jane achou 1 água
+
+Inventário: 🆘x0 ☣️x0 🍶x6 🥫x5 
+
+Ted : explorando. Volta em 1 dia
+Dolores : fome:4 sede:2.3
+Timmy : fome:2.9 sede:3.4
+Mary Jane : fome:2.2 sede:2.2
+
+----------------------------------
+Dia : 13
+
+
+Ted voltou da exploração. Ganhos:
+	Comida : 3
+	Água : 4
+	Medkit : 0
+
+Inventário: 🆘x0 ☣️x1 🍶x8 🥫x7 
+
+Ted : fome:3 sede:3
+Dolores : fome:3.5 sede:3.6
+Timmy : fome:2.5 sede:2.8
+Mary Jane : fome:3.7 sede:3.6
+
+----------------------------------
+Dia : 14
+
+Ted achou 2 água
+Foi perdido 1 água
+
+Inventário: 🆘x0 ☣️x1 🍶x9 🥫x7 
+
+Ted : fome:2.4 sede:2.3
+Dolores : fome:3 sede:3.1
+Timmy : fome:2.1 sede:2.1
+Mary Jane : fome:3.3 sede:3
+
+----------------------------------
+Dia : 15
+
+Foi achado 1 medkit
+
+Ted foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x1 ☣️x0 🍶x7 🥫x5 
+
+Ted : explorando. Volta em 3 dia
+Dolores : fome:2.6 sede:2.5
+Timmy : fome:3.7 sede:3.3
+Mary Jane : fome:2.9 sede:2.4
+
+----------------------------------
+Dia : 16
+
+
+Inventário: 🆘x1 ☣️x0 🍶x5 🥫x5 
+
+Ted : explorando. Volta em 2 dia
+Dolores : fome:2.1 sede:3.9
+Timmy : fome:3.3 sede:2.6
+Mary Jane : fome:2.4 sede:3.7
+
+----------------------------------
+Dia : 17
+
+
+Inventário: 🆘x1 ☣️x0 🍶x4 🥫x3 
+
+Ted : explorando. Volta em 1 dia
+Dolores : fome:3.7 sede:3.2
+Timmy : fome:3 sede:4
+Mary Jane : fome:4 sede:3.1
+
+----------------------------------
+Dia : 18
+
+Foi perdido 1 água
+
+Ted voltou da exploração. Ganhos:
+	Comida : 5
+	Água : 3
+	Medkit : 0
+
+Inventário: 🆘x1 ☣️x1 🍶x6 🥫x8 
+
+Ted : fome:3 sede:3
+Dolores : fome:3.2 sede:2.6
+Timmy : fome:2.6 sede:3.3
+Mary Jane : fome:3.5 sede:2.5
+
+----------------------------------
+Dia : 19
+
+
+Mary Jane foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x1 ☣️x0 🍶x4 🥫x8 
+
+Ted : fome:2.4 sede:2.3
+Dolores : fome:2.8 sede:3.9
+Timmy : fome:2.2 sede:2.5
+Mary Jane : explorando. Volta em 3 dia
+
+----------------------------------
+Dia : 20
+
+Foi perdido 2 comida
+Foi achado 1 medkit
+
+Inventário: 🆘x2 ☣️x0 🍶x2 🥫x4 
+
+Ted : fome:3.8 sede:3.6
+Dolores : fome:2.3 sede:3.4
+Timmy : fome:3.8 sede:3.7
+Mary Jane : explorando. Volta em 2 dia
+
+----------------------------------
+Dia : 21
+
+Ted achou 2 comida
+Timmy achou 1 água
+
+Inventário: 🆘x2 ☣️x0 🍶x3 🥫x5 
+
+Ted : fome:3.3 sede:2.9
+Dolores : fome:3.8 sede:2.8
+Timmy : fome:3.5 sede:3
+Mary Jane : explorando. Volta em 1 dia
+
+----------------------------------
+Dia : 22
+
+Dolores achou 1 comida
+
+Mary Jane voltou da exploração. Ganhos:
+	Comida : 4
+	Água : 5
+	Medkit : 1
+
+Inventário: 🆘x3 ☣️x1 🍶x8 🥫x10 
+
+Ted : fome:2.7 sede:2.3
+Dolores : fome:3.4 sede:2.1
+Timmy : fome:3.1 sede:2.4
+Mary Jane : fome:3 sede:3
+
+----------------------------------
+Dia : 23
+
+
+Ted foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x3 ☣️x0 🍶x5 🥫x10 
+
+Ted : explorando. Volta em 3 dia
+Dolores : fome:2.9 sede:3.6
+Timmy : fome:2.7 sede:3.8
+Mary Jane : fome:2.6 sede:2.4
+
+----------------------------------
+Dia : 24
+
+Foi achado 1 medkit
+
+Inventário: 🆘x4 ☣️x0 🍶x4 🥫x10 
+
+Ted : explorando. Volta em 2 dia
+Dolores : fome:2.5 sede:3.1
+Timmy : fome:2.3 sede:3.1
+Mary Jane : fome:2.1 sede:3.8
+
+----------------------------------
+Dia : 25
+
+
+Inventário: 🆘x4 ☣️x0 🍶x4 🥫x8 
+
+Ted : explorando. Volta em 1 dia
+Dolores : fome:2 sede:2.4
+Timmy : fome:4 sede:2.4
+Mary Jane : fome:3.7 sede:3.1
+
+----------------------------------
+Dia : 26
+
+
+Ted voltou da exploração. Ganhos:
+	Comida : 2
+	Água : 5
+	Medkit : 0
+
+Inventário: 🆘x4 ☣️x1 🍶x7 🥫x9 
+
+Ted : fome:3 sede:3
+Dolores : fome:3.6 sede:3.8
+Timmy : fome:3.6 sede:3.7
+Mary Jane : fome:3.2 sede:2.5
+
+----------------------------------
+Dia : 27
+
+
+Inventário: 🆘x4 ☣️x1 🍶x6 🥫x9 
+
+Ted : fome:2.4 sede:2.3
+Dolores : fome:3.1 sede:3.2
+Timmy : fome:3.2 sede:3
+Mary Jane : fome:2.8 sede:3.9
+
+----------------------------------
+Dia : 28
+
+Dolores pegou uma doença, ainda bem que tinha um medkit e está curada
+Foi achado 1 medkit
+
+Mary Jane foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x4 ☣️x0 🍶x5 🥫x8 
+
+Ted : fome:3.8 sede:3.6
+Dolores : fome:2.6 sede:2.6
+Timmy : fome:2.8 sede:2.4
+Mary Jane : explorando. Volta em 3 dia
+
+----------------------------------
+Dia : 29
+
+
+Inventário: 🆘x4 ☣️x0 🍶x4 🥫x8 
+
+Ted : fome:3.3 sede:2.9
+Dolores : fome:2.2 sede:2
+Timmy : fome:2.4 sede:3.7
+Mary Jane : explorando. Volta em 2 dia
+
+----------------------------------
+Dia : 30
+
+Timmy achou 1 água
+
+Inventário: 🆘x4 ☣️x0 🍶x4 🥫x7 
+
+Ted : fome:2.7 sede:2.2
+Dolores : fome:3.7 sede:3.4
+Timmy : fome:2.1 sede:3
+Mary Jane : explorando. Volta em 1 dia
+
+----------------------------------
+Dia : 31
+
+
+Mary Jane voltou da exploração. Ganhos:
+	Comida : 4
+	Água : 2
+	Medkit : 0
+
+Inventário: 🆘x4 ☣️x1 🍶x5 🥫x10 
+
+Ted : fome:2.1 sede:3.5
+Dolores : fome:3.3 sede:2.7
+Timmy : fome:3.7 sede:2.3
+Mary Jane : fome:3 sede:3
+
+----------------------------------
+Dia : 32
+
+Foi perdido 1 medkit
+
+Mary Jane foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x3 ☣️x0 🍶x4 🥫x9 
+
+Ted : fome:3.5 sede:2.8
+Dolores : fome:2.8 sede:2.2
+Timmy : fome:3.3 sede:3.6
+Mary Jane : explorando. Volta em 3 dia
+
+----------------------------------
+Dia : 33
+
+Foi perdido 1 comida
+
+Inventário: 🆘x3 ☣️x0 🍶x3 🥫x8 
+
+Ted : fome:3 sede:2.1
+Dolores : fome:2.3 sede:3.6
+Timmy : fome:2.9 sede:2.8
+Mary Jane : explorando. Volta em 2 dia
+
+----------------------------------
+Dia : 34
+
+
+Inventário: 🆘x3 ☣️x0 🍶x2 🥫x7 
+
+Ted : fome:2.4 sede:3.5
+Dolores : fome:3.9 sede:3.1
+Timmy : fome:2.6 sede:2.2
+Mary Jane : explorando. Volta em 1 dia
+
+----------------------------------
+Dia : 35
+
+Foi perdido 1 medkit
+
+Mary Jane voltou da exploração. Ganhos:
+	Comida : 5
+	Água : 4
+	Medkit : 1
+
+Inventário: 🆘x3 ☣️x1 🍶x5 🥫x11 
+
+Ted : fome:3.8 sede:2.9
+Dolores : fome:3.4 sede:2.5
+Timmy : fome:2.2 sede:3.4
+Mary Jane : fome:3 sede:3
+
+----------------------------------
+Dia : 36
+
+
+Dolores foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x3 ☣️x0 🍶x4 🥫x10 
+
+Ted : fome:3.2 sede:2.2
+Dolores : explorando. Volta em 3 dia
+Timmy : fome:3.8 sede:2.7
+Mary Jane : fome:2.6 sede:2.4
+
+----------------------------------
+Dia : 37
+
+
+Inventário: 🆘x3 ☣️x0 🍶x1 🥫x10 
+
+Ted : fome:2.6 sede:3.5
+Dolores : explorando. Volta em 2 dia
+Timmy : fome:3.4 sede:4
+Mary Jane : fome:2.1 sede:3.9
+
+----------------------------------
+Dia : 38
+
+
+Inventário: 🆘x3 ☣️x0 🍶x1 🥫x9 
+
+Ted : fome:2.1 sede:2.8
+Dolores : explorando. Volta em 1 dia
+Timmy : fome:3.1 sede:3.4
+Mary Jane : fome:3.7 sede:3.2
+
+----------------------------------
+Dia : 39
+
+
+Dolores voltou da exploração. Ganhos:
+	Comida : 3
+	Água : 2
+	Medkit : 1
+
+Inventário: 🆘x4 ☣️x1 🍶x3 🥫x11 
+
+Ted : fome:3.5 sede:2.2
+Dolores : fome:3 sede:3
+Timmy : fome:2.7 sede:2.7
+Mary Jane : fome:3.2 sede:2.5
+
+----------------------------------
+Dia : 40
+
+
+Dolores foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x4 ☣️x0 🍶x1 🥫x11 
+
+Ted : fome:2.9 sede:3.4
+Dolores : explorando. Volta em 3 dia
+Timmy : fome:2.3 sede:2.1
+Mary Jane : fome:2.8 sede:3.9
+
+----------------------------------
+Dia : 41
+
+A família foi achada por militares, todos foram salvos, fim do jogo.
+
+Inventário: 
+
+Ted : fome:2.3 sede:2.7
+Dolores : explorando. Volta em 2 dia
+Timmy : fome:3.9 sede:3.3
+Mary Jane : fome:2.4 sede:3.2
+
+Após a eclosão da Terceira Guerra Mundial e a subsequente guerra nuclear, uma família de Frankenmuth emerge como sobrevivente, confrontada não apenas pela devastação imediata, mas também pelo desafio constante de manter-se viva em um mundo transformado em um deserto radioativo e hostil. Com sua casa resistindo ao impacto direto da bomba, eles agora enfrentam a difícil tarefa de sobreviver em um ambiente de recursos escassos, radiação perigosa e a constante ameaça de outros sobreviventes desesperados.
+----------------------------------
+Dia : 1
+
+
+Inventário: 🆘x1 ☣️x1 🍶x10 🥫x10 
+
+Ted : fome:5 sede:5
+Dolores : fome:5 sede:5
+Timmy : fome:5 sede:5
+Mary Jane : fome:5 sede:5
+
+----------------------------------
+Dia : 2
+
+
+Inventário: 🆘x1 ☣️x1 🍶x10 🥫x10 
+
+Ted : fome:4.4 sede:4.4
+Dolores : fome:4.5 sede:4.3
+Timmy : fome:4.6 sede:4.4
+Mary Jane : fome:4.6 sede:4.4
+
+----------------------------------
+Dia : 3
+
+
+Inventário: 🆘x1 ☣️x1 🍶x10 🥫x10 
+
+Ted : fome:3.8 sede:3.7
+Dolores : fome:4.1 sede:3.7
+Timmy : fome:4.2 sede:3.8
+Mary Jane : fome:4.1 sede:3.8
+
+----------------------------------
+Dia : 4
+
+
+Inventário: 🆘x1 ☣️x1 🍶x10 🥫x10 
+
+Ted : fome:3.3 sede:2.9
+Dolores : fome:3.6 sede:3.1
+Timmy : fome:3.9 sede:3.2
+Mary Jane : fome:3.7 sede:3.2
+
+----------------------------------
+Dia : 5
+
+
+Inventário: 🆘x1 ☣️x1 🍶x10 🥫x10 
+
+Ted : fome:2.7 sede:2.1
+Dolores : fome:3.2 sede:2.5
+Timmy : fome:3.5 sede:2.5
+Mary Jane : fome:3.2 sede:2.6
+
+----------------------------------
+Dia : 6
+
+
+Inventário: 🆘x1 ☣️x1 🍶x7 🥫x10 
+
+Ted : fome:2.1 sede:3.4
+Dolores : fome:2.7 sede:3.8
+Timmy : fome:3.1 sede:3.8
+Mary Jane : fome:2.8 sede:2.1
+
+----------------------------------
+Dia : 7
+
+
+Inventário: 🆘x1 ☣️x1 🍶x6 🥫x9 
+
+Ted : fome:3.5 sede:2.8
+Dolores : fome:2.3 sede:3.2
+Timmy : fome:2.7 sede:3.2
+Mary Jane : fome:2.4 sede:3.6
+
+----------------------------------
+Dia : 8
+
+
+Inventário: 🆘x1 ☣️x1 🍶x6 🥫x7 
+
+Ted : fome:3 sede:2.1
+Dolores : fome:3.8 sede:2.6
+Timmy : fome:2.4 sede:2.5
+Mary Jane : fome:3.9 sede:3
+
+----------------------------------
+Dia : 9
+
+
+Mary Jane foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x1 ☣️x0 🍶x4 🥫x6 
+
+Ted : fome:2.4 sede:3.5
+Dolores : fome:3.3 sede:2.1
+Timmy : fome:4 sede:3.8
+Mary Jane : explorando. Volta em 3 dia
+
+----------------------------------
+Dia : 10
+
+Foi perdido 1 água
+
+Inventário: 🆘x1 ☣️x0 🍶x2 🥫x5 
+
+Ted : fome:3.8 sede:2.8
+Dolores : fome:2.9 sede:3.6
+Timmy : fome:3.6 sede:3.1
+Mary Jane : explorando. Volta em 2 dia
+
+----------------------------------
+Dia : 11
+
+
+Inventário: 🆘x1 ☣️x0 🍶x2 🥫x5 
+
+Ted : fome:3.2 sede:2.2
+Dolores : fome:2.4 sede:2.9
+Timmy : fome:3.2 sede:2.4
+Mary Jane : explorando. Volta em 1 dia
+
+----------------------------------
+Dia : 12
+
+
+Mary Jane voltou da exploração. Ganhos:
+	Comida : 2
+	Água : 4
+	Medkit : 0
+
+Inventário: 🆘x1 ☣️x1 🍶x4 🥫x6 
+
+Ted : fome:2.6 sede:3.5
+Dolores : fome:4 sede:2.3
+Timmy : fome:2.9 sede:3.7
+Mary Jane : fome:3 sede:3
+
+----------------------------------
+Dia : 13
+
+
+Dolores foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x1 ☣️x0 🍶x3 🥫x6 
+
+Ted : fome:2.1 sede:2.8
+Dolores : explorando. Volta em 3 dia
+Timmy : fome:2.5 sede:3
+Mary Jane : fome:2.6 sede:2.5
+
+----------------------------------
+Dia : 14
+
+Timmy achou 1 comida
+
+Inventário: 🆘x1 ☣️x0 🍶x2 🥫x6 
+
+Ted : fome:3.5 sede:2.1
+Dolores : explorando. Volta em 2 dia
+Timmy : fome:2.1 sede:2.3
+Mary Jane : fome:2.1 sede:3.9
+
+----------------------------------
+Dia : 15
+
+
+Inventário: 🆘x1 ☣️x0 🍶x0 🥫x4 
+
+Ted : fome:2.9 sede:3.4
+Dolores : explorando. Volta em 1 dia
+Timmy : fome:3.7 sede:3.7
+Mary Jane : fome:3.7 sede:3.3
+
+----------------------------------
+Dia : 16
+
+
+Dolores voltou da exploração. Ganhos:
+	Comida : 2
+	Água : 2
+	Medkit : 1
+
+Inventário: 🆘x2 ☣️x1 🍶x2 🥫x6 
+
+Ted : fome:2.3 sede:2.6
+Dolores : fome:3 sede:3
+Timmy : fome:3.3 sede:2.9
+Mary Jane : fome:3.2 sede:2.7
+
+----------------------------------
+Dia : 17
+
+Ted achou 1 comida
+
+Mary Jane foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x2 ☣️x0 🍶x1 🥫x6 
+
+Ted : fome:3.8 sede:4
+Dolores : fome:2.5 sede:2.5
+Timmy : fome:3 sede:2.2
+Mary Jane : explorando. Volta em 3 dia
+
+----------------------------------
+Dia : 18
+
+
+Inventário: 🆘x2 ☣️x0 🍶x0 🥫x6 
+
+Ted : fome:3.2 sede:3.3
+Dolores : fome:2.1 sede:1.9
+Timmy : fome:2.6 sede:3.6
+Mary Jane : explorando. Volta em 2 dia
+
+----------------------------------
+Dia : 19
+
+Timmy achou 2 água
+
+Inventário: 🆘x2 ☣️x0 🍶x2 🥫x5 
+
+Ted : fome:2.6 sede:2.6
+Dolores : fome:3.6 sede:1.4
+Timmy : fome:2.2 sede:2.9
+Mary Jane : explorando. Volta em 1 dia
+
+----------------------------------
+Dia : 20
+
+
+Mary Jane voltou da exploração. Ganhos:
+	Comida : 2
+	Água : 4
+	Medkit : 0
+
+Inventário: 🆘x2 ☣️x1 🍶x4 🥫x6 
+
+Ted : fome:2 sede:3.9
+Dolores : fome:3.2 sede:2.9
+Timmy : fome:3.8 sede:2.2
+Mary Jane : fome:3 sede:3
+
+----------------------------------
+Dia : 21
+
+
+Timmy foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x2 ☣️x0 🍶x3 🥫x5 
+
+Ted : fome:3.4 sede:3.1
+Dolores : fome:2.7 sede:2.3
+Timmy : explorando. Volta em 3 dia
+Mary Jane : fome:2.6 sede:2.4
+
+----------------------------------
+Dia : 22
+
+
+Inventário: 🆘x2 ☣️x0 🍶x1 🥫x5 
+
+Ted : fome:2.9 sede:2.5
+Dolores : fome:2.3 sede:3.7
+Timmy : explorando. Volta em 2 dia
+Mary Jane : fome:2.1 sede:3.8
+
+----------------------------------
+Dia : 23
+
+
+Inventário: 🆘x2 ☣️x0 🍶x0 🥫x3 
+
+Ted : fome:2.3 sede:3.8
+Dolores : fome:3.8 sede:3
+Timmy : explorando. Volta em 1 dia
+Mary Jane : fome:3.7 sede:3.2
+
+----------------------------------
+Dia : 24
+
+Foi perdido 1 medkit
+
+Timmy voltou da exploração. Ganhos:
+	Comida : 5
+	Água : 4
+	Medkit : 1
+
+Inventário: 🆘x2 ☣️x1 🍶x4 🥫x7 
+
+Ted : fome:3.7 sede:3
+Dolores : fome:3.3 sede:2.4
+Timmy : fome:3 sede:3
+Mary Jane : fome:3.2 sede:2.7
+
+----------------------------------
+Dia : 25
+
+Timmy pegou uma doença, ainda bem que tinha um medkit e está curada
+Foi perdido 1 medkit
+
+Timmy foi explorar, devido a falta de comida/água
+
+Timmy morreu por causa da radiação
+Inventário: 🆘x0 ☣️x0 🍶x3 🥫x7 
+
+Ted : fome:3.1 sede:2.4
+Dolores : fome:2.9 sede:3.8
+Timmy: Morto
+Mary Jane : fome:2.8 sede:2.2
+
+----------------------------------
+Dia : 26
+
+Foi perdido 1 água
+
+Mary Jane foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x0 ☣️x0 🍶x0 🥫x7 
+
+Ted : fome:2.6 sede:3.6
+Dolores : fome:2.4 sede:3.1
+Timmy: Morto
+Mary Jane : explorando. Volta em 3 dia
+
+----------------------------------
+Dia : 27
+
+Foi perdido 1 comida
+
+Inventário: 🆘x0 ☣️x0 🍶x0 🥫x4 
+
+Ted : fome:4 sede:2.9
+Dolores : fome:4 sede:2.4
+Timmy: Morto
+Mary Jane : explorando. Volta em 2 dia
+
+----------------------------------
+Dia : 28
+
+
+Inventário: 🆘x0 ☣️x0 🍶x0 🥫x4 
+
+Ted : fome:3.4 sede:2.3
+Dolores : fome:3.5 sede:1.9
+Timmy: Morto
+Mary Jane : explorando. Volta em 1 dia
+
+----------------------------------
+Dia : 29
+
+
+Mary Jane voltou da exploração. Ganhos:
+	Comida : 3
+	Água : 5
+	Medkit : 0
+
+Inventário: 🆘x0 ☣️x0 🍶x5 🥫x7 
+
+Ted : fome:2.8 sede:1.7
+Dolores : fome:3 sede:1.3
+Timmy: Morto
+Mary Jane : fome:3 sede:3
+
+----------------------------------
+Dia : 30
+
+Foi perdido 2 comida
+
+Mary Jane foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x0 ☣️x0 🍶x3 🥫x5 
+
+Ted : fome:2.2 sede:3
+Dolores : fome:2.6 sede:2.7
+Timmy: Morto
+Mary Jane : explorando. Volta em 3 dia
+
+----------------------------------
+Dia : 31
+
+Ted está doente
+
+Inventário: 🆘x0 ☣️x0 🍶x3 🥫x4 
+
+Ted : fome:3.7 sede:2.4 💀x0
+Dolores : fome:2.1 sede:2.1
+Timmy: Morto
+Mary Jane : explorando. Volta em 2 dia
+
+----------------------------------
+Dia : 32
+
+
+Inventário: 🆘x0 ☣️x0 🍶x1 🥫x3 
+
+Ted : fome:3.1 sede:3.6 💀x1
+Dolores : fome:3.7 sede:3.6
+Timmy: Morto
+Mary Jane : explorando. Volta em 1 dia
+
+----------------------------------
+Dia : 33
+
+Dolores enlouqueceu e fugiu da família, morreu de radiação
+
+Mary Jane voltou da exploração. Ganhos:
+	Comida : 5
+	Água : 4
+	Medkit : 1
+
+Inventário: 🆘x1 ☣️x0 🍶x5 🥫x8 
+
+Ted : fome:2.5 sede:2.9 💀x2
+Dolores: Morto
+Timmy: Morto
+Mary Jane : fome:3 sede:3
+
+Ted se curou com um medkit
+----------------------------------
+Dia : 34
+
+
+Mary Jane foi explorar, devido a falta de comida/água
+
+Mary Jane morreu por causa da radiação
+Inventário: 🆘x0 ☣️x0 🍶x5 🥫x7 
+
+Ted : fome:3.9 sede:2.2
+Dolores: Morto
+Timmy: Morto
+Mary Jane: Morto
+
+----------------------------------
+Dia : 35
+
+
+Inventário: 🆘x0 ☣️x0 🍶x4 🥫x7 
+
+Ted : fome:3.3 sede:3.5
+Dolores: Morto
+Timmy: Morto
+Mary Jane: Morto
+
+----------------------------------
+Dia : 36
+
+
+Ted foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x0 ☣️x0 🍶x4 🥫x7 
+
+Ted : explorando. Volta em 3 dia
+Dolores: Morto
+Timmy: Morto
+Mary Jane: Morto
+
+----------------------------------
+Dia : 37
+
+
+Inventário: 🆘x0 ☣️x0 🍶x4 🥫x7 
+
+Ted : explorando. Volta em 2 dia
+Dolores: Morto
+Timmy: Morto
+Mary Jane: Morto
+
+----------------------------------
+Dia : 38
+
+
+Inventário: 🆘x0 ☣️x0 🍶x4 🥫x7 
+
+Ted : explorando. Volta em 1 dia
+Dolores: Morto
+Timmy: Morto
+Mary Jane: Morto
+
+----------------------------------
+Dia : 39
+
+
+Ted voltou da exploração. Ganhos:
+	Comida : 5
+	Água : 5
+	Medkit : 0
+
+Inventário: 🆘x0 ☣️x0 🍶x9 🥫x12 
+
+Ted : fome:3 sede:3
+Dolores: Morto
+Timmy: Morto
+Mary Jane: Morto
+
+----------------------------------
+Dia : 40
+
+
+Inventário: 🆘x0 ☣️x0 🍶x9 🥫x12 
+
+Ted : fome:2.4 sede:2.3
+Dolores: Morto
+Timmy: Morto
+Mary Jane: Morto
+
+----------------------------------
+Dia : 41
+
+
+Inventário: 🆘x0 ☣️x0 🍶x8 🥫x11 
+
+Ted : fome:3.8 sede:3.6
+Dolores: Morto
+Timmy: Morto
+Mary Jane: Morto
+
+----------------------------------
+Dia : 42
+
+Foi achado 1 medkit
+
+Inventário: 🆘x1 ☣️x0 🍶x8 🥫x11 
+
+Ted : fome:3.3 sede:3
+Dolores: Morto
+Timmy: Morto
+Mary Jane: Morto
+
+----------------------------------
+Dia : 43
+
+
+Inventário: 🆘x1 ☣️x0 🍶x8 🥫x11 
+
+Ted : fome:2.7 sede:2.2
+Dolores: Morto
+Timmy: Morto
+Mary Jane: Morto
+
+----------------------------------
+Dia : 44
+
+
+Inventário: 🆘x1 ☣️x0 🍶x7 🥫x11 
+
+Ted : fome:2.1 sede:3.5
+Dolores: Morto
+Timmy: Morto
+Mary Jane: Morto
+
+----------------------------------
+Dia : 45
+
+Ted pegou uma doença, ainda bem que tinha um medkit e está curada
+
+Inventário: 🆘x0 ☣️x0 🍶x7 🥫x10 
+
+Ted : fome:3.5 sede:2.9
+Dolores: Morto
+Timmy: Morto
+Mary Jane: Morto
+
+----------------------------------
+Dia : 46
+
+
+Inventário: 🆘x0 ☣️x0 🍶x7 🥫x10 
+
+Ted : fome:3 sede:2.1
+Dolores: Morto
+Timmy: Morto
+Mary Jane: Morto
+
+----------------------------------
+Dia : 47
+
+
+Inventário: 🆘x0 ☣️x0 🍶x6 🥫x10 
+
+Ted : fome:2.4 sede:3.3
+Dolores: Morto
+Timmy: Morto
+Mary Jane: Morto
+
+----------------------------------
+Dia : 48
+
+
+Inventário: 🆘x0 ☣️x0 🍶x6 🥫x9 
+
+Ted : fome:3.8 sede:2.7
+Dolores: Morto
+Timmy: Morto
+Mary Jane: Morto
+
+----------------------------------
+Dia : 49
+
+
+Ted foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x0 ☣️x0 🍶x5 🥫x9 
+
+Ted : explorando. Volta em 3 dia
+Dolores: Morto
+Timmy: Morto
+Mary Jane: Morto
+
+----------------------------------
+Dia : 50
+
+
+Inventário: 🆘x0 ☣️x0 🍶x5 🥫x9 
+
+Ted : explorando. Volta em 2 dia
+Dolores: Morto
+Timmy: Morto
+Mary Jane: Morto
+
+----------------------------------
+Dia : 51
+
+
+Inventário: 🆘x0 ☣️x0 🍶x5 🥫x9 
+
+Ted : explorando. Volta em 1 dia
+Dolores: Morto
+Timmy: Morto
+Mary Jane: Morto
+
+----------------------------------
+Dia : 52
+
+
+Ted voltou da exploração. Ganhos:
+	Comida : 2
+	Água : 2
+	Medkit : 1
+
+Inventário: 🆘x1 ☣️x0 🍶x7 🥫x11 
+
+Ted : fome:3 sede:3
+Dolores: Morto
+Timmy: Morto
+Mary Jane: Morto
+
+----------------------------------
+Dia : 53
+
+
+Inventário: 🆘x1 ☣️x0 🍶x7 🥫x11 
+
+Ted : fome:2.4 sede:2.4
+Dolores: Morto
+Timmy: Morto
+Mary Jane: Morto
+
+----------------------------------
+Dia : 54
+
+Foi achado 1 medkit
+
+Inventário: 🆘x2 ☣️x0 🍶x6 🥫x10 
+
+Ted : fome:3.8 sede:3.6
+Dolores: Morto
+Timmy: Morto
+Mary Jane: Morto
+
+----------------------------------
+Dia : 55
+
+Foi achado 1 medkit
+
+Inventário: 🆘x3 ☣️x0 🍶x6 🥫x10 
+
+Ted : fome:3.3 sede:2.9
+Dolores: Morto
+Timmy: Morto
+Mary Jane: Morto
+
+----------------------------------
+Dia : 56
+
+
+Inventário: 🆘x3 ☣️x0 🍶x6 🥫x10 
+
+Ted : fome:2.7 sede:2.2
+Dolores: Morto
+Timmy: Morto
+Mary Jane: Morto
+
+----------------------------------
+Dia : 57
+
+
+Ted foi explorar, devido a falta de comida/água
+
+Ted morreu por causa da radiação
+Inventário: 🆘x3 ☣️x0 🍶x5 🥫x10 
+
+Ted: Morto
+Dolores: Morto
+Timmy: Morto
+Mary Jane: Morto
+
+Todos os membros morreram, fim do jogo
+Após a eclosão da Terceira Guerra Mundial e a subsequente guerra nuclear, uma família de Frankenmuth emerge como sobrevivente, confrontada não apenas pela devastação imediata, mas também pelo desafio constante de manter-se viva em um mundo transformado em um deserto radioativo e hostil. Com sua casa resistindo ao impacto direto da bomba, eles agora enfrentam a difícil tarefa de sobreviver em um ambiente de recursos escassos, radiação perigosa e a constante ameaça de outros sobreviventes desesperados.
+----------------------------------
+Dia : 1
+
+
+Inventário: 🆘x1 ☣️x1 🍶x10 🥫x10 
+
+Ted : fome:5 sede:5
+Dolores : fome:5 sede:5
+Timmy : fome:5 sede:5
+Mary Jane : fome:5 sede:5
+
+----------------------------------
+Dia : 2
+
+Foi perdido 1 comida
+
+Inventário: 🆘x1 ☣️x1 🍶x10 🥫x9 
+
+Ted : fome:4.4 sede:4.4
+Dolores : fome:4.5 sede:4.4
+Timmy : fome:4.6 sede:4.3
+Mary Jane : fome:4.6 sede:4.4
+
+----------------------------------
+Dia : 3
+
+
+Inventário: 🆘x1 ☣️x1 🍶x10 🥫x9 
+
+Ted : fome:3.8 sede:3.7
+Dolores : fome:4.1 sede:3.7
+Timmy : fome:4.2 sede:3.6
+Mary Jane : fome:4.1 sede:3.8
+
+----------------------------------
+Dia : 4
+
+
+Inventário: 🆘x1 ☣️x1 🍶x10 🥫x9 
+
+Ted : fome:3.3 sede:2.9
+Dolores : fome:3.6 sede:3.2
+Timmy : fome:3.9 sede:2.9
+Mary Jane : fome:3.7 sede:3.2
+
+----------------------------------
+Dia : 5
+
+
+Inventário: 🆘x1 ☣️x1 🍶x10 🥫x9 
+
+Ted : fome:2.7 sede:2.2
+Dolores : fome:3.2 sede:2.7
+Timmy : fome:3.5 sede:2.1
+Mary Jane : fome:3.2 sede:2.7
+
+----------------------------------
+Dia : 6
+
+
+Inventário: 🆘x1 ☣️x1 🍶x8 🥫x9 
+
+Ted : fome:2.1 sede:3.6
+Dolores : fome:2.7 sede:2.1
+Timmy : fome:3.1 sede:3.5
+Mary Jane : fome:2.8 sede:2.1
+
+----------------------------------
+Dia : 7
+
+Dolores achou 1 água
+
+Inventário: 🆘x1 ☣️x1 🍶x7 🥫x8 
+
+Ted : fome:3.5 sede:2.9
+Dolores : fome:2.3 sede:3.6
+Timmy : fome:2.7 sede:2.7
+Mary Jane : fome:2.4 sede:3.5
+
+----------------------------------
+Dia : 8
+
+Foi perdido 1 comida
+
+Mary Jane foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x1 ☣️x0 🍶x6 🥫x5 
+
+Ted : fome:3 sede:2.2
+Dolores : fome:3.8 sede:2.9
+Timmy : fome:2.4 sede:4
+Mary Jane : explorando. Volta em 3 dia
+
+----------------------------------
+Dia : 9
+
+
+Inventário: 🆘x1 ☣️x0 🍶x5 🥫x4 
+
+Ted : fome:2.4 sede:3.4
+Dolores : fome:3.3 sede:2.3
+Timmy : fome:4 sede:3.3
+Mary Jane : explorando. Volta em 2 dia
+
+----------------------------------
+Dia : 10
+
+
+Inventário: 🆘x1 ☣️x0 🍶x4 🥫x3 
+
+Ted : fome:3.8 sede:2.7
+Dolores : fome:2.9 sede:3.6
+Timmy : fome:3.6 sede:2.6
+Mary Jane : explorando. Volta em 1 dia
+
+----------------------------------
+Dia : 11
+
+
+Mary Jane voltou da exploração. Ganhos:
+	Comida : 3
+	Água : 3
+	Medkit : 0
+
+Inventário: 🆘x1 ☣️x1 🍶x6 🥫x6 
+
+Ted : fome:3.2 sede:2.1
+Dolores : fome:2.4 sede:3.1
+Timmy : fome:3.2 sede:4
+Mary Jane : fome:3 sede:3
+
+----------------------------------
+Dia : 12
+
+
+Mary Jane foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x1 ☣️x0 🍶x5 🥫x5 
+
+Ted : fome:2.6 sede:3.5
+Dolores : fome:4 sede:2.5
+Timmy : fome:2.9 sede:3.3
+Mary Jane : explorando. Volta em 3 dia
+
+----------------------------------
+Dia : 13
+
+
+Inventário: 🆘x1 ☣️x0 🍶x4 🥫x5 
+
+Ted : fome:2.1 sede:2.7
+Dolores : fome:3.5 sede:4
+Timmy : fome:2.5 sede:2.6
+Mary Jane : explorando. Volta em 2 dia
+
+----------------------------------
+Dia : 14
+
+
+Inventário: 🆘x1 ☣️x0 🍶x3 🥫x4 
+
+Ted : fome:3.5 sede:2
+Dolores : fome:3 sede:3.3
+Timmy : fome:2.1 sede:4
+Mary Jane : explorando. Volta em 1 dia
+
+----------------------------------
+Dia : 15
+
+Foi perdido 1 água
+
+Mary Jane voltou da exploração. Ganhos:
+	Comida : 4
+	Água : 4
+	Medkit : 0
+
+Inventário: 🆘x1 ☣️x1 🍶x5 🥫x7 
+
+Ted : fome:2.9 sede:3.4
+Dolores : fome:2.6 sede:2.6
+Timmy : fome:3.7 sede:3.2
+Mary Jane : fome:3 sede:3
+
+----------------------------------
+Dia : 16
+
+Foi perdido 1 comida
+
+Ted foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x1 ☣️x0 🍶x5 🥫x6 
+
+Ted : explorando. Volta em 3 dia
+Dolores : fome:2.1 sede:2.1
+Timmy : fome:3.3 sede:2.5
+Mary Jane : fome:2.6 sede:2.4
+
+----------------------------------
+Dia : 17
+
+
+Inventário: 🆘x1 ☣️x0 🍶x2 🥫x5 
+
+Ted : explorando. Volta em 2 dia
+Dolores : fome:3.7 sede:3.4
+Timmy : fome:3 sede:3.8
+Mary Jane : fome:2.1 sede:3.7
+
+----------------------------------
+Dia : 18
+
+Mary Jane pegou uma doença, ainda bem que tinha um medkit e está curada
+
+Inventário: 🆘x0 ☣️x0 🍶x2 🥫x4 
+
+Ted : explorando. Volta em 1 dia
+Dolores : fome:3.2 sede:2.8
+Timmy : fome:2.6 sede:3.2
+Mary Jane : fome:3.7 sede:3.1
+
+----------------------------------
+Dia : 19
+
+Timmy achou 1 comida
+
+Ted voltou da exploração. Ganhos:
+	Comida : 5
+	Água : 4
+	Medkit : 1
+
+Inventário: 🆘x1 ☣️x1 🍶x6 🥫x10 
+
+Ted : fome:3 sede:3
+Dolores : fome:2.8 sede:2.3
+Timmy : fome:2.2 sede:2.6
+Mary Jane : fome:3.2 sede:2.5
+
+----------------------------------
+Dia : 20
+
+
+Timmy foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x1 ☣️x0 🍶x3 🥫x9 
+
+Ted : fome:2.4 sede:2.3
+Dolores : fome:2.3 sede:3.6
+Timmy : explorando. Volta em 3 dia
+Mary Jane : fome:2.8 sede:3.8
+
+----------------------------------
+Dia : 21
+
+
+Inventário: 🆘x1 ☣️x0 🍶x2 🥫x7 
+
+Ted : fome:3.8 sede:3.6
+Dolores : fome:3.8 sede:3
+Timmy : explorando. Volta em 2 dia
+Mary Jane : fome:2.4 sede:3.2
+
+----------------------------------
+Dia : 22
+
+
+Inventário: 🆘x1 ☣️x0 🍶x2 🥫x6 
+
+Ted : fome:3.3 sede:2.8
+Dolores : fome:3.4 sede:2.3
+Timmy : explorando. Volta em 1 dia
+Mary Jane : fome:3.9 sede:2.6
+
+----------------------------------
+Dia : 23
+
+Foi achado 1 medkit
+
+Timmy voltou da exploração. Ganhos:
+	Comida : 5
+	Água : 5
+	Medkit : 0
+
+Inventário: 🆘x2 ☣️x1 🍶x6 🥫x11 
+
+Ted : fome:2.7 sede:2.2
+Dolores : fome:2.9 sede:3.8
+Timmy : fome:3 sede:3
+Mary Jane : fome:3.5 sede:2.1
+
+----------------------------------
+Dia : 24
+
+
+Mary Jane foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x2 ☣️x0 🍶x4 🥫x11 
+
+Ted : fome:2.1 sede:3.4
+Dolores : fome:2.5 sede:3.2
+Timmy : fome:2.6 sede:2.3
+Mary Jane : explorando. Volta em 3 dia
+
+----------------------------------
+Dia : 25
+
+
+Inventário: 🆘x2 ☣️x0 🍶x3 🥫x10 
+
+Ted : fome:3.5 sede:2.7
+Dolores : fome:2 sede:2.5
+Timmy : fome:2.2 sede:3.7
+Mary Jane : explorando. Volta em 2 dia
+
+----------------------------------
+Dia : 26
+
+
+Inventário: 🆘x2 ☣️x0 🍶x1 🥫x8 
+
+Ted : fome:3 sede:3.9
+Dolores : fome:3.6 sede:4
+Timmy : fome:3.9 sede:3
+Mary Jane : explorando. Volta em 1 dia
+
+----------------------------------
+Dia : 27
+
+Foi achado 1 medkit
+
+Mary Jane voltou da exploração. Ganhos:
+	Comida : 2
+	Água : 4
+	Medkit : 0
+
+Inventário: 🆘x3 ☣️x1 🍶x5 🥫x10 
+
+Ted : fome:2.4 sede:3.2
+Dolores : fome:3.1 sede:3.4
+Timmy : fome:3.5 sede:2.3
+Mary Jane : fome:3 sede:3
+
+----------------------------------
+Dia : 28
+
+Foi perdido 1 água
+
+Ted foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x3 ☣️x0 🍶x3 🥫x9 
+
+Ted : explorando. Volta em 3 dia
+Dolores : fome:2.6 sede:2.8
+Timmy : fome:3.1 sede:3.6
+Mary Jane : fome:2.6 sede:2.3
+
+----------------------------------
+Dia : 29
+
+
+Inventário: 🆘x3 ☣️x0 🍶x2 🥫x9 
+
+Ted : explorando. Volta em 2 dia
+Dolores : fome:2.2 sede:2.2
+Timmy : fome:2.7 sede:2.8
+Mary Jane : fome:2.1 sede:3.7
+
+----------------------------------
+Dia : 30
+
+Dolores pegou uma doença, ainda bem que tinha um medkit e está curada
+Foi perdido 1 medkit
+
+Inventário: 🆘x1 ☣️x0 🍶x1 🥫x7 
+
+Ted : explorando. Volta em 1 dia
+Dolores : fome:3.7 sede:3.5
+Timmy : fome:2.4 sede:2.2
+Mary Jane : fome:3.7 sede:3.1
+
+----------------------------------
+Dia : 31
+
+
+Ted voltou da exploração. Ganhos:
+	Comida : 4
+	Água : 4
+	Medkit : 1
+
+Inventário: 🆘x2 ☣️x1 🍶x4 🥫x10 
+
+Ted : fome:3 sede:3
+Dolores : fome:3.3 sede:3
+Timmy : fome:4 sede:3.6
+Mary Jane : fome:3.2 sede:2.6
+
+----------------------------------
+Dia : 32
+
+
+Mary Jane foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x2 ☣️x0 🍶x4 🥫x10 
+
+Ted : fome:2.4 sede:2.4
+Dolores : fome:2.8 sede:2.4
+Timmy : fome:3.6 sede:2.8
+Mary Jane : explorando. Volta em 3 dia
+
+----------------------------------
+Dia : 33
+
+
+Inventário: 🆘x2 ☣️x0 🍶x2 🥫x9 
+
+Ted : fome:3.8 sede:3.7
+Dolores : fome:2.3 sede:3.8
+Timmy : fome:3.2 sede:2.1
+Mary Jane : explorando. Volta em 2 dia
+
+----------------------------------
+Dia : 34
+
+Foi achado 1 medkit
+
+Inventário: 🆘x3 ☣️x0 🍶x1 🥫x8 
+
+Ted : fome:3.3 sede:3
+Dolores : fome:3.9 sede:3.1
+Timmy : fome:2.9 sede:3.3
+Mary Jane : explorando. Volta em 1 dia
+
+----------------------------------
+Dia : 35
+
+
+Mary Jane voltou da exploração. Ganhos:
+	Comida : 2
+	Água : 3
+	Medkit : 1
+
+Inventário: 🆘x4 ☣️x1 🍶x4 🥫x10 
+
+Ted : fome:2.7 sede:2.3
+Dolores : fome:3.4 sede:2.6
+Timmy : fome:2.5 sede:2.7
+Mary Jane : fome:3 sede:3
+
+----------------------------------
+Dia : 36
+
+
+Timmy foi explorar, devido a falta de comida/água
+
+Inventário: 🆘x4 ☣️x0 🍶x1 🥫x10 
+
+Ted : fome:2.1 sede:3.6
+Dolores : fome:3 sede:3.9
+Timmy : explorando. Volta em 3 dia
+Mary Jane : fome:2.6 sede:2.5
+
+----------------------------------
+Dia : 37
+
+
+Inventário: 🆘x4 ☣️x0 🍶x0 🥫x9 
+
+Ted : fome:3.5 sede:2.9
+Dolores : fome:2.5 sede:3.3
+Timmy : explorando. Volta em 2 dia
+Mary Jane : fome:2.1 sede:3.8
+
+----------------------------------
+Dia : 38
+
+
+Inventário: 🆘x4 ☣️x0 🍶x0 🥫x8 
+
+Ted : fome:3 sede:2.1
+Dolores : fome:2.1 sede:2.7
+Timmy : explorando. Volta em 1 dia
+Mary Jane : fome:3.7 sede:3.3
+
+----------------------------------
+Dia : 39
+
+Ted achou 2 comida
+Foi perdido 1 comida
+A família foi achada por militares, todos foram salvos, fim do jogo.
+
+Timmy voltou da exploração. Ganhos:
+Inventário: 
+
+Ted : fome:2.4 sede:1.5
+Dolores : fome:3.6 sede:2.1
+Timmy : fome:3 sede:3
+Mary Jane : fome:3.2 sede:2.6
+
+----------------------------------
+Dia recorde : 68
+Simulacao numero : 2
+Evento: lostWater, Sobrevivente: Ted, Dia: 2, Inventário: 🆘x1 ☣️x1 🍶x9 🥫x10 
+Evento: lostMedkit, Sobrevivente: Ted, Dia: 2, Inventário: 🆘x0 ☣️x1 🍶x9 🥫x10 
+Evento: lostFood, Sobrevivente: Dolores, Dia: 8, Inventário: 🆘x0 ☣️x1 🍶x5 🥫x7 
+Evento: getFood, Sobrevivente: Ted, Dia: 9, Inventário: 🆘x0 ☣️x0 🍶x5 🥫x6 
+Evento: getWater, Sobrevivente: Mary Jane, Dia: 12, Inventário: 🆘x1 ☣️x1 🍶x7 🥫x10 
+Evento: lostFood, Sobrevivente: Dolores, Dia: 23, Inventário: 🆘x2 ☣️x0 🍶x4 🥫x5 
+Evento: getSick, Sobrevivente: Dolores, Dia: 24, Inventário: 🆘x1 ☣️x0 🍶x2 🥫x5 
+Evento: freakOut, Sobrevivente: Ted, Dia: 25, Inventário: 🆘x1 ☣️x0 🍶x1 🥫x3 
+Evento: getFood, Sobrevivente: Timmy, Dia: 27, Inventário: 🆘x2 ☣️x0 🍶x2 🥫x8 
+Evento: lostFood, Sobrevivente: Timmy, Dia: 27, Inventário: 🆘x2 ☣️x0 🍶x2 🥫x7 
+Evento: lostFood, Sobrevivente: Timmy, Dia: 28, Inventário: 🆘x2 ☣️x0 🍶x1 🥫x5 
+Evento: lostFood, Sobrevivente: Timmy, Dia: 29, Inventário: 🆘x2 ☣️x0 🍶x0 🥫x3 
+Evento: getSick, Sobrevivente: Dolores, Dia: 31, Inventário: 🆘x1 ☣️x0 🍶x2 🥫x4 
+Evento: lostWater, Sobrevivente: Timmy, Dia: 32, Inventário: 🆘x1 ☣️x0 🍶x0 🥫x3 
+Evento: getMedkit, Sobrevivente: Timmy, Dia: 37, Inventário: 🆘x3 ☣️x0 🍶x1 🥫x6 
+Evento: lostWater, Sobrevivente: Mary Jane, Dia: 42, Inventário: 🆘x4 ☣️x1 🍶x5 🥫x12 
+Evento: lostWater, Sobrevivente: Timmy, Dia: 43, Inventário: 🆘x4 ☣️x0 🍶x2 🥫x12 
+Evento: lostMedkit, Sobrevivente: Timmy, Dia: 46, Inventário: 🆘x4 ☣️x1 🍶x3 🥫x14 
+Evento: lostFood, Sobrevivente: Dolores, Dia: 47, Inventário: 🆘x4 ☣️x0 🍶x2 🥫x13 
+Evento: lostWater, Sobrevivente: Mary Jane, Dia: 50, Inventário: 🆘x5 ☣️x1 🍶x1 🥫x16 
+Evento: getSick, Sobrevivente: Dolores, Dia: 51, Inventário: 🆘x4 ☣️x1 🍶x0 🥫x16 
+Evento: getFood, Sobrevivente: Dolores, Dia: 52, Inventário: 🆘x4 ☣️x0 🍶x0 🥫x15 
+Evento: getSick, Sobrevivente: Dolores, Dia: 54, Inventário: 🆘x3 ☣️x0 🍶x0 🥫x15 
+Evento: getWater, Sobrevivente: Dolores, Dia: 61, Inventário: 🆘x4 ☣️x0 🍶x5 🥫x18 
+Evento: lostFood, Sobrevivente: Dolores, Dia: 62, Inventário: 🆘x4 ☣️x0 🍶x5 🥫x17 
+Evento: lostWater, Sobrevivente: Dolores, Dia: 65, Inventário: 🆘x5 ☣️x0 🍶x3 🥫x17 
+Evento: armyHelp, Sobrevivente: Dolores, Dia: 68, Inventário: 🆘x5 ☣️x0 🍶x5 🥫x20 
+Media de dias : 46
