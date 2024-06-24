@@ -37,6 +37,8 @@ Todas as simulações foram utilizadas as estratégias do arquivo [strategy.json
 
 ![100000 simulações SurviveAfterBomb](https://github.com/yeanjy/SurviveAfterBomb/assets/129001484/96265935-9866-4ef0-b611-84cc284ffdbe)
 
+Exemplo de uma saída pode ser visto no arquivo [exec.txt](https://github.com/yeanjy/SurviveAfterBomb/blob/main/exec.txt)
+
 ## Diagrama de classes
 ![diagrama](https://github.com/yeanjy/SurviveAfterBomb/assets/129001484/a04a03fc-654e-4663-bae6-26486a8c7de2)
 
