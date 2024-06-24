@@ -29,8 +29,15 @@ Você pode adicionar mais sobreviventes ou configurar as informações dos sobre
 
 ## Gráficos
 
+Todas as simulações foram utilizadas as estratégias do arquivo [strategy.json](https://github.com/yeanjy/SurviveAfterBomb/blob/main/strategy.json)
+
 ![1000 simulações SurviveAfterBomb](https://github.com/yeanjy/SurviveAfterBomb/assets/129001484/bc9815de-eeb2-432e-8f43-9f8ab9785bf0)
 
 ![10000 simulações SurviveAfterBomb](https://github.com/yeanjy/SurviveAfterBomb/assets/129001484/6602b1b6-260a-4a16-a644-f1882c9ebcc3)
 
 ![100000 simulações SurviveAfterBomb](https://github.com/yeanjy/SurviveAfterBomb/assets/129001484/96265935-9866-4ef0-b611-84cc284ffdbe)
+
+## Diagrama de classes
+![diagrama](https://github.com/yeanjy/SurviveAfterBomb/assets/129001484/a04a03fc-654e-4663-bae6-26486a8c7de2)
+
+
